@@ -75,3 +75,12 @@ a:hover, a:focus {
   visibility: visible;
   pointer-events: auto;
 }
+
+.collapse-full-screen {
+  position: fixed;
+  top: 55px;
+  left:  0;
+  width: 100vw;
+  height: 100vh;
+  background: #fff;
+}

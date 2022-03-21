@@ -1,10 +1,13 @@
 import { useState } from "react";
 import { BsCart2 } from "react-icons/bs";
 import cx from "classnames";
+import dynamic from "next/dynamic";
 
 import styles from "../../styles/header.module.scss";
 
-export default function HeaderCart() {
+const EmptyCart = dynamic(() => import("./EmptyCart"));
+
+export default function DesktopCart() {
   const [active, setActive] = useState(false);
 
   return (
@@ -32,7 +35,9 @@ export default function HeaderCart() {
               active ? "active" : ""
             )}
           >
-            <div className={styles["dropdown-menu-content"]}><h3>No products in the cart.</h3></div>
+            <div className={styles["dropdown-menu-content"]}>
+              <EmptyCart />
+            </div>
           </div>
         </div>
       </div>
