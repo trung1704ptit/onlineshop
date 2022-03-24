@@ -24,16 +24,16 @@ export default function MyAccount() {
             active ? "active" : ""
           )}
         >
-          <div className={styles['dropdown-menu-content']}>
+          <div className={styles["dropdown-menu-content"]}>
             <ul className="list-style-none">
               <li>
                 <Link href="/my-account" target="_blank">
-                  Signup
+                  <a className="link-animated">Signup</a>
                 </Link>
               </li>
               <li>
                 <Link href="/my-account" target="_blank">
-                  Login
+                  <a className="link-animated">Login</a>
                 </Link>
               </li>
             </ul>
