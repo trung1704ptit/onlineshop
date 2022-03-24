@@ -2,7 +2,10 @@
 
 .main-header {
   color: $primary-color;
-  border-bottom: 3px solid $green-color;
+
+  .top-header {
+    border-bottom: 3px solid $green-color;
+  }
 }
 
 .main-header {
@@ -131,7 +134,7 @@
             }
 
             a:hover {
-              color: #00000099;
+              color: $text-hover-color;
 
               &:before {
                 transform-origin: left center;
@@ -205,7 +208,48 @@
 }
 
 
-// mobile
+// Header Categories
+.header-categories {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  font-weight: 600;
+
+  .left-side {
+    .toggle-categories {
+      width: 280px;
+      padding: 10px;
+      font-size: 14px;
+      display: flex;
+      align-items: center;
+      svg {
+        margin-left: 10px;
+        font-size: 16px;
+      }
+    }
+  }
+
+  .right-side {
+    //
+  }
+
+  ul li {
+    display: inline-flex;
+    align-items: center;
+    padding: 15px 0 15px 30px;
+
+    a {
+      &:hover {
+        color: $text-hover-color;
+      }
+    }
+  }
+}
+
+
+
+// Mobile
 .main-mobile-header {
   display: flex;
   background-color: #f6f6f6;
@@ -245,6 +289,7 @@
     height: 50px;
     border-bottom: 1px solid #e0e0e0;
     // transition: width 1s;
+    z-index: 10000;
 
     input {
       padding-inline-start: 1em;

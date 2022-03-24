@@ -5,6 +5,8 @@ import { BsList, BsXLg } from "react-icons/bs";
 import { useState } from "react";
 // import dynamic from "next/dynamic";
 import CollapseFullscreen from "../Collapse/CollapseFullscreen";
+import CategoryList from "../Category/CategoryList";
+import { CgMenuGridO } from 'react-icons/cg'
 
 export default function MobileMenu() {
   const [open, setOpen] = useState(false);
@@ -12,7 +14,7 @@ export default function MobileMenu() {
   return (
     <>
       {!open ? (
-        <BsList
+        <CgMenuGridO
           className={styles["search-icon"]}
           onClick={() => setOpen(!open)}
         />
@@ -23,7 +25,7 @@ export default function MobileMenu() {
         />
       )}
       <CollapseFullscreen active={open}>
-        <div className={styles["empty-wrapper"]}>Menu</div>
+        <CategoryList />
       </CollapseFullscreen>
     </>
   );
