@@ -9,7 +9,6 @@ export default function SlideCarousel() {
     <Carousel touch={true}>
       <Carousel.Item>
         <img
-          className="d-block w-100"
           src="/images/slider-1.jpg"
           alt="First slide"
           className={styles["image"]}
@@ -24,7 +23,6 @@ export default function SlideCarousel() {
       </Carousel.Item>
       <Carousel.Item>
         <img
-          className="d-block w-100"
           src="/images/slider-2.jpg"
           alt="Second slide"
           className={styles["image"]}
@@ -40,7 +38,6 @@ export default function SlideCarousel() {
       </Carousel.Item>
       <Carousel.Item>
         <img
-          className="d-block w-100"
           src="/images/slider-3.jpg"
           alt="Third slide"
           className={styles["image"]}
