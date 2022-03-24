@@ -17,13 +17,17 @@
 
       &:hover {
         background: $gray-color;
-
-        a {
+        & > .sub-category-list {
+          opacity: 1;
+          visibility: visible;
+          pointer-events: all;
+        }
+        .category-link {
           color: #000;
         }
       }
 
-      a {
+      .category-link {
         padding: 10px;
         width: 100%;
         position: relative;
@@ -60,6 +64,9 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
+    visibility: none;
+    pointer-events: none;
+    opacity: 0;
 
     .sub-category-block {
       display: flex;
