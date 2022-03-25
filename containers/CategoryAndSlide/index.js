@@ -3,10 +3,9 @@ import { Col, Container, Row } from "react-bootstrap";
 import { useMediaQuery } from "react-responsive";
 import Section from "../../components/Section";
 
-const SlideCarousel = dynamic(() => import("../../components/Carousel"));
-const CategoryList = dynamic(() =>
-  import("../../components/Category/CategoryList")
-);
+import SlideCarousel from "../../components/Carousel";
+import CategoryList from "../../components/Category/CategoryList";
+
 
 export default function CategoryAndSlide() {
   const isLargeDevice = useMediaQuery({
@@ -17,16 +16,8 @@ export default function CategoryAndSlide() {
     return (
       <Section>
         <div className="d-flex align-item-stretch">
-          <Container>
-            <Row>
-              <Col xs={12} md={3}>
-                <CategoryList />
-              </Col>
-              <Col xs={12} md={9}>
-                <SlideCarousel />
-              </Col>
-            </Row>
-          </Container>
+          <CategoryList />
+          <SlideCarousel />
         </div>
       </Section>
     );

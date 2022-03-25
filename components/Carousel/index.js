@@ -1,12 +1,13 @@
 import Link from "next/link";
 import { Carousel } from "react-bootstrap";
+import { ImArrowRight2 } from "react-icons/im";
 // import { HiArrowRight, HiArrowLeft } from "react-icons/hi";
 import styles from "../../styles/carousel.module.scss";
 import CircleButton from "../Button/CircleButton";
 
 export default function SlideCarousel() {
   return (
-    <Carousel touch={true}>
+    <Carousel touch={true} className={styles['carousel-wraper']}>
       <Carousel.Item>
         <img
           src="/images/slider-1.jpg"
@@ -18,7 +19,9 @@ export default function SlideCarousel() {
           <p className={styles["sub-title"]}>
             Subscribe and get 20% off your first{" "}
           </p>
-          <CircleButton>Samsung Galaxy S22</CircleButton>
+          <CircleButton>
+            Samsung Galaxy S22 <ImArrowRight2 />
+          </CircleButton>
         </Carousel.Caption>
       </Carousel.Item>
       <Carousel.Item>
@@ -33,7 +36,9 @@ export default function SlideCarousel() {
           <p className={styles["sub-title"]}>
             Subscribe and get 20% off your first{" "}
           </p>
-          <CircleButton>Samsung Galaxy S22</CircleButton>
+          <CircleButton>
+            Samsung Galaxy S22 <ImArrowRight2 />
+          </CircleButton>
         </Carousel.Caption>
       </Carousel.Item>
       <Carousel.Item>
@@ -48,7 +53,9 @@ export default function SlideCarousel() {
           <p className={styles["sub-title"]}>
             Subscribe and get 20% off your first
           </p>
-          <CircleButton>Samsung Galaxy S22</CircleButton>
+          <CircleButton>
+            Samsung Galaxy S22 <ImArrowRight2 />
+          </CircleButton>
         </Carousel.Caption>
       </Carousel.Item>
     </Carousel>
