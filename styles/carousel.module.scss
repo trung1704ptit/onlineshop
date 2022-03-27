@@ -1,4 +1,6 @@
-.carousel-wraper {
+@import './variables.module.scss';
+
+.home-carousel-wraper {
   flex: 1;
 
   .image {
@@ -33,5 +35,4 @@
       left: 100px;
     }
   }
-
 }

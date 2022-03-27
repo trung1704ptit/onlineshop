@@ -12,7 +12,7 @@ export default function Services() {
 
   if (isLargeDevice) {
     return (
-      <Section className="mt-10">
+      <Section>
         <div className={styles["service-wrapper"]}>
           <div className={styles["service-block"]}>
             <RiTruckLine />

@@ -1,6 +1,6 @@
-export default function Section({ children, ...props }) {
+export default function Section({ children }) {
   return (
-    <section {...props}>
+    <section>
       <div className="container">
         <div className="row">{children}</div>
       </div>

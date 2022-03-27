@@ -1,12 +1,9 @@
 import Head from "next/head";
-import dynamic from "next/dynamic";
-
+import TrendingProductCarousel from '../containers/TrendingProductCarousel';
 import Layout from "../components/Layout";
-
-const CategoryAndSlide = dynamic(() =>
-  import("../containers/CategoryAndSlide")
-);
-const Services = dynamic(() => import("../containers/Services"));
+import CategoryAndSlide from "../containers/CategoryAndSlide";
+import Services from "../containers/Services";
+import Devider from "../components/Devider";
 
 export default function Home() {
   return (
@@ -20,6 +17,8 @@ export default function Home() {
       <Layout>
         <CategoryAndSlide />
         <Services />
+        <Devider height='30px' />
+        <TrendingProductCarousel />
       </Layout>
     </>
   );

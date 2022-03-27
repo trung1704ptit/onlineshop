@@ -7,7 +7,7 @@ import CircleButton from "../Button/CircleButton";
 
 export default function SlideCarousel() {
   return (
-    <Carousel touch={true} className={styles['carousel-wraper']}>
+    <Carousel touch={true} className={styles["home-carousel-wraper"]}>
       <Carousel.Item>
         <img
           src="/images/slider-1.jpg"

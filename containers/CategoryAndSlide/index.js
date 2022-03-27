@@ -1,8 +1,6 @@
-import dynamic from "next/dynamic";
-import { Col, Container, Row } from "react-bootstrap";
 import { useMediaQuery } from "react-responsive";
-import Section from "../../components/Section";
 
+import Section from "../../components/Section";
 import SlideCarousel from "../../components/Carousel";
 import CategoryList from "../../components/Category/CategoryList";
 
