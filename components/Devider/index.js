@@ -1,3 +1,9 @@
-export default function Devider(props) {
-  return <div className="devider" style={{ ...props }}></div>;
+import Section from "../Section";
+
+export default function Devider() {
+  return (
+    <Section>
+      <div className="devider" />
+    </Section>
+  );
 }

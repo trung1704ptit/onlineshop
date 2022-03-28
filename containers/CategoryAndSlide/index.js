@@ -4,7 +4,6 @@ import Section from "../../components/Section";
 import SlideCarousel from "../../components/Carousel";
 import CategoryList from "../../components/Category/CategoryList";
 
-
 export default function CategoryAndSlide() {
   const isLargeDevice = useMediaQuery({
     query: "(min-width: 992px)",
@@ -20,5 +19,10 @@ export default function CategoryAndSlide() {
       </Section>
     );
   }
-  return <SlideCarousel />;
+
+  return (
+    <Section>
+      <SlideCarousel />
+    </Section>
+  );
 }

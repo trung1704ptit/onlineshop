@@ -15,10 +15,12 @@ export default function Home() {
       </Head>
 
       <Layout>
-        <CategoryAndSlide />
-        <Services />
-        <Devider height='30px' />
-        <TrendingProductCarousel />
+        <div>
+          <CategoryAndSlide></CategoryAndSlide>
+          <Services></Services>
+          <Devider></Devider>
+          <TrendingProductCarousel></TrendingProductCarousel>
+        </div>
       </Layout>
     </>
   );
