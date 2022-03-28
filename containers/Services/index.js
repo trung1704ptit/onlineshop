@@ -1,16 +1,28 @@
 import { Col, Container, Row } from "react-bootstrap";
 import { useMediaQuery } from "react-responsive";
-import { RiTruckLine, RiPaypalFill, RiCoupon3Line, RiGift2Line } from 'react-icons/ri';
+import {
+  RiTruckLine,
+  RiPaypalFill,
+  RiCoupon3Line,
+  RiGift2Line,
+} from "react-icons/ri";
 import { BsHandIndexThumb } from "react-icons/bs";
 import Section from "../../components/Section";
-import styles from '../../styles/services.module.scss';
+import styles from "../../styles/services.module.scss";
+import { useEffect, useState } from "react";
 
 export default function Services() {
   const isLargeDevice = useMediaQuery({
     query: "(min-width: 992px)",
   });
 
-  if (isLargeDevice) {
+  const [mounted, setMounted] = useState(false);
+
+  useEffect(() => {
+    setMounted(true), [];
+  });
+
+  if (mounted && isLargeDevice) {
     return (
       <Section>
         <div className={styles["service-wrapper"]}>

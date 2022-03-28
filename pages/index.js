@@ -1,5 +1,5 @@
 import Head from "next/head";
-import TrendingProductCarousel from '../containers/TrendingProductCarousel';
+import TrendingProductCarousel from "../containers/TrendingProductCarousel";
 import Layout from "../components/Layout";
 import CategoryAndSlide from "../containers/CategoryAndSlide";
 import Services from "../containers/Services";
@@ -16,10 +16,10 @@ export default function Home() {
 
       <Layout>
         <div>
-          <CategoryAndSlide></CategoryAndSlide>
-          <Services></Services>
-          <Devider></Devider>
-          <TrendingProductCarousel></TrendingProductCarousel>
+          <CategoryAndSlide />
+          <Services />
+          <Devider height={30}/>
+          <TrendingProductCarousel />
         </div>
       </Layout>
     </>

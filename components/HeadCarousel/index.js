@@ -1,11 +1,12 @@
 import Link from "next/link";
 import { Carousel } from "react-bootstrap";
 import { ImArrowRight2 } from "react-icons/im";
+import Slider from "react-slick";
 // import { HiArrowRight, HiArrowLeft } from "react-icons/hi";
 import styles from "../../styles/carousel.module.scss";
 import CircleButton from "../Button/CircleButton";
 
-export default function SlideCarousel() {
+export default function HeadCarousel() {
   return (
     <Carousel touch={true} className={styles["home-carousel-wraper"]}>
       <Carousel.Item>
@@ -60,4 +61,5 @@ export default function SlideCarousel() {
       </Carousel.Item>
     </Carousel>
   );
+
 }
