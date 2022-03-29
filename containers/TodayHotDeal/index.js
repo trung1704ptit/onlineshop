@@ -1,13 +1,9 @@
 import React from "react";
 import Slider from "react-slick";
 import { ImArrowRight2, ImArrowLeft2 } from "react-icons/im";
-import { MdOutlineKeyboardArrowRight } from "react-icons/md";
 import Section from "../../components/Section";
-import styles from "../../styles/product.module.scss";
-import CircleButton from "../../components/Button/CircleButton";
-import Link from "next/link";
 import Product from "../../components/Product";
-import { Col, Container, Row } from "react-bootstrap";
+import { Col } from "react-bootstrap";
 import ProductPreview from "../../components/ProductPreview";
 
 function SampleNextArrow(props) {
