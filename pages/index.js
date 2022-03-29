@@ -6,7 +6,8 @@ import Services from "../containers/Services";
 import Devider from "../components/Devider";
 import dynamic from "next/dynamic";
 
-const Brands = dynamic(() => import('../containers/BrandsCarousel'))
+const Brands = dynamic(() => import("../containers/BrandsCarousel"));
+const TodayHotDeal = dynamic(() => import("../containers/TodayHotDeal"));
 
 export default function Home() {
   return (
@@ -19,13 +20,16 @@ export default function Home() {
 
       <Layout>
         <>
-          <Devider height={30} className="d-block d-sm-none"/>
+          <Devider height={30} className="d-block d-sm-none" />
           <CategoryAndSlide />
           <Services />
-          <Devider height={30} />
+          <Devider height={40} />
           <TrendingProductCarousel />
-          <Devider height={30} />
+          <Devider height={40} />
+          <TodayHotDeal />
+          <Devider height={40} />
           <Brands />
+          <Devider height={40} />
         </>
       </Layout>
     </>

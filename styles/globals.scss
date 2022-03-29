@@ -26,6 +26,7 @@ a {
 .reset-link-style {
   color: inherit;
   transition: inherit;
+
   &:hover {
     color: inherit
   }
@@ -190,6 +191,9 @@ a:focus {
   display: inline-flex;
   align-items: center;
   transition: 0.2s ease-in-out;
+  justify-content: center;
+  text-align: center;
+  font-weight: 600;
 
   &:hover {
     background: #000;
@@ -201,11 +205,37 @@ a:focus {
   }
 }
 
+.btn-circle.small {
+  padding: 0.8em 1.3em;
+  font-size: 12px;
+}
+
+.btn-circle.medium {
+  padding: 1em 1.5em;
+  font-size: 13px;
+}
+
+.btn-circle.large {
+  padding: 1.3em 2em;
+  font-size: 14px;
+}
+
+.btn-circle.transparent {
+  background: transparent;
+  border: 2px solid $gray-color;
+
+  &:hover {
+    border-color: #000;
+    background: #000;
+  }
+}
+
+
 .slick-prev,
 .slick-next {
-  background: #fff;
-  width: 50px;
-  height: 50px;
+  background: rgb(245, 247, 252);
+  width: 45px;
+  height: 45px;
   border-radius: 50%;
   text-align: center;
   display: flex;
