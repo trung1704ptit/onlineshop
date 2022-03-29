@@ -15,12 +15,13 @@ export default function Home() {
       </Head>
 
       <Layout>
-        <div>
+        <>
+          <Devider height={30} className="d-block d-sm-none"/>
           <CategoryAndSlide />
           <Services />
-          <Devider height={30}/>
+          <Devider height={30} />
           <TrendingProductCarousel />
-        </div>
+        </>
       </Layout>
     </>
   );
