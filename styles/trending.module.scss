@@ -2,10 +2,37 @@
 
 .trending-product {
   .slide-block {
+    position: relative;
+    border-radius: $border-radius-base;
+    overflow: hidden;
+
     img {
       height: 200px;
+      width: 100%;
       object-fit: cover;
-      border-radius: $border-radius-base;
+    }
+
+    .overlay {
+      background: rgba(0, 0, 0, 0.2);
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+    }
+    .caption {
+      max-width: 200px;
+      text-align: left;
+      color: #fff;
+      position: absolute;
+      top: 50%;
+      left: 20%;
+      transform: translate(-20%, -50%);
+      z-index: 10;
+      h3 {
+        font-size: 24px;
+        margin-bottom: 30px;
+      }
     }
   }
 }

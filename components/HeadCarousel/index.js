@@ -8,7 +8,11 @@ import CircleButton from "../Button/CircleButton";
 
 export default function HeadCarousel() {
   return (
-    <Carousel touch={true} className={styles["home-carousel-wraper"]} interval={1000000000}>
+    <Carousel
+      touch={true}
+      className={styles["home-carousel-wraper"]}
+      interval={1000000000}
+    >
       <Carousel.Item>
         <img
           src="/images/slider-1.jpg"

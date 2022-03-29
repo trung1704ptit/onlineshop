@@ -23,6 +23,14 @@ a {
   position: relative;
 }
 
+.reset-link-style {
+  color: inherit;
+  transition: inherit;
+  &:hover {
+    color: inherit
+  }
+}
+
 .link-animated {
   position: relative;
 
@@ -179,7 +187,6 @@ a:focus {
   font-size: 13px;
   background: #fff;
   color: #000000;
-  padding: 1.3em 2em;
   display: inline-flex;
   align-items: center;
   transition: 0.2s ease-in-out;
