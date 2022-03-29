@@ -11,7 +11,7 @@ export default function HeadCarousel() {
     <Carousel
       touch={true}
       className={styles["home-carousel-wraper"]}
-      interval={1000000000}
+      interval={3000}
     >
       <Carousel.Item>
         <img

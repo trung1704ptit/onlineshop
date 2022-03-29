@@ -29,6 +29,8 @@ export default function TrendingProductCarousel() {
   const settings = {
     dots: false,
     infinite: true,
+    autoplay: true,
+    autoplaySpeed:3000,
     speed: 800,
     slidesToShow: 3,
     slidesToScroll: 1,
