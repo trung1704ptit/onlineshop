@@ -1,8 +1,8 @@
-import cx from 'classnames';
+import cx from "classnames";
 import Section from "../Section";
 
 export default function Devider(props) {
-  const { height, className } = props;
+  const { height = 15, className } = props;
   return (
     <Section>
       <div className={cx("devider", className)} style={{ height }} />

@@ -96,7 +96,6 @@ export default function TrendingProductCarousel() {
           <div className={styles["slide-block"]}>
             <img src="/images/queen.jpg" alt="slide-image" />
             <div className={styles["overlay"]} />
-
             <div className={styles["caption"]}>
               <h3>Chanel Gabriele Perfume.</h3>
               <Link href="#">
@@ -110,7 +109,6 @@ export default function TrendingProductCarousel() {
           <div className={styles["slide-block"]}>
             <img src="/images/women.jpg" alt="slide-image" />
             <div className={styles["overlay"]} />
-
             <div className={styles["caption"]}>
               <h3>Women's Lookbook</h3>
               <Link href="#">

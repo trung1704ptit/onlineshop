@@ -4,6 +4,9 @@ import Layout from "../components/Layout";
 import CategoryAndSlide from "../containers/CategoryAndSlide";
 import Services from "../containers/Services";
 import Devider from "../components/Devider";
+import dynamic from "next/dynamic";
+
+const Brands = dynamic(() => import('../containers/BrandsCarousel'))
 
 export default function Home() {
   return (
@@ -21,6 +24,8 @@ export default function Home() {
           <Services />
           <Devider height={30} />
           <TrendingProductCarousel />
+          <Devider height={30} />
+          <Brands />
         </>
       </Layout>
     </>
