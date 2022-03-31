@@ -45,10 +45,10 @@ export default function Home() {
           <Brands />
           <Devider height={60} />
 
-          <CategoryBannerFullWidth />
+          <ProductCountDown />
           <Devider height={60} />
 
-          <ProductCountDown />
+          <CategoryBannerFullWidth />
           <Devider height={40} />
         </>
       </Layout>

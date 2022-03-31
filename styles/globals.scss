@@ -208,6 +208,7 @@ a:focus {
 .btn-circle.small {
   padding: 0.6em 1.5em;
   font-size: 12px;
+
   svg {
     font-size: 18px;
   }
@@ -216,6 +217,7 @@ a:focus {
 .btn-circle.medium {
   padding: 0.8em 1.6em;
   font-size: 13px;
+
   svg {
     font-size: 18px;
   }
@@ -294,6 +296,7 @@ a:focus {
   font-weight: bold;
   margin: 0 10px;
   color: $second-color;
+
   &:nth-child(1) {
     margin: 0 10px 0 0;
   }
