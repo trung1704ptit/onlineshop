@@ -15,6 +15,10 @@ const TrendingProductCarousel = dynamic(() =>
 );
 const ProductCountDown =  dynamic(() => import('../containers/ProductCountDown'));
 
+const CategoryBannerFullWidth = dynamic(() =>
+  import("../containers/CategoryBanner/CategoryBannerFullWidth")
+);
+
 export default function Home() {
   return (
     <>
@@ -39,6 +43,9 @@ export default function Home() {
           <Devider height={60} />
 
           <Brands />
+          <Devider height={60} />
+
+          <CategoryBannerFullWidth />
           <Devider height={60} />
 
           <ProductCountDown />
