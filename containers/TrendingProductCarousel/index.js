@@ -1,70 +1,53 @@
 import React from "react";
 import Slider from "react-slick";
-import { ImArrowRight2, ImArrowLeft2 } from "react-icons/im";
+import Link from "next/link";
 import { MdOutlineKeyboardArrowRight } from "react-icons/md";
 import Section from "../../components/Section";
 import styles from "../../styles/trending.module.scss";
 import CircleButton from "../../components/Button/CircleButton";
-import Link from "next/link";
+import { NextArrow, PrevArrow } from '../../utils/helper';
 
-function SampleNextArrow(props) {
-  const { className, style, onClick } = props;
-  return (
-    <div className={className} onClick={onClick}>
-      <ImArrowRight2 />
-    </div>
-  );
-}
+const settings = {
+  dots: false,
+  infinite: true,
+  autoplay: true,
+  autoplaySpeed:7000,
+  speed: 800,
+  slidesToShow: 3,
+  slidesToScroll: 1,
+  initialSlide: 0,
+  nextArrow: <NextArrow />,
+  prevArrow: <PrevArrow />,
+  responsive: [
+    {
+      breakpoint: 1024,
+      settings: {
+        slidesToShow: 3,
+        slidesToScroll: 3,
+        infinite: true,
+        dots: true,
+      },
+    },
+    {
+      breakpoint: 600,
+      settings: {
+        slidesToShow: 2,
+        slidesToScroll: 2,
+        initialSlide: 2,
+      },
+    },
+    {
+      breakpoint: 480,
+      settings: {
+        slidesToShow: 1,
+        slidesToScroll: 1,
+      },
+    },
+  ],
+};
 
-function SamplePrevArrow(props) {
-  const { className, style, onClick } = props;
-  return (
-    <div className={className} onClick={onClick}>
-      <ImArrowLeft2 />
-    </div>
-  );
-}
 
 export default function TrendingProductCarousel() {
-  const settings = {
-    dots: false,
-    infinite: true,
-    autoplay: true,
-    autoplaySpeed:3000,
-    speed: 800,
-    slidesToShow: 3,
-    slidesToScroll: 1,
-    initialSlide: 0,
-    nextArrow: <SampleNextArrow className={styles["carousel-button"]} />,
-    prevArrow: <SamplePrevArrow className={styles["carousel-button"]} />,
-    responsive: [
-      {
-        breakpoint: 1024,
-        settings: {
-          slidesToShow: 3,
-          slidesToScroll: 3,
-          infinite: true,
-          dots: true,
-        },
-      },
-      {
-        breakpoint: 600,
-        settings: {
-          slidesToShow: 2,
-          slidesToScroll: 2,
-          initialSlide: 2,
-        },
-      },
-      {
-        breakpoint: 480,
-        settings: {
-          slidesToShow: 1,
-          slidesToScroll: 1,
-        },
-      },
-    ],
-  };
-
   return (
     <Section>
       <div className={styles["trending-product"]}>

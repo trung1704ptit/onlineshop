@@ -21,11 +21,11 @@ export default function DesktopCart() {
         <div className={styles["cart-dropdown"]}>
           <span className={styles["circle-item"]}>
             <BsCart2 />
-            <span className={styles["cart-total"]}>0</span>
+            <span className={styles["cart-total"]}>3</span>
           </span>
           <div className={styles["cart-total-cost"]}>
             <span className={styles["cart-total-text"]}>Total</span>
-            <span>$0.00</span>
+            <span>$45.00</span>
           </div>
           <div
             className={cx(

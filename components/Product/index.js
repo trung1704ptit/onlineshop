@@ -1,31 +1,35 @@
 import Link from "next/link";
 import styles from "../../styles/product.module.scss";
 import CircleButton from "../Button/CircleButton";
-import { BsCartPlus } from "react-icons/bs";
 
-export default function Product() {
+export default function Product({ data }) {
   return (
-    <Link href="#">
-      <div className={styles["product-item"]}>
-        <figure>
+    <div className={styles["product-item"]}>
+      <figure>
+        {data.oldPrice !== data.currentPrice ? (
           <span className={styles["label"]}>Sale!</span>
-          <img
-            src="https://retailshop.liquid-themes.com/staging/wp-content/uploads/2020/05/prod-3@2x-300x208.jpg"
-            alt="product-img"
-          />
-        </figure>
-        <div className={styles["product-category"]}>
-          <Link href="#">Clothing</Link>
+        ) : null}
+        <img src={data.images[0]} alt="product-img" />
+      </figure>
+
+      <div className={styles["product-bottom"]}>
+        <div>
+          <div className={styles["product-category"]}>
+            <Link href="#">{data.categories[0]}</Link>
+          </div>
+          <h3 className={styles["title"]}>{data.title}</h3>
+          <div className={styles["product-price"]}>
+            <span className={styles["old-price"]}>${data.oldPrice}</span>
+            <span className={styles["current-price"]}>
+              ${data.currentPrice}
+            </span>
+          </div>
         </div>
-        <h3 className={styles["title"]}>GoPro Action Camera 32GB Waterproof</h3>
-        <div className={styles["product-price"]}>
-          <span className={styles["old-price"]}>$20.00</span>
-          <span className={styles["current-price"]}>$18.00</span>
-        </div>
+
         <CircleButton size="medium" style="transparent">
           Add to cart
         </CircleButton>
       </div>
-    </Link>
+    </div>
   );
 }

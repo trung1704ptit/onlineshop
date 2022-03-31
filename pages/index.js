@@ -25,7 +25,7 @@ export default function Home() {
           <Services />
           <Devider height={40} />
           <TrendingProductCarousel />
-          <Devider height={40} />
+          <Devider height={60} />
           <TodayHotDeal />
           <Devider height={40} />
           <Brands />

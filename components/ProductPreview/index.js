@@ -1,5 +1,5 @@
-import { MdOutlineKeyboardArrowRight } from "react-icons/md";
-import styles from "../../styles/product.module.scss";
+import { MdKeyboardArrowRight } from "react-icons/md";
+import styles from "../../styles/product-carousel.module.scss";
 import CircleButton from "../Button/CircleButton";
 
 export default function ProductPreview({ imageUrl }) {
@@ -13,7 +13,7 @@ export default function ProductPreview({ imageUrl }) {
       <div className={styles["caption"]}>
         <h2>New Arrivals in Fashion.</h2>
         <CircleButton size="medium">
-          Shop Women&apos;s <MdOutlineKeyboardArrowRight />
+          Shop Women&apos;s <MdKeyboardArrowRight />
         </CircleButton>
       </div>
     </div>

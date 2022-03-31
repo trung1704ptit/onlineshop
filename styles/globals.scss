@@ -202,17 +202,24 @@ a:focus {
 
   svg {
     margin-left: 7px;
+    font-size: inherit;
   }
 }
 
 .btn-circle.small {
   padding: 0.8em 1.3em;
   font-size: 12px;
+  svg {
+    font-size: 18px;
+  }
 }
 
 .btn-circle.medium {
   padding: 1em 1.5em;
   font-size: 13px;
+  svg {
+    font-size: 18px;
+  }
 }
 
 .btn-circle.large {
@@ -257,6 +264,7 @@ a:focus {
 }
 
 .slick-slide>div {
+  height: 100%;
   margin: 0 10px;
 }
 
@@ -266,4 +274,12 @@ a:focus {
 
 .devider {
   min-height: 15px;
+}
+
+.slick-track {
+  display: flex !important;
+}
+
+.slick-slide {
+  height: inherit !important;
 }
