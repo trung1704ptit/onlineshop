@@ -1,15 +1,15 @@
 import React from "react";
 import Slider from "react-slick";
-import Countdown from "react-countdown";
 import Link from "next/link";
 import { Col, Row } from "react-bootstrap";
-import { MdOutlineKeyboardArrowRight } from 'react-icons/md';
+import { MdOutlineKeyboardArrowRight } from "react-icons/md";
 import Section from "../../components/Section";
 import Product from "../../components/Product";
 import ProductPreview from "../../components/ProductPreview";
 import { products } from "./mockProducts";
 import styles from "../../styles/product-carousel.module.scss";
-import { NextArrow, PrevArrow } from '../../utils/helper';
+import { NextArrow, PrevArrow } from "../../utils/helper";
+import Countdown from "../../components/CountDown";
 
 const settings = {
   dots: false,
@@ -45,24 +45,6 @@ const settings = {
   ],
 };
 
-const Completionist = () => <Link href="#">Shop Now!</Link>;
-
-// Renderer callback with condition
-const renderer = ({ days, hours, minutes, seconds, completed }) => {
-  if (completed) {
-    return <Completionist />;
-  } else {
-    return (
-      <div className={styles["time-counter"]}>
-        <span className={styles["highlight"]}>{days}</span> Days
-        <span className={styles["highlight"]}>{hours}</span> Hours
-        <span className={styles["highlight"]}>{minutes}</span> Minutes
-        <span className={styles["highlight"]}>{seconds}</span> Seconds
-      </div>
-    );
-  }
-};
-
 export default function TodayHotDeal() {
   return (
     <Section>
@@ -73,13 +55,14 @@ export default function TodayHotDeal() {
           </Col>
           <Col md={3} xs={12}>
             <Link href="#">
-              <a className="link-animated">See More <MdOutlineKeyboardArrowRight /></a>
+              <a className="link-animated">
+                See More <MdOutlineKeyboardArrowRight />
+              </a>
             </Link>
           </Col>
           <Col md={6} xs={12}>
             <Countdown
               date={new Date(new Date().getTime() + 5 * 24 * 60 * 60 * 1000)}
-              renderer={renderer}
             />
           </Col>
         </Row>

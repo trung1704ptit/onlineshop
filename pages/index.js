@@ -1,13 +1,19 @@
 import Head from "next/head";
-import TrendingProductCarousel from "../containers/TrendingProductCarousel";
-import Layout from "../components/Layout";
-import CategoryAndSlide from "../containers/CategoryAndSlide";
-import Services from "../containers/Services";
-import Devider from "../components/Devider";
 import dynamic from "next/dynamic";
+
+import Layout from "../components/Layout";
+import Devider from "../components/Devider";
 
 const Brands = dynamic(() => import("../containers/BrandsCarousel"));
 const TodayHotDeal = dynamic(() => import("../containers/TodayHotDeal"));
+const CategoryAndSlide = dynamic(() =>
+  import("../containers/CategoryAndSlide")
+);
+const Services = dynamic(() => import("../containers/Services"));
+const TrendingProductCarousel = dynamic(() =>
+  import("../containers/TrendingProductCarousel")
+);
+const ProductCountDown =  dynamic(() => import('../containers/ProductCountDown'));
 
 export default function Home() {
   return (
@@ -22,13 +28,20 @@ export default function Home() {
         <>
           <Devider height={30} className="d-block d-sm-none" />
           <CategoryAndSlide />
+
           <Services />
           <Devider height={40} />
+
           <TrendingProductCarousel />
           <Devider height={60} />
+
           <TodayHotDeal />
-          <Devider height={40} />
+          <Devider height={60} />
+
           <Brands />
+          <Devider height={60} />
+
+          <ProductCountDown />
           <Devider height={40} />
         </>
       </Layout>

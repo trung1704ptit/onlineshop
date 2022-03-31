@@ -37,6 +37,7 @@ export default function BrandsCarousel() {
 
   return (
     <Section>
+      <h6 className="text-center mb-4">ANY GLOBAL BRAND YOU NEED, AT YOUR FINGERTIPS.</h6>
       <Slider {...settings}>
         <img
           src="/images/brands/brand1.jpg"
