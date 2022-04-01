@@ -18,7 +18,7 @@ export default function DesktopHeader() {
             <Link href="/">
               <a>
                 <img
-                  src="https://retailshop.liquid-themes.com/staging/wp-content/uploads/2020/06/hubmarket-logo-dark.svg"
+                  src="/images/logo.svg"
                   alt="logo"
                 />
               </a>

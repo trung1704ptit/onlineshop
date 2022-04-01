@@ -1,5 +1,60 @@
 @import './variables.module.scss';
 
 .footer {
-  color: $primary-color;
+  color: rgb(180 182 182);
+  background: #282d2f;
+  width: 100%;
+  .first-content {
+    padding: 40px 0 30px 0;
+  }
+  .head {
+    color: #fff;
+    margin: 30px 0;
+  }
+  li {
+    margin-bottom: 8px;
+    a:hover {
+      color: #fff
+    }
+  }
+  .socials {
+    li {
+      display: inline-block;
+      margin-right: 20px;
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      text-align: center;
+      transition: 0.2s all;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      &:hover {
+        background: #fff;
+        color: #000;
+        a {
+          color: #000;
+        }
+      }
+
+      a {
+        font-size: 30px;
+        color: #fff;
+      }
+    }
+  }
+  .second-content {
+    border-top: 1px solid #373c3e;
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    padding: 20px 0;
+    li {
+      display: inline-block;
+      margin-right: 20px;
+    }
+    img {
+      height: 30px;
+    }
+  }
 }
