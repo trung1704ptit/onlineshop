@@ -18,6 +18,7 @@ const ProductCountDown =  dynamic(() => import('../containers/ProductCountDown')
 const CategoryBannerFullWidth = dynamic(() =>
   import("../containers/CategoryBanner/CategoryBannerFullWidth")
 );
+const BestSeller =  dynamic(() => import('../containers/BestSeller'));
 
 export default function Home() {
   return (
@@ -42,13 +43,16 @@ export default function Home() {
           <TodayHotDeal />
           <Devider height={60} />
 
-          <Brands />
-          <Devider height={60} />
-
           <ProductCountDown />
           <Devider height={60} />
 
+          <BestSeller />
+          <Devider height={60} />
+
           <CategoryBannerFullWidth />
+          <Devider height={60} />
+
+          <Brands />
           <Devider height={40} />
         </>
       </Layout>

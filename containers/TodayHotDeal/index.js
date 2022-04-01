@@ -51,7 +51,7 @@ export default function TodayHotDeal() {
       <div className={styles["product-carousel-heading"]}>
         <Row>
           <Col md={3} xs={12}>
-            <h3>Today's Hot Deal</h3>
+            <h2>Today's Hot Deal</h2>
           </Col>
           <Col md={3} xs={12}>
             <Link href="#">
@@ -74,7 +74,8 @@ export default function TodayHotDeal() {
 
       <Col md={9} xs={12}>
         <Slider {...settings}>
-          {products && products.map((item) => <Product data={item} />)}
+          {products &&
+            products.map((item) => <Product data={item} key={item.id} />)}
         </Slider>
       </Col>
     </Section>
