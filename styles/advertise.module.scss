@@ -1,0 +1,68 @@
+@import './variables.module.scss';
+
+.advertise1 {
+  padding: 15px;
+  border-radius: $border-radius-base;
+  background: $light-gray-color;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+
+  .left-content {
+    font-size: 16px;
+    margin-bottom: 30px;
+
+    .highlight {
+      background: $green-color;
+      padding: 3px 10px;
+      color: #000;
+      border-radius: 20px;
+    }
+  }
+
+  .right-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+
+    .price-and-message {
+      display: block;
+      flex-direction: column;
+      justify-content: center;
+      text-align: left;
+      margin: 0;
+
+      .price {
+        color: $third-color;
+        font-size: 24px;
+        font-weight: 600;
+      }
+
+      .message {
+        color: $dark-color;
+      }
+    }
+  }
+
+  @media screen and(min-width: 768px) {
+    padding: 15px 30px;
+    flex-wrap: initial;
+
+    .left-content {
+      margin: 0;
+    }
+
+    .right-content {
+      justify-content: initial;
+      width: initial;
+      justify-content: end;
+
+      .price-and-message {
+        margin-right: 30px;
+      }
+    }
+  }
+
+}
