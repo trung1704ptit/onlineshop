@@ -18,6 +18,9 @@ export default function HeaderCategories() {
           <div className={styles["right-side"]}>
             <ul className="list-style-none">
               <li>
+                <Link href="/shop">Shop</Link>
+              </li>
+              <li>
                 <Link href="#">Hot Deals</Link>
                 <span className={"link-badge orange"}>Sale</span>
               </li>
