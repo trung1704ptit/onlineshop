@@ -2,7 +2,7 @@ import { Col, Container, Row } from "react-bootstrap";
 import Link from "next/link";
 import { MdOutlineKeyboardArrowDown } from "react-icons/md";
 import Product from "../../components/Product";
-import { products } from "../TodayHotDeal/mockProducts";
+import { products } from "../../data/products";
 
 export default function BestSeller() {
   return (
@@ -16,7 +16,7 @@ export default function BestSeller() {
         <Row>
           {products &&
             products.map((item) => (
-              <Col xs={6} md={3} key={item.id}>
+              <Col xs={6} md={4} xl={3} key={item.id}>
                 <div className="pb-4 h-100">
                   <Product data={item} />
                 </div>

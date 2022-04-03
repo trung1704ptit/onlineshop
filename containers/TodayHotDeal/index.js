@@ -6,7 +6,7 @@ import { MdOutlineKeyboardArrowRight } from "react-icons/md";
 import Section from "../../components/Section";
 import Product from "../../components/Product";
 import ProductPreview from "../../components/ProductPreview";
-import { products } from "./mockProducts";
+import { products } from "../../data/products";
 import styles from "../../styles/product-carousel.module.scss";
 import { NextArrow, PrevArrow } from "../../utils/helper";
 import Countdown from "../../components/CountDown";
@@ -26,20 +26,10 @@ const settings = {
   prevArrow: <PrevArrow />,
   responsive: [
     {
-      breakpoint: 1024,
-      settings: {
-        slidesToShow: 3,
-        slidesToScroll: 3,
-        infinite: true,
-        dots: true,
-      },
-    },
-    {
-      breakpoint: 600,
+      breakpoint: 992,
       settings: {
         slidesToShow: 2,
-        slidesToScroll: 2,
-        initialSlide: 2,
+        slidesToScroll: 1,
       },
     },
   ],

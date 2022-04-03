@@ -1,6 +1,6 @@
 export const products = [
   {
-    id: "1",
+    id: "1023211",
     title: "GoPro Action Camera 32GB Waterproof",
     oldPrice: "20.00",
     currentPrice: "18.00",
@@ -8,7 +8,7 @@ export const products = [
     categories: ["Electrics"],
   },
   {
-    id: "2",
+    id: "22324532",
     title: "Non-ticking Wooden  Wall Clock",
     oldPrice: "20.00",
     currentPrice: "18.00",
@@ -16,7 +16,7 @@ export const products = [
     categories: ["Clothing"],
   },
   {
-    id: "3",
+    id: "3433343",
     title: "Bag",
     oldPrice: "20.00",
     currentPrice: "18.00",
@@ -24,7 +24,7 @@ export const products = [
     categories: ["Watch"],
   },
   {
-    id: "4",
+    id: "4543333",
     title: "Shoose",
     oldPrice: "20.00",
     currentPrice: "18.00",
@@ -32,7 +32,7 @@ export const products = [
     categories: ["Home"],
   },
   {
-    id: "5",
+    id: "56333",
     title: "Macbook",
     oldPrice: "20.00",
     currentPrice: "18.00",
@@ -40,7 +40,7 @@ export const products = [
     categories: ["Laptop"],
   },
   {
-    id: "6",
+    id: "6543323",
     title: "Smart Watch",
     oldPrice: "20.00",
     currentPrice: "18.00",
@@ -48,7 +48,7 @@ export const products = [
     categories: ["Home"],
   },
   {
-    id: "7",
+    id: "76543",
     title: "Fast charger",
     oldPrice: "20.00",
     currentPrice: "18.00",
@@ -56,7 +56,7 @@ export const products = [
     categories: ["Electrics"],
   },
   {
-    id: "8",
+    id: "834333",
     title: "Apple Imac",
     oldPrice: "20.00",
     currentPrice: "18.00",
