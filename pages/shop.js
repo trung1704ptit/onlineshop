@@ -5,6 +5,7 @@ import Layout from "../components/Layout";
 import Devider from "../components/Devider";
 
 const AdvertiseBanner = dynamic(() => import('../containers/AdvertiseBanner'));
+const ProductListWithFilter = dynamic(() => import('../containers/ProductListWithFilter'));
 
 export default function Shop() {
   return (
@@ -19,6 +20,8 @@ export default function Shop() {
         <>
           <AdvertiseBanner />
           <Devider height={20} />
+
+          <ProductListWithFilter />
         </>
       </Layout>
     </>

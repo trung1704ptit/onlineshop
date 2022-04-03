@@ -1,8 +1,7 @@
 import { Container } from "react-bootstrap";
 import { MdOutlineKeyboardArrowRight } from "react-icons/md";
-// import { Col, Row } from 'react-bootstrap';
+
 import CircleButton from "../../components/Button/CircleButton";
-import Section from "../../components/Section";
 import styles from "../../styles/category.module.scss";
 
 export default function CategoryBannerFullWidth() {
