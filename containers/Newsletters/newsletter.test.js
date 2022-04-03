@@ -1,5 +1,4 @@
 import Newsletter from "@/containers/Newsletters";
-import preloadAll from "jest-next-dynamic";
 
 import { render, screen } from "../../test/test-utils";
 
@@ -7,7 +6,6 @@ describe("News Letter", () => {
   let container, getByText;
 
   beforeEach(async () => {
-    await preloadAll();
     const element = render(<Newsletter />);
     container = element.container;
     getByText = element.getByText;
