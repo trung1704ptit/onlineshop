@@ -7,7 +7,7 @@ export default function Newsletter() {
   };
 
   return (
-    <section>
+    <section data-test="newsletterComponent">
       <div
         className={styles["newsletter"]}
         style={{ backgroundImage: "url(/images/pattern-2.png)" }}
@@ -23,7 +23,7 @@ export default function Newsletter() {
             </Col>
             <Col xs={12} md={6}>
               <form className={styles["search-form"]} onSubmit={onSubmit}>
-                <input placeholder="Your email address" required />
+                <input placeholder="Your email address" required role="newsletterInput"/>
                 <button>Sign Up</button>
               </form>
             </Col>

@@ -15,6 +15,7 @@
     "classnames": "^2.3.1",
     "lodash": "^4.17.21",
     "next": "12.1.0",
+    "prop-types": "^15.8.1",
     "react": "17.0.2",
     "react-bootstrap": "^2.2.1",
     "react-countdown": "^2.3.2",
@@ -29,10 +30,12 @@
     "@testing-library/jest-dom": "^5.16.3",
     "@testing-library/react": "12.1.2",
     "babel-jest": "^27.5.1",
+    "check-prop-types": "^1.1.2",
     "cypress": "^9.5.3",
     "eslint": "8.11.0",
     "eslint-config-next": "12.1.0",
     "jest": "27.4.5",
+    "jest-next-dynamic": "^1.0.1",
     "sass": "^1.49.9",
     "url-loader": "^4.1.1"
   }

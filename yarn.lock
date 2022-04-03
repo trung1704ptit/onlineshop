@@ -1444,6 +1444,11 @@ check-more-types@^2.24.0:
   resolved "https://registry.yarnpkg.com/check-more-types/-/check-more-types-2.24.0.tgz#1420ffb10fd444dcfc79b43891bbfffd32a84600"
   integrity sha1-FCD/sQ/URNz8ebQ4kbv//TKoRgA=
 
+check-prop-types@^1.1.2:
+  version "1.1.2"
+  resolved "https://registry.yarnpkg.com/check-prop-types/-/check-prop-types-1.1.2.tgz#c42df4fbdb509fbd4d8a102d113bb0ca01c21e67"
+  integrity sha512-hGDrZ1yhRgKuP1yzZ5sUX/PPmlKBLOF1GyF0Z008Sienko3BFZmlCXnmq+npRTIL/WlFCUzThyd+F5PQnnT1ug==
+
 "chokidar@>=3.0.0 <4.0.0":
   version "3.5.3"
   resolved "https://registry.npmjs.org/chokidar/-/chokidar-3.5.3.tgz"
@@ -3134,6 +3139,11 @@ jest-mock@^27.5.1:
   dependencies:
     "@jest/types" "^27.5.1"
     "@types/node" "*"
+
+jest-next-dynamic@^1.0.1:
+  version "1.0.1"
+  resolved "https://registry.yarnpkg.com/jest-next-dynamic/-/jest-next-dynamic-1.0.1.tgz#b8af62babeda3cff0cf0a6e0af6de3a9dfc8d6cd"
+  integrity sha512-peo9yRvUn8u6PZro9AzzjxpgUc+1NZhZMan+1xzk7Bz1vA0d5IC2Iw8E7bkC2cwl9AG3XxTaqPVAXbC3aMbVkw==
 
 jest-pnp-resolver@^1.2.2:
   version "1.2.2"

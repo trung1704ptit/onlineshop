@@ -1,13 +1,15 @@
 import React from 'react';
-
-// Using render and screen from test-utils.js instead of
-// @testing-library/react
+import preloadAll from 'jest-next-dynamic' 
 
 import { screen, render } from '../test-utils';
 
 import Home from '@/pages/index.js';
 
 describe('HomePage', () => {
+  beforeAll(async () => {
+    await preloadAll()
+  })
+
   it('should render the text',  () => {
     render(<Home />)
 
