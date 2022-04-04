@@ -1,65 +1,77 @@
-import { Carousel } from "react-bootstrap";
+import { NextArrow, PrevArrow } from "@utils/helper";
 import { ImArrowRight2 } from "react-icons/im";
+import Slider from "react-slick";
 import styles from "../../styles/carousel.module.scss";
 import CircleButton from "../Button/CircleButton";
 
+const settings = {
+  dots: false,
+  infinite: true,
+  autoplay: true,
+  autoplaySpeed: 7000,
+  speed: 800,
+  slidesToShow: 1,
+  slidesToScroll: 1,
+  initialSlide: 0,
+  nextArrow: <NextArrow />,
+  prevArrow: <PrevArrow />,
+};
+
 export default function HeadCarousel() {
   return (
-    <Carousel
-      touch={true}
-      className={styles["home-carousel-wraper"]}
-      interval={3000}
-    >
-      <Carousel.Item>
-        <img
-          src="/images/slider-1.jpg"
-          alt="First slide"
-          className={styles["image"]}
-        />
-        <Carousel.Caption className={styles["carousel-caption"]}>
-          <h3>Beauty and Personal Care</h3>
-          <p className={styles["sub-title"]}>
-            Subscribe and get 20% off your first{" "}
-          </p>
-          <CircleButton>
-            Samsung Galaxy S22 <ImArrowRight2 />
-          </CircleButton>
-        </Carousel.Caption>
-      </Carousel.Item>
-      <Carousel.Item>
-        <img
-          src="/images/slider-2.jpg"
-          alt="Second slide"
-          className={styles["image"]}
-        />
+    <div className={styles["home-carousel-wraper"]}>
+      <Slider {...settings}>
+        <div className={styles["carousel-item"]}>
+          <img
+            src="/images/slider-1.jpg"
+            alt="First slide"
+            className={styles["image"]}
+          />
+          <div className={styles["carousel-caption"]}>
+            <h3>Beauty and Personal Care</h3>
+            <p className={styles["sub-title"]}>
+              Subscribe and get 20% off your first{" "}
+            </p>
+            <CircleButton>
+              Samsung Galaxy S22 <ImArrowRight2 />
+            </CircleButton>
+          </div>
+        </div>
 
-        <Carousel.Caption className={styles["carousel-caption"]}>
-          <h3>Toys and Games</h3>
-          <p className={styles["sub-title"]}>
-            Subscribe and get 20% off your first{" "}
-          </p>
-          <CircleButton>
-            Samsung Galaxy S22 <ImArrowRight2 />
-          </CircleButton>
-        </Carousel.Caption>
-      </Carousel.Item>
-      <Carousel.Item>
-        <img
-          src="/images/slider-3.jpg"
-          alt="Third slide"
-          className={styles["image"]}
-        />
+        <div className={styles["carousel-item"]}>
+          <img
+            src="/images/slider-2.jpg"
+            alt="First slide"
+            className={styles["image"]}
+          />
+          <div className={styles["carousel-caption"]}>
+            <h3>Beauty and Personal Care</h3>
+            <p className={styles["sub-title"]}>
+              Subscribe and get 20% off your first{" "}
+            </p>
+            <CircleButton>
+              Samsung Galaxy S22 <ImArrowRight2 />
+            </CircleButton>
+          </div>
+        </div>
 
-        <Carousel.Caption className={styles["carousel-caption"]}>
-          <h3>Shop activity trackers and smartwatches</h3>
-          <p className={styles["sub-title"]}>
-            Subscribe and get 20% off your first
-          </p>
-          <CircleButton>
-            Samsung Galaxy S22 <ImArrowRight2 />
-          </CircleButton>
-        </Carousel.Caption>
-      </Carousel.Item>
-    </Carousel>
+        <div className={styles["carousel-item"]}>
+          <img
+            src="/images/slider-3.jpg"
+            alt="First slide"
+            className={styles["image"]}
+          />
+          <div className={styles["carousel-caption"]}>
+            <h3>Beauty and Personal Care</h3>
+            <p className={styles["sub-title"]}>
+              Subscribe and get 20% off your first{" "}
+            </p>
+            <CircleButton>
+              Samsung Galaxy S22 <ImArrowRight2 />
+            </CircleButton>
+          </div>
+        </div>
+      </Slider>
+    </div>
   );
 }

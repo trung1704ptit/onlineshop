@@ -13,6 +13,9 @@
   }
   li {
     margin-bottom: 8px;
+    a {
+      color: inherit;
+    }
     a:hover {
       color: #fff
     }
@@ -55,6 +58,12 @@
     }
     img {
       height: 30px;
+    }
+    li a {
+      color: inherit;
+      &:hover {
+        color: #fff
+      }
     }
   }
 }

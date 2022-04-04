@@ -1,10 +1,12 @@
 @import './variables.module.scss';
 
 .home-carousel-wraper {
-  flex: 1;
+  min-width: 500px;
+
   .carousel-item {
     border-radius: $border-radius-base;
     overflow: hidden;
+    position: relative;
   }
 
   .image {
@@ -24,15 +26,19 @@
     text-align: left;
     right: unset;
     max-width: 300px;
+    position: absolute;
+    color: #fff;
 
     h3 {
       font-size: 46px;
       font-weight: 600;
+      color: inherit;
     }
 
     .sub-title {
       font-size: 18px;
       margin-bottom: 2em;
+      color: inherit;
     }
 
     @media screen and (min-width: 768px) {
