@@ -16,10 +16,12 @@
       align-items: center;
       justify-content: space-between;
       border-right: 1px solid $gray-color;
+
       &:last-of-type {
         border: none;
         padding: 0 0 0 10px;
       }
+
       .show-text {
         color: $dark-color;
         padding-left: 10px;
@@ -34,6 +36,87 @@
     .list-icon {
       font-size: 20px;
       margin-left: 15px;
+    }
+  }
+}
+
+.left-filter {
+  border-right: 1px solid $gray-color;
+  min-width: 300px;
+
+  .filter-item {
+    padding-right: 15px;
+
+    .title {
+      font-size: 14px;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      margin-bottom: 20px;
+    }
+  }
+
+  img {
+    width: 100%;
+    border-radius: $border-radius-base;
+  }
+
+  h5 {
+    margin: 20px 0 0 0;
+  }
+
+  .price-slider {
+    width: 100%;
+
+    .text-price {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      margin-top: 20px;
+      font-size: 14px;
+
+      .text {
+        color: $dark-color;
+      }
+    }
+  }
+
+  .color-options {
+    display: inline-flex;
+    justify-content: flex-start;
+    align-items: center;
+
+    .color-item {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      border-radius: 50%;
+      width: 32px;
+      height: 32px;
+      cursor: pointer;
+      transition: 0.2s ease-in-out;
+      border: 2px solid transparent;
+
+      .color {
+        width: 24px;
+        height: 24px;
+        border-radius: 50%;
+        svg {
+          color: #fff;
+        }
+      }
+
+      &:hover {
+        border: 2px solid #000;
+      }
+
+      &.active {
+        border: 2px solid #000;
+      }
+    }
+
+    .color-item.active {
+      border: 2px solid #000;
     }
   }
 }

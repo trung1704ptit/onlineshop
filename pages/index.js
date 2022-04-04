@@ -2,7 +2,7 @@ import Head from "next/head";
 import dynamic from "next/dynamic";
 
 import Layout from "../components/Layout";
-import Devider from "../components/Devider";
+import Space from "../components/Space";
 
 const Brands = dynamic(() => import("../containers/BrandsCarousel"));
 const TodayHotDeal = dynamic(() => import("../containers/TodayHotDeal"));
@@ -13,12 +13,14 @@ const Services = dynamic(() => import("../containers/Services"));
 const TrendingProductCarousel = dynamic(() =>
   import("../containers/TrendingProductCarousel")
 );
-const ProductCountDown =  dynamic(() => import('../containers/ProductCountDown'));
+const ProductCountDown = dynamic(() =>
+  import("../containers/ProductCountDown")
+);
 
 const CategoryBannerFullWidth = dynamic(() =>
   import("../containers/CategoryBanner/CategoryBannerFullWidth")
 );
-const BestSeller =  dynamic(() => import('../containers/BestSeller'));
+const BestSeller = dynamic(() => import("../containers/BestSeller"));
 
 export default function Home() {
   return (
@@ -31,29 +33,29 @@ export default function Home() {
 
       <Layout>
         <>
-          <Devider height={30} className="d-block d-sm-none" />
+          <Space height={30} className="d-block d-sm-none" />
           <CategoryAndSlide />
 
           <Services />
-          <Devider height={40} />
+          <Space height={40} />
 
           <TrendingProductCarousel />
-          <Devider height={60} />
+          <Space height={60} />
 
           <TodayHotDeal />
-          <Devider height={60} />
+          <Space height={60} />
 
           <ProductCountDown />
-          <Devider height={60} />
+          <Space height={60} />
 
           <BestSeller />
-          <Devider height={60} />
+          <Space height={60} />
 
           <CategoryBannerFullWidth />
-          <Devider height={60} />
+          <Space height={60} />
 
           <Brands />
-          <Devider height={40} />
+          <Space height={40} />
         </>
       </Layout>
     </>

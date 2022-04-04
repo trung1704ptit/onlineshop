@@ -41,4 +41,5 @@ export const FILTER = {
   ],
   prices: {},
   product_status: [],
+  colors: ['green', 'red', 'orange', 'black', 'blue', 'purple']
 };

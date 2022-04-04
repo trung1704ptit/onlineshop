@@ -2,7 +2,7 @@ import Head from "next/head";
 import dynamic from "next/dynamic";
 
 import Layout from "../components/Layout";
-import Devider from "../components/Devider";
+import Space from "../components/Space";
 
 const AdvertiseBanner = dynamic(() => import('../containers/AdvertiseBanner'));
 const ProductListWithFilter = dynamic(() => import('../containers/ProductListWithFilter'));
@@ -19,9 +19,10 @@ export default function Shop() {
       <Layout>
         <>
           <AdvertiseBanner />
-          <Devider height={20} />
+          <Space height={40} />
 
           <ProductListWithFilter />
+          <Space height={60} />
         </>
       </Layout>
     </>
