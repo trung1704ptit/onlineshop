@@ -1,4 +1,5 @@
 import CircleButton from "@components/Button/CircleButton";
+import CategorySelectTree from "@components/CategorySelectTree";
 import ColorOptions from "@components/ColorOptions";
 import styles from "@styles/filter.module.scss";
 import { Divider, Slider } from "antd";
@@ -10,6 +11,10 @@ export default function LeftFilter() {
       <div className={styles["filter-item"]}>
         <h5>Product Categories</h5>
       </div>
+
+      <Divider />
+
+      <CategorySelectTree />
 
       <Divider />
 
