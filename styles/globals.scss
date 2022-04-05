@@ -32,6 +32,29 @@ a {
   }
 }
 
+.logo {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  img {
+    height: 40px;
+  }
+  .name {
+    font-size: 24px;
+    font-weight: bold;
+    color: inherit;
+    margin-left: 5px;
+    font-family: 'Jost';
+  }
+}
+
+.logo.white {
+  color: #fff;
+}
+.logo.black {
+  color: #000;
+}
+
 .link-animated {
   position: relative;
 

@@ -9,7 +9,6 @@ class MyDocument extends Document {
             href="https://fonts.googleapis.com/css2?family=Jost&family=Lato&display=swap"
             rel="stylesheet"
           />
-          <link rel="stylesheet" href="bootstrap-4-utilities.min.css" />
         </Head>
         <body>
           <Main />

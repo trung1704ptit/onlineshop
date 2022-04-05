@@ -3,6 +3,7 @@ import dynamic from "next/dynamic";
 import { BsSuitHeart } from "react-icons/bs";
 import cx from "classnames";
 import styles from "../../styles/header.module.scss";
+import Logo from "@components/Logo";
 
 const MyAccount = dynamic(() => import("./MyAccount"));
 const DesktopSearch = dynamic(() => import("../SearchBar/DesktopSearch"));
@@ -17,10 +18,7 @@ export default function DesktopHeader() {
           <div className={styles["header-logo"]}>
             <Link href="/">
               <a>
-                <img
-                  src="/images/logo.svg"
-                  alt="logo"
-                />
+                <Logo />
               </a>
             </Link>
           </div>

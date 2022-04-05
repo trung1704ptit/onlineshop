@@ -10,7 +10,10 @@
 
 .main-header {
   .header-logo {
-    padding: 30px 0;
+    padding: 20px 0;
+    img {
+      height: 50px;
+    }
   }
 
   .col {
@@ -240,7 +243,6 @@
 
   .mobile-header-item {
     display: flex;
-    flex: 0 0 33.333333333333%;
 
     .left-item {
       padding: 2px;

@@ -7,6 +7,7 @@ import {
   TiSocialPinterest,
 } from "react-icons/ti";
 import styles from "../../styles/footer.module.scss";
+import Logo from "@components/Logo";
 
 const { Title } = Typography;
 
@@ -17,7 +18,9 @@ export default function Footer() {
         <div className={styles["first-content"]}>
           <Row>
             <Col sx={25} md={10}>
-              <img src="/images/white-logo.svg" className={styles["head"]} />
+              <div>
+                <Logo white />
+              </div>
               <p>
                 Spanish fast-fashion retailer based in store pick up points, the
                 company founded in 1997.

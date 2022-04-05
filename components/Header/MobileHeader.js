@@ -2,6 +2,7 @@ import Link from "next/link";
 import cx from "classnames";
 import dynamic from "next/dynamic";
 import styles from "../../styles/header.module.scss";
+import Logo from "@components/Logo";
 
 const MobileSearch = dynamic(() => import("../SearchBar/MobileSearch"));
 const MobileCart = dynamic(() => import("../Cart/MobileCart"));
@@ -22,10 +23,7 @@ export default function MobileHeader() {
 
       <div className={styles["mobile-header-item"]}>
         <Link href="/">
-          <img
-            src="https://retailshop.liquid-themes.com/staging/wp-content/uploads/2020/06/hubmarket-logo-dark.svg"
-            alt="logo"
-          />
+          <Logo />
         </Link>
       </div>
 
