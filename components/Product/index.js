@@ -1,10 +1,16 @@
 import Link from "next/link";
 import styles from "../../styles/product.module.scss";
 import CircleButton from "../Button/CircleButton";
+import classNames from "classnames";
 
-export default function Product({ data }) {
+export default function Product({ data, border = true }) {
   return (
-    <div className={styles["product-item"]}>
+    <div
+      className={classNames(
+        styles["product-item"],
+        border ? "border" : "border-0"
+      )}
+    >
       <figure>
         {data.oldPrice !== data.currentPrice ? (
           <span className={styles["label"]}>Sale!</span>

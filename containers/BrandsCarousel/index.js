@@ -1,6 +1,9 @@
 import Slider from "react-slick";
+import { Typography } from "antd";
 import Section from "../../components/Section";
 import styles from "../../styles/brands.module.scss";
+
+const { Title } = Typography;
 
 export default function BrandsCarousel() {
   const settings = {
@@ -19,9 +22,8 @@ export default function BrandsCarousel() {
         breakpoint: 1024,
         settings: {
           slidesToShow: 3,
-          slidesToScroll: 3,
+          slidesToScroll: 1,
           infinite: true,
-          dots: true,
         },
       },
       {
@@ -43,7 +45,9 @@ export default function BrandsCarousel() {
 
   return (
     <Section>
-      <h6 className="text-center mb-4">ANY GLOBAL BRAND YOU NEED, AT YOUR FINGERTIPS.</h6>
+      <Title level={5} className="text-center mb-4">
+        ANY GLOBAL BRAND YOU NEED, AT YOUR FINGERTIPS.
+      </Title>
       <Slider {...settings}>
         <img
           src="/images/brands/brand1.jpg"

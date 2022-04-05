@@ -11,7 +11,7 @@ export default function CategoryList() {
         {mockList &&
           mockList.map((item) => (
             <li key={item.id} className={styles["category-item"]}>
-              <Link href="#">
+              <Link href="/shop">
                 <a className={styles['category-link']}>
                   <item.icon size="25" className={styles["icon"]} />
                   {item.name}

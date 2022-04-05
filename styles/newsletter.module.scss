@@ -4,21 +4,26 @@
   background-color: #111314;
   background-repeat: no-repeat;
   background-position: 20% 30%;
-  padding: 2.5rem 0;
-  h2 {
+  padding: 3.5rem 0;
+
+  h3 {
     color: #fff;
   }
+
   p {
     color: $gray-color;
   }
+
   .highlight {
     color: $second-color;
     font-weight: 600;
   }
+
   .search-form {
     border-radius: $border-radius-base;
     overflow: hidden;
     display: flex;
+
     input {
       background: #fff;
       padding: 15px 20px;
@@ -27,12 +32,15 @@
       border: none;
       flex: 1;
     }
+
     button {
       padding: 15px 20px;
       border: none;
       background: $second-color;
-      color: #000;
+      color: #fff;
       transition: 0.2s ease-in-out;
+      cursor: pointer;
+
       &:hover {
         color: #fff;
         background: #000;

@@ -4,12 +4,15 @@ import ColorOptions from "@components/ColorOptions";
 import styles from "@styles/filter.module.scss";
 import { Divider, Slider } from "antd";
 import cx from "classnames";
+import { Typography } from "antd";
+
+const { Title } = Typography;
 
 export default function LeftFilter() {
   return (
     <div className={styles["left-filter"]}>
       <div className={styles["filter-item"]}>
-        <h5>Product Categories</h5>
+        <Title level={5}>Product Categories</Title>
       </div>
 
       <Divider />

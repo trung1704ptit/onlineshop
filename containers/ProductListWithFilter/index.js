@@ -1,7 +1,7 @@
 import TopFilter from "@components/Filter/TopFilter";
 import LeftFilter from "@components/Filter/LeftFilter";
 import Section from "@components/Section";
-import { Row, Col, Divider } from "antd";
+import { Row, Col } from "antd";
 import styles from "@styles/shop.module.scss";
 
 import { products } from "../../data/products";
@@ -17,7 +17,7 @@ export default function ProductListWithFilter() {
           <Row gutter={16}>
             {products &&
               products.map((item) => (
-                <Col xs={12} sm={8} md={6} key={item.id}>
+                <Col xs={24} sm={12} xl={6} key={item.id}>
                   <div className="pb-4 h-100">
                     <Product data={item} />
                   </div>

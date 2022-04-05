@@ -1,8 +1,11 @@
 import { Container } from "react-bootstrap";
 import { MdOutlineKeyboardArrowRight } from "react-icons/md";
+import { Typography } from "antd";
 
 import CircleButton from "../../components/Button/CircleButton";
 import styles from "../../styles/category.module.scss";
+
+const { Title } = Typography;
 
 export default function CategoryBannerFullWidth() {
   return (
@@ -14,7 +17,7 @@ export default function CategoryBannerFullWidth() {
         >
           <div className="pos-rel h-100">
             <div className={styles["content"]}>
-              <h2>Street style has its own rules</h2>
+              <Title level={2}>Street style has its own rules</Title>
               <p className={styles["sub-title"]}>Retro game your styles!</p>
               <CircleButton>
                 Shop Now <MdOutlineKeyboardArrowRight />

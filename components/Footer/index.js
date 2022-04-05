@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { Col, Container, Row } from "react-bootstrap";
+import { Col, Row, Typography } from "antd";
 import {
   TiSocialFacebook,
   TiSocialInstagram,
@@ -8,13 +8,15 @@ import {
 } from "react-icons/ti";
 import styles from "../../styles/footer.module.scss";
 
+const { Title } = Typography;
+
 export default function Footer() {
   return (
     <footer className={styles.footer}>
-      <Container>
+      <div className="container">
         <div className={styles["first-content"]}>
           <Row>
-            <Col sx={12} md={5}>
+            <Col sx={25} md={10}>
               <img src="/images/white-logo.svg" className={styles["head"]} />
               <p>
                 Spanish fast-fashion retailer based in store pick up points, the
@@ -56,10 +58,12 @@ export default function Footer() {
               <div className="search-bar"></div>
             </Col>
 
-            <Col sx={12} md={1}></Col>
+            <Col sx={25} md={2}></Col>
 
-            <Col sx={12} md={2}>
-              <h6 className={styles["head"]}>Marketplace</h6>
+            <Col sx={25} md={4}>
+              <Title level={5} className={styles["head"]}>
+                Marketplace
+              </Title>
               <ul className="list-style-none">
                 <li>
                   <Link href="#">In-store Shop</Link>
@@ -78,8 +82,10 @@ export default function Footer() {
                 </li>
               </ul>
             </Col>
-            <Col sx={12} md={2}>
-              <h6 className={styles["head"]}>Customer Care</h6>
+            <Col sx={25} md={4}>
+              <Title level={5} className={styles["head"]}>
+                Customer Care
+              </Title>
               <ul className="list-style-none">
                 <li>
                   <Link href="#">In-store Shop</Link>
@@ -98,8 +104,10 @@ export default function Footer() {
                 </li>
               </ul>
             </Col>
-            <Col sx={12} md={2}>
-              <h6 className={styles["head"]}>About Online shop</h6>
+            <Col sx={25} md={4}>
+              <Title level={5} className={styles["head"]}>
+                About Online shop
+              </Title>
               <ul className="list-style-none">
                 <li>
                   <Link href="#">Track you order</Link>
@@ -140,7 +148,7 @@ export default function Footer() {
             <img src="/images/payments.png" />
           </div>
         </div>
-      </Container>
+      </div>
     </footer>
   );
 }

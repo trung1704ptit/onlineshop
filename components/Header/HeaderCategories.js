@@ -21,15 +21,15 @@ export default function HeaderCategories() {
                 <Link href="/shop">Shop</Link>
               </li>
               <li>
-                <Link href="#">Hot Deals</Link>
+                <Link href="/shop">Hot Deals</Link>
                 <span className={"link-badge orange"}>Sale</span>
               </li>
               <li>
-                <Link href="#">Best Sellers</Link>
+                <Link href="/shop">Best Sellers</Link>
                 {/* <span className={"link-badge red"}>Hot</span> */}
               </li>
               <li>
-                <Link href="#">New Arrivals</Link>
+                <Link href="/shop">New Arrivals</Link>
                 <span className={"link-badge green"}>New</span>
               </li>
             </ul>

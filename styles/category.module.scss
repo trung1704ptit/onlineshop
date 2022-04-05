@@ -2,9 +2,9 @@
 
 .category-list {
   display: block;
-  border-top: 1px solid $gray-color;
-  border-left: 1px solid $gray-color;
-  border-right: 1px solid $gray-color;
+  // border-top: 1px solid $gray-color;
+  // border-left: 1px solid $gray-color;
+  // border-right: 1px solid $gray-color;
   position: relative;
   width: 100%;
 
@@ -20,7 +20,13 @@
       align-items: center;
       height: 55px;
       border-bottom: 1px solid $gray-color;
+      border-right: 1px solid $gray-color;
+      border-left: 1px solid $gray-color;
       transition: all ease-in-out 0.1s;
+
+      &:nth-of-type(1) {
+        border-top: 1px solid $gray-color;
+      }
 
       &:hover {
         background: $gray-color;
