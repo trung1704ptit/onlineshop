@@ -1,4 +1,3 @@
-import { Container } from "react-bootstrap";
 import { MdOutlineKeyboardArrowRight } from "react-icons/md";
 import { Typography } from "antd";
 
@@ -10,7 +9,7 @@ const { Title } = Typography;
 export default function CategoryBannerFullWidth() {
   return (
     <section>
-      <Container>
+      <div className="container">
         <div
           className={styles["category-banner-full-width"]}
           style={{ backgroundImage: "url(/images/banner-street-style.jpg)" }}
@@ -25,7 +24,7 @@ export default function CategoryBannerFullWidth() {
             </div>
           </div>
         </div>
-      </Container>
+      </div>
     </section>
   );
 }

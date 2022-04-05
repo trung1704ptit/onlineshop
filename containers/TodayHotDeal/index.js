@@ -43,11 +43,11 @@ export default function TodayHotDeal() {
     <Section>
       <div className={styles["product-carousel-heading"]}>
         <Row gutter={16}>
-          <Col md={6} xs={12}>
+          <Col xs={18} sm={6}>
             <Title level={2}>Today's Hot Deal</Title>
           </Col>
 
-          <Col md={2} xs={12}>
+          <Col xs={6} sm={2}>
             <Link href="#">
               <a className="link-animated">
                 See More <MdOutlineKeyboardArrowRight />
@@ -55,7 +55,7 @@ export default function TodayHotDeal() {
             </Link>
           </Col>
 
-          <Col md={16} xs={12}>
+          <Col xs={24} sm={16}>
             <Countdown
               date={new Date(new Date().getTime() + 5 * 24 * 60 * 60 * 1000)}
             />
@@ -64,15 +64,15 @@ export default function TodayHotDeal() {
       </div>
 
       <Row gutter={32}>
-        <Col md={6} xs={12}>
+        <Col xs={24} sm={6}>
           <ProductPreview imageUrl="/images/products/women.jpg" />
         </Col>
 
-        <Col md={18} xs={12}>
+        <Col xs={24} sm={18}>
           <Slider {...settings}>
             {products &&
               products.map((item) => (
-                <Product data={item} key={item.id} border={true} />
+                <Product data={item} key={item.id} border={false} />
               ))}
           </Slider>
         </Col>

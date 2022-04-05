@@ -2,10 +2,13 @@ import React from "react";
 import Slider from "react-slick";
 import Link from "next/link";
 import { MdOutlineKeyboardArrowRight } from "react-icons/md";
+import Title from "antd/lib/typography/Title";
+
 import Section from "../../components/Section";
 import styles from "../../styles/trending.module.scss";
 import CircleButton from "../../components/Button/CircleButton";
 import { NextArrow, PrevArrow } from '../../utils/helper';
+
 
 const settings = {
   dots: false,
@@ -55,7 +58,7 @@ export default function TrendingProductCarousel() {
             <img src="/images/vr.jpg" alt="slide-image" />
             <div className={styles["overlay"]} />
             <div className={styles["caption"]}>
-              <h3>PlayStation 4 VR has arrived.</h3>
+              <Title level={4}>PlayStation 4 VR has arrived.</Title>
               <Link href="#">
                 <CircleButton size="medium">
                   See Products <MdOutlineKeyboardArrowRight />
@@ -68,7 +71,7 @@ export default function TrendingProductCarousel() {
             <img src="/images/phone.jpg" alt="slide-image" />
             <div className={styles["overlay"]} />
             <div className={styles["caption"]}>
-              <h3>Galaxy S22 Series.</h3>
+              <Title level={4}>Galaxy S22 Series.</Title>
               <Link href="#">
                 <CircleButton size="medium">
                   See Products <MdOutlineKeyboardArrowRight />
@@ -81,7 +84,7 @@ export default function TrendingProductCarousel() {
             <img src="/images/queen.jpg" alt="slide-image" />
             <div className={styles["overlay"]} />
             <div className={styles["caption"]}>
-              <h3>Chanel Gabriele Perfume.</h3>
+              <Title level={4}>Chanel Gabriele Perfume.</Title>
               <Link href="#">
                 <CircleButton size="medium">
                   See Products <MdOutlineKeyboardArrowRight />
@@ -94,7 +97,7 @@ export default function TrendingProductCarousel() {
             <img src="/images/women.jpg" alt="slide-image" />
             <div className={styles["overlay"]} />
             <div className={styles["caption"]}>
-              <h3>Women's Lookbook</h3>
+              <Title level={4}>Women's Lookbook</Title>
               <Link href="#">
                 <CircleButton size="medium">
                   See Products <MdOutlineKeyboardArrowRight />

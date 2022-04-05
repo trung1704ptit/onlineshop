@@ -4,6 +4,8 @@ import Slider from "react-slick";
 import styles from "../../styles/carousel.module.scss";
 import CircleButton from "../Button/CircleButton";
 
+import Title from "antd/lib/typography/Title";
+
 const settings = {
   dots: false,
   infinite: true,
@@ -28,7 +30,7 @@ export default function HeadCarousel() {
             className={styles["image"]}
           />
           <div className={styles["carousel-caption"]}>
-            <h3>Beauty and Personal Care</h3>
+            <Title level={3}>Beauty and Personal Care</Title>
             <p className={styles["sub-title"]}>
               Subscribe and get 20% off your first{" "}
             </p>
@@ -45,7 +47,7 @@ export default function HeadCarousel() {
             className={styles["image"]}
           />
           <div className={styles["carousel-caption"]}>
-            <h3>Beauty and Personal Care</h3>
+            <Title level={3}>Beauty and Personal Care</Title>
             <p className={styles["sub-title"]}>
               Subscribe and get 20% off your first{" "}
             </p>
@@ -62,7 +64,7 @@ export default function HeadCarousel() {
             className={styles["image"]}
           />
           <div className={styles["carousel-caption"]}>
-            <h3>Beauty and Personal Care</h3>
+            <Title level={3}>Beauty and Personal Care</Title>
             <p className={styles["sub-title"]}>
               Subscribe and get 20% off your first{" "}
             </p>

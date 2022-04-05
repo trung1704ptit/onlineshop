@@ -1,4 +1,3 @@
-import { Col, Container, Row } from "react-bootstrap";
 import { useMediaQuery } from "react-responsive";
 import {
   RiTruckLine,

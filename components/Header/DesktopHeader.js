@@ -26,7 +26,7 @@ export default function DesktopHeader() {
           </div>
           <DesktopSearch />
 
-          <div className="col-auto head-col d-flex">
+          <div className="col-auto head-col d-flex flex-fill justify-content-end">
             <DesktopCart />
 
             {/*  wishlist */}
