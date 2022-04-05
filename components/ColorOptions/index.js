@@ -36,11 +36,11 @@ export default function ColorOptions() {
             isActive(item) ? "active" : ""
           )}
           onClick={() => handleClick(item)}
+          key={item}
         >
           <div
             style={{ background: item }}
             className={styles["color"]}
-            key={item}
           >
             {isActive(item) ? <BsCheckLg /> : null}
           </div>
