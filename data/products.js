@@ -4,7 +4,7 @@ export const products = [
     title: "GoPro Action Camera 32GB Waterproof",
     oldPrice: "20.00",
     currentPrice: "18.00",
-    images: ["/images/products/gopro.jpg"],
+    images: ["/images/products/gopro.jpg", "/images/products/chair.jpg"],
     categories: ["Electrics"],
   },
   {
@@ -12,7 +12,10 @@ export const products = [
     title: "Non-ticking Wooden  Wall Clock",
     oldPrice: "20.00",
     currentPrice: "18.00",
-    images: ["/images/products/glasses.jpg"],
+    images: [
+      "/images/products/glasses.jpg",
+      "/images/products/apple-airpod.jpg",
+    ],
     categories: ["Clothing"],
   },
   {
@@ -28,7 +31,7 @@ export const products = [
     title: "Shoose",
     oldPrice: "20.00",
     currentPrice: "18.00",
-    images: ["/images/products/chair.jpg"],
+    images: ["/images/products/chair.jpg", "/images/products/glasses.jpg"],
     categories: ["Home"],
   },
   {
@@ -36,7 +39,7 @@ export const products = [
     title: "Macbook",
     oldPrice: "20.00",
     currentPrice: "18.00",
-    images: ["/images/products/macbook.jpg"],
+    images: ["/images/products/macbook.jpg", "/images/products/charger.jpg"],
     categories: ["Laptop"],
   },
   {
@@ -52,7 +55,10 @@ export const products = [
     title: "Fast charger",
     oldPrice: "20.00",
     currentPrice: "18.00",
-    images: ["/images/products/charger.jpg"],
+    images: [
+      "/images/products/charger.jpg",
+      "/images/products/smartwatch2.jpg",
+    ],
     categories: ["Electrics"],
   },
   {
@@ -60,7 +66,7 @@ export const products = [
     title: "Apple Imac",
     oldPrice: "20.00",
     currentPrice: "18.00",
-    images: ["/images/products/imac.jpg"],
+    images: ["/images/products/imac.jpg", "/images/products/charger.jpg"],
     categories: ["Laptop"],
   },
   {
@@ -68,7 +74,10 @@ export const products = [
     title: "Apple AirPod",
     oldPrice: "20.00",
     currentPrice: "18.00",
-    images: ["/images/products/apple-airpod.jpg"],
+    images: [
+      "/images/products/apple-airpod.jpg",
+      "/images/products/smartwatch2.jpg",
+    ],
     categories: ["Laptop"],
   },
   {
@@ -76,7 +85,10 @@ export const products = [
     title: 'Dell Monitor 24"',
     oldPrice: "265.00",
     currentPrice: "250.00",
-    images: ["/images/products/dell-monitor.webp"],
+    images: [
+      "/images/products/dell-monitor.webp",
+      "/images/products/charger.jpg",
+    ],
     categories: ["Laptop"],
   },
   {
@@ -84,7 +96,7 @@ export const products = [
     title: "Canon",
     oldPrice: "20.00",
     currentPrice: "18.00",
-    images: ["/images/products/canon.webp"],
+    images: ["/images/products/canon.webp", "/images/products/charger.jpg"],
     categories: ["Laptop"],
   },
   {
@@ -92,7 +104,7 @@ export const products = [
     title: "Headphone",
     oldPrice: "20.00",
     currentPrice: "18.00",
-    images: ["/images/products/headphone.webp"],
+    images: ["/images/products/headphone.webp", "/images/products/charger.jpg"],
     categories: ["Laptop"],
   },
   {
@@ -100,7 +112,10 @@ export const products = [
     title: "Sony play station 4",
     oldPrice: "20.00",
     currentPrice: "18.00",
-    images: ["/images/products/sony-play-station.webp"],
+    images: [
+      "/images/products/sony-play-station.webp",
+      "/images/products/charger.jpg",
+    ],
     categories: ["Laptop"],
   },
   {
@@ -108,7 +123,7 @@ export const products = [
     title: "TV JVC 3",
     oldPrice: "20.00",
     currentPrice: "18.00",
-    images: ["/images/products/jvc3.webp"],
+    images: ["/images/products/jvc3.webp", "/images/products/charger.jpg"],
     categories: ["Laptop"],
   },
   {
@@ -116,7 +131,7 @@ export const products = [
     title: "Sound Echo",
     oldPrice: "20.00",
     currentPrice: "18.00",
-    images: ["/images/products/echo2.webp"],
+    images: ["/images/products/echo2.webp", "/images/products/charger.jpg"],
     categories: ["Laptop"],
   },
   {
@@ -124,7 +139,10 @@ export const products = [
     title: "Sport Shoes",
     oldPrice: "20.00",
     currentPrice: "18.00",
-    images: ["/images/products/sport-shoes.jpg"],
+    images: [
+      "/images/products/sport-shoes.jpg",
+      "/images/products/charger.jpg",
+    ],
     categories: ["Laptop"],
   },
 ];
