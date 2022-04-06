@@ -1,11 +1,11 @@
-import Newsletter from "@/containers/Newsletters";
+import Newsletter from "@containers/Newsletters";
 
-import { render, screen } from "../../test/test-utils";
+import { render, screen } from "../../__tests__/utils";
 
 describe("News Letter", () => {
   let container, getByText;
 
-  beforeEach(async () => {
+  beforeEach(() => {
     const element = render(<Newsletter />);
     container = element.container;
     getByText = element.getByText;

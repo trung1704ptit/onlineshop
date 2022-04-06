@@ -1,9 +1,9 @@
 import React from 'react';
 import preloadAll from 'jest-next-dynamic' 
 
-import { screen, render } from '../test-utils';
+import { screen, render } from '../utils';
 
-import Home from '@/pages/index.js';
+import Home from '@pages/index.js';
 
 describe('HomePage', () => {
   beforeAll(async () => {
