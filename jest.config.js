@@ -15,6 +15,7 @@ const customJestConfig = {
     "^@pages/(.*)$": "<rootDir>/pages/$1",
     "^@utils/(.*)$": "<rootDir>/utils/$1",
     "^@__tests__/(.*)$": "<rootDir>/__tests__/$1",
+    "^@redux/(.*)$": "<rootDir>/redux/$1",
   },
   testEnvironment: "jest-environment-jsdom",
   modulePathIgnorePatterns: ["cypress"],
