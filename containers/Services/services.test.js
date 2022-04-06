@@ -1,7 +1,11 @@
-import { render, screen } from '@__tests__/utils';
+import { render, screen, cleanup } from '@__tests__/utils';
 import Services from '@containers/Services';
 
 describe('Services', () => {
+  afterEach(() => {
+    cleanup()
+  })
+
   let container, getByText;
 
   beforeEach(async () => {

@@ -14,6 +14,7 @@ export default function Services() {
     <Section>
       <div
         className={classNames(styles["service-wrapper"], "d-none d-md-flex")}
+        data-testid="services"
       >
         <div className={styles["service-block"]} role="serviceItem">
           <RiTruckLine />
