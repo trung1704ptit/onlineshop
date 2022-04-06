@@ -5,21 +5,23 @@ import styles from "@styles/filter.module.scss";
 import { Divider, Slider } from "antd";
 import cx from "classnames";
 import { Typography } from "antd";
+import classNames from "classnames";
 
 const { Title } = Typography;
 
 export default function LeftFilter() {
   return (
     <div className={styles["left-filter"]}>
-      <div className={styles["filter-item"]}>
-        <Title level={5}>Product Categories</Title>
+      <div className={classNames(styles["filter-item"], "d-none d-xl-block")}>
+        <Title level={5}>Filters products</Title>
+        <Divider />
       </div>
 
-      <Divider />
-
-      <CategorySelectTree />
-
-      <Divider />
+      <div className={styles["filter-item"]}>
+        <h6 className={styles["title"]}>Filter by Categories</h6>
+        <CategorySelectTree />
+        <Divider />
+      </div>
 
       <div className={cx(styles["price-slider"], styles["filter-item"])}>
         <h6 className={styles["title"]}>Filter by price</h6>
@@ -34,20 +36,12 @@ export default function LeftFilter() {
             Filter
           </CircleButton>
         </div>
+        <Divider />
       </div>
-
-      <Divider />
 
       <div className={styles["filter-item"]}>
         <h6 className={styles["title"]}>Filter by color</h6>
         <ColorOptions />
-      </div>
-
-      <Divider />
-
-      {/* Ads */}
-      <div className={styles["filter-item"]}>
-        <img src="/images/others/1.png" alt="banner" />
       </div>
     </div>
   );

@@ -18,6 +18,7 @@ export default function Advertise() {
             Do not miss this special opportunity today
           </div>
         </div>
+
         <CircleButton size="small" style="transparent">
           Shop Now
         </CircleButton>

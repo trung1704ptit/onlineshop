@@ -3,7 +3,7 @@
 .top-filter {
   display: flex;
   justify-content: space-between;
-  align-items: baseline;
+  align-items: center;
   padding-bottom: 10px;
   border-bottom: 1px solid $gray-color;
 
@@ -15,9 +15,9 @@
       padding: 0 10px;
       align-items: center;
       justify-content: space-between;
-      border-right: 1px solid $gray-color;
+      border-left: 1px solid $gray-color;
 
-      &:last-of-type {
+      &:first-of-type {
         border: none;
         padding: 0 0 0 10px;
       }
@@ -41,8 +41,8 @@
 }
 
 .left-filter {
-  border-right: 1px solid $gray-color;
   min-width: 300px;
+  padding-bottom: 40px;
 
   .filter-item {
     padding-right: 15px;
@@ -61,7 +61,8 @@
   }
 
   h5 {
-    margin: 20px 0 0 0;
+    margin: 0;
+    padding-top: 25px;
   }
 
   .price-slider {
@@ -104,6 +105,7 @@
         display: flex;
         justify-content: center;
         align-items: center;
+
         svg {
           color: #fff;
         }

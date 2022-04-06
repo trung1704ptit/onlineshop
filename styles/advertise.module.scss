@@ -10,8 +10,8 @@
   flex-wrap: wrap;
 
   .left-content {
-    font-size: 16px;
-    margin-bottom: 30px;
+    font-size: 14px;
+    margin-bottom: 20px;
 
     .highlight {
       background: $green-color;
@@ -20,6 +20,10 @@
       border-radius: 20px;
       margin: 0 3px;
     }
+
+    @media screen and(min-width: 768px) {
+      font-size: 16px;
+    }
   }
 
   .right-content {
@@ -27,13 +31,14 @@
     align-items: center;
     justify-content: space-between;
     width: 100%;
-
+    display: block;
+    
     .price-and-message {
       display: block;
       flex-direction: column;
       justify-content: center;
       text-align: left;
-      margin: 0;
+      margin: 0 0 20px 0;
 
       .price {
         color: $third-color;
@@ -56,12 +61,13 @@
     }
 
     .right-content {
+      display: flex;
       justify-content: initial;
       width: initial;
       justify-content: end;
 
       .price-and-message {
-        margin-right: 30px;
+        margin: 0 30px 0 0;
       }
     }
   }

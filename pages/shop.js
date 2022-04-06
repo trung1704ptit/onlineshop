@@ -18,6 +18,8 @@ export default function Shop() {
 
       <Layout>
         <>
+          <Space height={16} className="d-md-none"/>
+
           <AdvertiseBanner />
           <Space height={40} />
 

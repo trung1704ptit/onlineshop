@@ -17,7 +17,7 @@ export default function Footer() {
       <div className="container">
         <div className={styles["first-content"]}>
           <Row>
-            <Col sx={25} md={10}>
+            <Col sm={24} md={12}>
               <div>
                 <Logo white />
               </div>
@@ -61,9 +61,8 @@ export default function Footer() {
               <div className="search-bar"></div>
             </Col>
 
-            <Col sx={25} md={2}></Col>
 
-            <Col sx={25} md={4}>
+            <Col sm={24} lg={4}>
               <Title level={5} className={styles["head"]}>
                 Marketplace
               </Title>
@@ -85,7 +84,8 @@ export default function Footer() {
                 </li>
               </ul>
             </Col>
-            <Col sx={25} md={4}>
+
+            <Col sm={24} lg={4}>
               <Title level={5} className={styles["head"]}>
                 Customer Care
               </Title>
@@ -107,7 +107,8 @@ export default function Footer() {
                 </li>
               </ul>
             </Col>
-            <Col sx={25} md={4}>
+
+            <Col sm={24} lg={4}>
               <Title level={5} className={styles["head"]}>
                 About Online shop
               </Title>
