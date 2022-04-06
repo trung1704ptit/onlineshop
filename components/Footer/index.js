@@ -62,7 +62,7 @@ export default function Footer() {
             </Col>
 
 
-            <Col sm={24} lg={4}>
+            <Col xs={24} md={4}>
               <Title level={5} className={styles["head"]}>
                 Marketplace
               </Title>
@@ -85,7 +85,7 @@ export default function Footer() {
               </ul>
             </Col>
 
-            <Col sm={24} lg={4}>
+            <Col xs={24} md={4}>
               <Title level={5} className={styles["head"]}>
                 Customer Care
               </Title>
@@ -108,7 +108,7 @@ export default function Footer() {
               </ul>
             </Col>
 
-            <Col sm={24} lg={4}>
+            <Col xs={24} md={4}>
               <Title level={5} className={styles["head"]}>
                 About Online shop
               </Title>
