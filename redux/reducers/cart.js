@@ -3,14 +3,17 @@ import * as types from "../types";
 const initialState = {
   products: [],
   total: 0,
-  totalPrice: 0.0
+  totalPrice: 0.0,
 };
 
 const cart = (state = initialState, action) => {
+  let products = state.products;
+  let product = action.payload;
+  let total = 0;
+  let totalPrice = 0;
+
   switch (action.type) {
     case types.ADD_TO_CART:
-      let products = state.products;
-      const product = action.payload;
       const exist = products.find((item) => item.id === action.payload.id);
 
       if (exist) {
@@ -18,11 +21,11 @@ const cart = (state = initialState, action) => {
           item.id === exist.id ? { ...exist, cartQty: exist.cartQty + 1 } : item
         );
       } else {
-        products = [...products, { ...product, cartQty: 1 }]
+        products = [...products, { ...product, cartQty: 1 }];
       }
 
-      const total = products.reduce((t, { cartQty }) => t + cartQty, 0);
-      const totalPrice = products.reduce(
+      total = products.reduce((t, { cartQty }) => t + cartQty, 0);
+      totalPrice = products.reduce(
         (t, { currentPrice }) => t + parseFloat(currentPrice),
         0
       );
@@ -31,7 +34,23 @@ const cart = (state = initialState, action) => {
         ...state,
         products,
         total,
-        totalPrice
+        totalPrice,
+      };
+
+    case types.REMOVE_FROM_CART:
+      const newProducts = products.filter((item) => item.id !== product.id);
+
+      total = newProducts.reduce((t, { cartQty }) => t + cartQty, 0);
+      totalPrice = newProducts.reduce(
+        (t, { currentPrice }) => t + parseFloat(currentPrice),
+        0
+      );
+
+      return {
+        ...state,
+        products: newProducts,
+        total,
+        totalPrice,
       };
 
     default:

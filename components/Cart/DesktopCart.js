@@ -39,7 +39,7 @@ export default function DesktopCart() {
           <div
             className={cx(
               "module-dropdown",
-              // "dropdown-fade-onhover",
+              "dropdown-fade-onhover",
               "right",
               active ? "active" : ""
             )}

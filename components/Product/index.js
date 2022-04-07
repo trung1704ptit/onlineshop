@@ -45,7 +45,7 @@ export default function Product({ data, border = true }) {
     message.loading({ content: `Adding ${title} to Cart`, key });
     setTimeout(() => {
       message.success({ content: `Added ${title}  to Cart`, key, duration: 2 });
-    }, 1000);
+    }, 800);
   };
 
   return (
