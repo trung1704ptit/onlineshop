@@ -1,11 +1,18 @@
 import Link from "next/link";
-import styles from "../../styles/product.module.scss";
-import CircleButton from "../Button/CircleButton";
 import classNames from "classnames";
 import { useState } from "react";
+import { useDispatch } from "react-redux";
+import { message } from "antd";
+
+import { addToCart } from "@redux/actions/cart";
+import styles from "../../styles/product.module.scss";
+import CircleButton from "../Button/CircleButton";
+
+const key = "updatable";
 
 export default function Product({ data, border = true }) {
   const [imgSrc, setImgSrc] = useState("");
+  const dispatch = useDispatch();
 
   useState(() => {
     if (data && data.images) {
@@ -27,6 +34,18 @@ export default function Product({ data, border = true }) {
         setImgSrc(data.images[0]);
       }
     }
+  };
+
+  const handleAddCart = () => {
+    dispatch(addToCart(data));
+    openMessage(data.title);
+  };
+
+  const openMessage = (title) => {
+    message.loading({ content: `Adding ${title} to Cart`, key });
+    setTimeout(() => {
+      message.success({ content: `Added ${title}  to Cart`, key, duration: 2 });
+    }, 1000);
   };
 
   return (
@@ -62,7 +81,7 @@ export default function Product({ data, border = true }) {
           </div>
         </div>
 
-        <CircleButton size="medium" style="transparent">
+        <CircleButton size="medium" style="transparent" onClick={handleAddCart}>
           Add to cart
         </CircleButton>
       </div>

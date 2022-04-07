@@ -262,6 +262,16 @@ a:focus {
   }
 }
 
+.btn-circle.black {
+  background: #000;
+  color: #fff;
+
+  &:hover {
+    background: $second-color;
+  }
+}
+
+
 .btn-circle.gray {
   background: $gray-color;
   &:hover {

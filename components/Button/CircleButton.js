@@ -1,4 +1,3 @@
-import Link from "next/link";
 import PropTypes from "prop-types";
 
 export default function CircleButton({
@@ -6,11 +5,23 @@ export default function CircleButton({
   size = "large",
   style = "",
   href = "/#",
+  onClick,
 }) {
+  const handleClick = (e) => {
+    if (onClick) {
+      e.preventDefault();
+      onClick();
+    }
+  };
+
   return (
-    <Link href={href}>
-      <a className={`btn-circle ${size} ${style}`}>{children}</a>
-    </Link>
+    <a
+      className={`btn-circle ${size} ${style}`}
+      href={href}
+      onClick={handleClick}
+    >
+      {children}
+    </a>
   );
 }
 

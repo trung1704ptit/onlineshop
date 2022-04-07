@@ -1,30 +1,25 @@
 import { useState } from "react";
-import { connect } from "react-redux";
-import { setInfo } from "@redux/actions/main";
+import { setInfo } from "@redux/actions/cart";
+import { useSelector, useDispatch } from "react-redux";
 
-function Home(props) {
-  const { name, setInfo } = props;
+export default function Test(props) {
   const [newName, setName] = useState("");
+  const dispatch = useDispatch();
+  const products = useSelector((state) => state.cart.products);
+
+  const handleClick = () => {
+    dispatch(setInfo(newName));
+  };
 
   return (
     <div>
-      <p>Enter a Name {name}:</p>
+      <p>Enter a Name {products.length}:</p>
       <input
         type="text"
         value={newName}
         onChange={(e) => setName(e.target.value)}
       ></input>
-      <button onClick={() => setInfo(newName)}>Submit</button>
+      <button onClick={() => handleClick()}>Submit</button>
     </div>
   );
 }
-
-const mapStateToProps = (state) => {
-  return { name: state.main.name };
-};
-
-const mapDispatchToProps = {
-  setInfo,
-};
-
-export default connect(mapStateToProps, mapDispatchToProps)(Home);

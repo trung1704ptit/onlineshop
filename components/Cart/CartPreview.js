@@ -1,0 +1,53 @@
+import CircleButton from "@components/Button/CircleButton";
+import styles from "@styles/cart.module.scss";
+import { List, Avatar, Tooltip } from "antd";
+import Link from "next/link";
+import { IoIosCloseCircleOutline } from "react-icons/io";
+import { MdOutlineKeyboardArrowRight } from "react-icons/md";
+
+export default function CartPreview({ products, totalPrice }) {
+  return (
+    <div className={styles["cart-preview"]}>
+      <List
+        itemLayout="horizontal"
+        dataSource={products}
+        renderItem={(item) => (
+          <List.Item
+            extra={
+              <Tooltip title="Remove product">
+                <IoIosCloseCircleOutline className={styles["remove-icon"]} />
+              </Tooltip>
+            }
+          >
+            <List.Item.Meta
+              avatar={
+                <Avatar
+                  src={item.images[0]}
+                  className={styles["product-img"]}
+                />
+              }
+              title={<a href="#">{item.title}</a>}
+              description={`${item.cartQty} x $${item.currentPrice}`}
+            />
+          </List.Item>
+        )}
+      />
+
+      <div className={styles["second"]}>
+        <div className={styles["subtotal"]}>
+          <span className={styles["text"]}>Subtotal</span>
+          <span className={styles["total-price"]}>${totalPrice}</span>
+        </div>
+
+        <CircleButton style="black w-100 mt-3 mb-3">Checkout</CircleButton>
+        <div className={styles["view-cart-link"]}>
+          <Link href="#">
+            <a className="d-flex align-items-center justify-content-center">
+              View Cart <MdOutlineKeyboardArrowRight />
+            </a>
+          </Link>
+        </div>
+      </div>
+    </div>
+  );
+}

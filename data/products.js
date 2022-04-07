@@ -33,6 +33,7 @@ export const products = [
     currentPrice: "18.00",
     images: ["/images/products/chair.jpg", "/images/products/glasses.jpg"],
     categories: ["Home"],
+    quantity: 10,
   },
   {
     id: "56333",
@@ -41,6 +42,7 @@ export const products = [
     currentPrice: "18.00",
     images: ["/images/products/macbook.jpg", "/images/products/charger.jpg"],
     categories: ["Laptop"],
+    quantity: 10,
   },
   {
     id: "6543323",
@@ -49,6 +51,7 @@ export const products = [
     currentPrice: "18.00",
     images: ["/images/products/smartwatch2.jpg"],
     categories: ["Home"],
+    quantity: 10,
   },
   {
     id: "76543",
@@ -60,6 +63,7 @@ export const products = [
       "/images/products/smartwatch2.jpg",
     ],
     categories: ["Electrics"],
+    quantity: 10,
   },
   {
     id: "834333",
@@ -68,6 +72,7 @@ export const products = [
     currentPrice: "18.00",
     images: ["/images/products/imac.jpg", "/images/products/charger.jpg"],
     categories: ["Laptop"],
+    quantity: 10,
   },
   {
     id: "54334",
@@ -79,6 +84,7 @@ export const products = [
       "/images/products/smartwatch2.jpg",
     ],
     categories: ["Laptop"],
+    quantity: 10,
   },
   {
     id: "633433",
@@ -90,6 +96,7 @@ export const products = [
       "/images/products/charger.jpg",
     ],
     categories: ["Laptop"],
+    quantity: 10,
   },
   {
     id: "64343",
@@ -98,6 +105,7 @@ export const products = [
     currentPrice: "18.00",
     images: ["/images/products/canon.webp", "/images/products/charger.jpg"],
     categories: ["Laptop"],
+    quantity: 10,
   },
   {
     id: "344544",
@@ -106,6 +114,7 @@ export const products = [
     currentPrice: "18.00",
     images: ["/images/products/headphone.webp", "/images/products/charger.jpg"],
     categories: ["Laptop"],
+    quantity: 2,
   },
   {
     id: "544333",
@@ -117,6 +126,7 @@ export const products = [
       "/images/products/charger.jpg",
     ],
     categories: ["Laptop"],
+    quantity: 10,
   },
   {
     id: "5445676",
@@ -125,6 +135,7 @@ export const products = [
     currentPrice: "18.00",
     images: ["/images/products/jvc3.webp", "/images/products/charger.jpg"],
     categories: ["Laptop"],
+    quantity: 0,
   },
   {
     id: "75443",
@@ -133,6 +144,7 @@ export const products = [
     currentPrice: "18.00",
     images: ["/images/products/echo2.webp", "/images/products/charger.jpg"],
     categories: ["Laptop"],
+    quantity: 6,
   },
   {
     id: "54433",
@@ -144,5 +156,6 @@ export const products = [
       "/images/products/charger.jpg",
     ],
     categories: ["Laptop"],
+    quantity: 3,
   },
 ];

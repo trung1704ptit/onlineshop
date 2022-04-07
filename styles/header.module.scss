@@ -57,35 +57,6 @@
       }
     }
 
-    .cart-dropdown {
-      display: flex;
-      align-items: center;
-
-      .cart-total-cost {
-        display: flex;
-        flex-direction: column;
-        margin-left: 10px;
-
-        .cart-total-text {
-          color: $dark-color;
-        }
-      }
-
-      .dropdown-menu-content {
-        padding: 20px 30px;
-        border: 1px solid $border-color;
-        border-radius: $border-radius-base;
-        width: 400px;
-
-        h3 {
-          font-size: 20px;
-          margin: 0;
-          font-weight: bold;
-          text-align: center;
-        }
-      }
-    }
-
     .wishlist .circle-item {
       transition: all ease-in-out 0.2s;
 
@@ -165,21 +136,6 @@
       font-size: 18px;
     }
   }
-}
-
-.cart-total {
-  position: absolute;
-  top: -0.25em;
-  right: -0.25em;
-  background: $second-color;
-  font-size: 13px;
-  width: 20px;
-  height: 20px;
-  display: inline-flex;
-  border-radius: 20px;
-  align-items: center;
-  justify-content: center;
-  color: #ffffff;
 }
 
 .head-col {
