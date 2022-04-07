@@ -26,7 +26,8 @@ const cart = (state = initialState, action) => {
 
       total = products.reduce((t, { cartQty }) => t + cartQty, 0);
       totalPrice = products.reduce(
-        (t, { currentPrice }) => t + parseFloat(currentPrice),
+        (t, { currentPrice, cartQty }) =>
+          t + parseFloat(currentPrice) * cartQty,
         0
       );
 
@@ -42,7 +43,8 @@ const cart = (state = initialState, action) => {
 
       total = newProducts.reduce((t, { cartQty }) => t + cartQty, 0);
       totalPrice = newProducts.reduce(
-        (t, { currentPrice }) => t + parseFloat(currentPrice),
+        (t, { currentPrice, cartQty }) =>
+          t + parseFloat(currentPrice) * cartQty,
         0
       );
 
