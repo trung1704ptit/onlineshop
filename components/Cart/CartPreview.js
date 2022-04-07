@@ -34,7 +34,7 @@ export default function CartPreview({ products, totalPrice }) {
       <List
         itemLayout="horizontal"
         dataSource={products}
-        style={{ maxHeight: 500, overflowY: "scroll" }}
+        style={{ maxHeight: 500, overflowY: "auto" }}
         renderItem={(item) => (
           <List.Item
             extra={

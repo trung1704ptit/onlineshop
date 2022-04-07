@@ -3,6 +3,7 @@ import { IoChevronForwardOutline } from "react-icons/io5";
 import isEmpty from "lodash/isEmpty";
 import styles from "../../styles/category.module.scss";
 import { mockList } from "./mock";
+import classNames from "classnames";
 
 export default function CategoryList() {
   return (
@@ -40,22 +41,22 @@ export const SubCategory = () => {
           <ul className="list-style-none">
             <li>
               <Link href="#">
-                <a className="link-animated">iPhone 14 Pro</a>
+                <a className={classNames(styles['link'], "link-animated")}>iPhone 14 Pro</a>
               </Link>
             </li>
             <li>
               <Link href="#">
-                <a className="link-animated">Samsung Galaxy</a>
+                <a className={classNames(styles['link'], "link-animated")}>Samsung Galaxy</a>
               </Link>
             </li>
             <li>
               <Link href="#">
-                <a className="link-animated">Realme Note</a>
+                <a className={classNames(styles['link'], "link-animated")}>Realme Note</a>
               </Link>
             </li>
             <li>
               <Link href="#">
-                <a className="link-animated">Sony Xperia Series</a>
+                <a className={classNames(styles['link'], "link-animated")}>Sony Xperia Series</a>
               </Link>
             </li>
           </ul>
@@ -70,22 +71,22 @@ export const SubCategory = () => {
           <ul className="list-style-none">
             <li>
               <Link href="#">
-                <a className="link-animated">iPhone 14 Pro</a>
+                <a className={classNames(styles['link'], "link-animated")}>iPhone 14 Pro</a>
               </Link>
             </li>
             <li>
               <Link href="#">
-                <a className="link-animated">Samsung Galaxy</a>
+                <a className={classNames(styles['link'], "link-animated")}>Samsung Galaxy</a>
               </Link>
             </li>
             <li>
               <Link href="#">
-                <a className="link-animated">Realme Note</a>
+                <a className={classNames(styles['link'], "link-animated")}>Realme Note</a>
               </Link>
             </li>
             <li>
               <Link href="#">
-                <a className="link-animated">Sony Xperia Series</a>
+                <a className={classNames(styles['link'], "link-animated")}>Sony Xperia Series</a>
               </Link>
             </li>
           </ul>
@@ -100,22 +101,22 @@ export const SubCategory = () => {
           <ul className="list-style-none">
             <li>
               <Link href="#">
-                <a className="link-animated">iPhone 14 Pro</a>
+                <a className={classNames(styles['link'], "link-animated")}>iPhone 14 Pro</a>
               </Link>
             </li>
             <li>
               <Link href="#">
-                <a className="link-animated">Samsung Galaxy</a>
+                <a className={classNames(styles['link'], "link-animated")}>Samsung Galaxy</a>
               </Link>
             </li>
             <li>
               <Link href="#">
-                <a className="link-animated">Realme Note</a>
+                <a className={classNames(styles['link'], "link-animated")}>Realme Note</a>
               </Link>
             </li>
             <li>
               <Link href="#">
-                <a className="link-animated">Sony Xperia Series</a>
+                <a className={classNames(styles['link'], "link-animated")}>Sony Xperia Series</a>
               </Link>
             </li>
           </ul>
@@ -130,22 +131,22 @@ export const SubCategory = () => {
           <ul className="list-style-none">
             <li>
               <Link href="#">
-                <a className="link-animated">iPhone 14 Pro</a>
+                <a className={classNames(styles['link'], "link-animated")}>iPhone 14 Pro</a>
               </Link>
             </li>
             <li>
               <Link href="#">
-                <a className="link-animated">Samsung Galaxy</a>
+                <a className={classNames(styles['link'], "link-animated")}>Samsung Galaxy</a>
               </Link>
             </li>
             <li>
               <Link href="#">
-                <a className="link-animated">Realme Note</a>
+                <a className={classNames(styles['link'], "link-animated")}>Realme Note</a>
               </Link>
             </li>
             <li>
               <Link href="#">
-                <a className="link-animated">Sony Xperia Series</a>
+                <a className={classNames(styles['link'], "link-animated")}>Sony Xperia Series</a>
               </Link>
             </li>
           </ul>

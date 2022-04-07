@@ -176,7 +176,8 @@
     align-items: center;
     padding: 15px 0 15px 30px;
 
-    a {
+    .link {
+      color: #000;
       &:hover {
         color: $text-hover-color;
       }

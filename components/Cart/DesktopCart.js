@@ -33,7 +33,7 @@ export default function DesktopCart() {
 
           <div className={cartStyles["cart-total-cost"]}>
             <span className={cartStyles["cart-total-text"]}>Total</span>
-            <span>${totalPrice.toFixed(2)}</span>
+            <span>${totalPrice}</span>
           </div>
 
           <div

@@ -1,7 +1,7 @@
 import TopFilter from "@components/Filter/TopFilter";
 import LeftFilter from "@components/Filter/LeftFilter";
 import Section from "@components/Section";
-import { Row, Col, Divider } from "antd";
+import { Row, Col, Divider, Pagination } from "antd";
 import styles from "@styles/shop.module.scss";
 import Space from '@components/Space';
 
@@ -37,6 +37,10 @@ export default function ProductListWithFilter() {
                 </Col>
               ))}
           </Row>
+
+          <div className="text-center">
+            <Pagination defaultCurrent={1} total={50} />
+          </div>
         </div>
       </div>
     </Section>

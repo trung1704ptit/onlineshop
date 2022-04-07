@@ -18,18 +18,26 @@ export default function HeaderCategories() {
           <div className={styles["right-side"]}>
             <ul className="list-style-none">
               <li>
-                <Link href="/shop">Shop</Link>
+                <Link href="/shop">
+                  <a className={styles["link"]}>Shop</a>
+                </Link>
               </li>
               <li>
-                <Link href="/shop">Hot Deals</Link>
+                <Link href="/shop">
+                  <a className={styles["link"]}>Hot Deals</a>
+                </Link>
                 <span className={"link-badge orange"}>Sale</span>
               </li>
               <li>
-                <Link href="/shop">Best Sellers</Link>
+                <Link href="/shop">
+                  <a className={styles["link"]}>Best Sellers</a>
+                </Link>
                 {/* <span className={"link-badge red"}>Hot</span> */}
               </li>
               <li>
-                <Link href="/shop">New Arrivals</Link>
+                <Link href="/shop">
+                  <a className={styles["link"]}>New Arrivals</a>
+                </Link>
                 <span className={"link-badge green"}>New</span>
               </li>
             </ul>

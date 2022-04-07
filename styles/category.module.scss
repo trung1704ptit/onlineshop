@@ -50,6 +50,7 @@
         padding: 1em 1.5em;
         display: flex;
         align-items: center;
+        color: #000;
 
         .icon {
           margin-inline-end: 0.75em;
@@ -104,6 +105,10 @@
 
       li {
         margin-bottom: 10px;
+      }
+
+      .link {
+        color: #000;
       }
     }
   }

@@ -29,7 +29,7 @@ const cart = (state = initialState, action) => {
         (t, { currentPrice, cartQty }) =>
           t + parseFloat(currentPrice) * cartQty,
         0
-      );
+      ).toFixed(2);
 
       return {
         ...state,
@@ -46,7 +46,7 @@ const cart = (state = initialState, action) => {
         (t, { currentPrice, cartQty }) =>
           t + parseFloat(currentPrice) * cartQty,
         0
-      );
+      ).toFixed(2);
 
       return {
         ...state,
