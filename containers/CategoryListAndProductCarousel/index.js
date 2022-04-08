@@ -1,11 +1,11 @@
 import { useMediaQuery } from "react-responsive";
 
 import Section from "../../components/Section";
-import HeadCarousel from "../../components/HeadCarousel";
+import HomeCarousel from "../../components/HomeCarousel";
 import CategoryList from "../../components/Category/CategoryList";
 import { useEffect, useState } from "react";
 
-export default function CategoryAndSlide() {
+export default function CategoryListAndProductCarousel() {
   const isLargeDevice = useMediaQuery({
     query: "(min-width: 992px)",
   });
@@ -22,7 +22,7 @@ export default function CategoryAndSlide() {
         <Section>
           <div className="d-flex align-item-stretch">
             <CategoryList />
-            <HeadCarousel />
+            <HomeCarousel />
           </div>
         </Section>
       );
@@ -30,7 +30,7 @@ export default function CategoryAndSlide() {
 
     return (
       <Section>
-        <HeadCarousel />
+        <HomeCarousel />
       </Section>
     );
   }

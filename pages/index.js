@@ -6,8 +6,8 @@ import Space from "../components/Space";
 
 const Brands = dynamic(() => import("../containers/BrandsCarousel"));
 const TodayHotDeal = dynamic(() => import("../containers/TodayHotDeal"));
-const CategoryAndSlide = dynamic(() =>
-  import("../containers/CategoryAndSlide")
+const CategoryListAndProductCarousel = dynamic(() =>
+  import("../containers/CategoryListAndProductCarousel")
 );
 const Services = dynamic(() => import("../containers/Services"));
 const TrendingProductCarousel = dynamic(() =>
@@ -17,9 +17,7 @@ const ProductCountDown = dynamic(() =>
   import("../containers/ProductCountDown")
 );
 
-const ProductBanner = dynamic(() =>
-  import("../containers/ProductBanner")
-);
+const ProductBanner = dynamic(() => import("../containers/ProductBanner"));
 const BestSeller = dynamic(() => import("../containers/BestSeller"));
 
 export default function Home() {
@@ -34,7 +32,7 @@ export default function Home() {
       <Layout>
         <>
           <Space height={30} className="d-block d-sm-none" />
-          <CategoryAndSlide />
+          <CategoryListAndProductCarousel />
 
           <Services />
           <Space height={40} />

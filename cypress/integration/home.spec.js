@@ -1,6 +1,6 @@
 
 // navigate to the shop page
-describe('Natigation', () => {
+describe('Navigation', () => {
   it('should navigate to the shop page', () => {
     cy.visit('http://localhost:3000')
 

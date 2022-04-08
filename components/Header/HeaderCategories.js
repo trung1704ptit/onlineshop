@@ -1,8 +1,6 @@
-import cx from "classnames";
 import Link from "next/link";
 import { BsCart2 } from "react-icons/bs";
-
-import styles from "../../styles/header.module.scss";
+import styles from "@styles/header.module.scss";
 import Section from "../Section";
 
 export default function HeaderCategories() {
@@ -19,24 +17,31 @@ export default function HeaderCategories() {
             <ul className="list-style-none">
               <li>
                 <Link href="/shop">
-                  <a className={styles["link"]}>Shop</a>
+                  <a className={styles["link"]} data-cy="shop-link">
+                    Shop
+                  </a>
                 </Link>
               </li>
               <li>
                 <Link href="/shop">
-                  <a className={styles["link"]}>Hot Deals</a>
+                  <a className={styles["link"]} data-cy="hot-deals-link">
+                    Hot Deals
+                  </a>
                 </Link>
                 <span className={"link-badge orange"}>Sale</span>
               </li>
               <li>
                 <Link href="/shop">
-                  <a className={styles["link"]}>Best Sellers</a>
+                  <a className={styles["link"]} data-cy="best-seller-link">
+                    Best Sellers
+                  </a>
                 </Link>
-                {/* <span className={"link-badge red"}>Hot</span> */}
               </li>
               <li>
                 <Link href="/shop">
-                  <a className={styles["link"]}>New Arrivals</a>
+                  <a className={styles["link"]} data-cy="new-arrivals-link">
+                    New Arrivals
+                  </a>
                 </Link>
                 <span className={"link-badge green"}>New</span>
               </li>

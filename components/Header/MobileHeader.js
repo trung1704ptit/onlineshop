@@ -1,4 +1,3 @@
-import Link from "next/link";
 import cx from "classnames";
 import dynamic from "next/dynamic";
 import styles from "../../styles/header.module.scss";
@@ -22,9 +21,7 @@ export default function MobileHeader() {
       </div>
 
       <div className={styles["mobile-header-item"]}>
-        <Link href="/">
-          <Logo />
-        </Link>
+        <Logo />
       </div>
 
       <div className={cx(styles["mobile-header-item"], styles["right-side"])}>

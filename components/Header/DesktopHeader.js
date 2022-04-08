@@ -16,11 +16,7 @@ export default function DesktopHeader() {
       <div className={cx(styles["top-header"], "pos-rel")}>
         <div className="container d-flex align-items-stretch">
           <div className={styles["header-logo"]}>
-            <Link href="/">
-              <a>
-                <Logo />
-              </a>
-            </Link>
+            <Logo />
           </div>
           <DesktopSearch />
 

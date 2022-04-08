@@ -19,7 +19,7 @@ const settings = {
   prevArrow: <PrevArrow />,
 };
 
-export default function HeadCarousel() {
+export default function HomeCarousel() {
   return (
     <div className={styles["home-carousel-wraper"]}>
       <Slider {...settings}>
