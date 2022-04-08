@@ -57,13 +57,10 @@
       color: $third-color;
     }
   }
-  .btn-circle {
-    justify-content: center;
-    border: 2px solid $gray-color;
-    font-size: 16px;
-    &:hover {
-      border-color: #000;
-    }
+  button:hover {
+    background: $second-color;
+    border: 1px solid $second-color;
+    color: #fff;
   }
   .product-bottom {
     display: flex;

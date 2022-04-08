@@ -59,11 +59,9 @@ export default function TrendingProductCarousel() {
             <div className={styles["overlay"]} />
             <div className={styles["caption"]}>
               <Title level={4}>PlayStation 4 VR has arrived.</Title>
-              <Link href="#">
-                <CircleButton size="medium">
-                  See Products <MdOutlineKeyboardArrowRight />
-                </CircleButton>
-              </Link>
+              <CircleButton size="medium">
+                See Products <MdOutlineKeyboardArrowRight />
+              </CircleButton>
             </div>
           </div>
 
@@ -72,11 +70,9 @@ export default function TrendingProductCarousel() {
             <div className={styles["overlay"]} />
             <div className={styles["caption"]}>
               <Title level={4}>Galaxy S22 Series.</Title>
-              <Link href="#">
-                <CircleButton size="medium">
-                  See Products <MdOutlineKeyboardArrowRight />
-                </CircleButton>
-              </Link>
+              <CircleButton size="medium">
+                See Products <MdOutlineKeyboardArrowRight />
+              </CircleButton>
             </div>
           </div>
 
@@ -85,11 +81,9 @@ export default function TrendingProductCarousel() {
             <div className={styles["overlay"]} />
             <div className={styles["caption"]}>
               <Title level={4}>Chanel Gabriele Perfume.</Title>
-              <Link href="#">
-                <CircleButton size="medium">
-                  See Products <MdOutlineKeyboardArrowRight />
-                </CircleButton>
-              </Link>
+              <CircleButton size="medium">
+                See Products <MdOutlineKeyboardArrowRight />
+              </CircleButton>
             </div>
           </div>
 
@@ -98,11 +92,9 @@ export default function TrendingProductCarousel() {
             <div className={styles["overlay"]} />
             <div className={styles["caption"]}>
               <Title level={4}>Women's Lookbook</Title>
-              <Link href="#">
-                <CircleButton size="medium">
-                  See Products <MdOutlineKeyboardArrowRight />
-                </CircleButton>
-              </Link>
+              <CircleButton size="medium">
+                See Products <MdOutlineKeyboardArrowRight />
+              </CircleButton>
             </div>
           </div>
         </Slider>

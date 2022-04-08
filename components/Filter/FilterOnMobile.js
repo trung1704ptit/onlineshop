@@ -1,5 +1,5 @@
-import React, { useState } from "react";
-import { Drawer, Button } from "antd";
+import React from "react";
+import { Drawer } from "antd";
 import LeftFilter from "./LeftFilter";
 
 export default function FilterOnMobile({ open, onClose }) {

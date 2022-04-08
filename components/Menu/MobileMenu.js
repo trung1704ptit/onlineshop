@@ -1,12 +1,9 @@
-// import Link from "next/link";
-import styles from "../../styles/header.module.scss";
-// import cx from "classnames";
-import { BsList, BsXLg } from "react-icons/bs";
+import { AiOutlineClose } from "react-icons/ai";
 import { useState } from "react";
-// import dynamic from "next/dynamic";
+import { BsGrid3X3Gap } from 'react-icons/bs';
+import styles from "@styles/header.module.scss";
 import CollapseFullscreen from "../Collapse/CollapseFullscreen";
 import CategoryList from "../Category/CategoryList";
-import { CgMenuGridO } from 'react-icons/cg'
 
 export default function MobileMenu() {
   const [open, setOpen] = useState(false);
@@ -14,12 +11,12 @@ export default function MobileMenu() {
   return (
     <>
       {!open ? (
-        <CgMenuGridO
+        <BsGrid3X3Gap
           className={styles["search-icon"]}
           onClick={() => setOpen(!open)}
         />
       ) : (
-        <BsXLg
+        <AiOutlineClose
           onClick={() => setOpen(!open)}
           className={styles["search-icon"]}
         />

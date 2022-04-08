@@ -2,10 +2,9 @@ import Link from "next/link";
 import classNames from "classnames";
 import { useState } from "react";
 import { useDispatch } from "react-redux";
-import { message, Spin } from "antd";
+import { Button, message } from "antd";
 import { addToCart } from "@redux/actions/cart";
 import styles from "../../styles/product.module.scss";
-import CircleButton from "../Button/CircleButton";
 
 const key = "updatable";
 
@@ -43,10 +42,10 @@ export default function Product({ data, border = true }) {
 
   const openMessage = (title) => {
     message.loading({ content: `Adding ${title} to Cart`, key });
-    setLoading(true)
+    setLoading(true);
     setTimeout(() => {
       message.success({ content: `Added ${title}  to Cart`, key, duration: 2 });
-      setLoading(false)
+      setLoading(false);
     }, 800);
   };
 
@@ -83,9 +82,15 @@ export default function Product({ data, border = true }) {
           </div>
         </div>
 
-        <CircleButton size="medium" style="transparent" onClick={handleAddCart}>
-          Add to cart {loading ? <Spin size="small" className="ms-2" /> : null}
-        </CircleButton>
+        <Button
+          size="large"
+          disabled={loading}
+          onClick={handleAddCart}
+          shape="round"
+          loading={loading}
+        >
+          Add to cart
+        </Button>
       </div>
     </div>
   );
