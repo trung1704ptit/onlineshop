@@ -1,8 +1,8 @@
 import { useMediaQuery } from "react-responsive";
 
-import Section from "../../components/Section";
-import HomeCarousel from "../../components/HomeCarousel";
-import CategoryList from "../../components/Category/CategoryList";
+import Section from "@components/Section";
+import HomeCarousel from "@components/HomeCarousel";
+import CategoryList from "@components/Category/CategoryList";
 import { useEffect, useState } from "react";
 
 export default function CategoryListAndProductCarousel() {

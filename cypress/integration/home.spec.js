@@ -1,11 +1,10 @@
-
 // navigate to the shop page
-describe('Navigation', () => {
-  it('should navigate to the shop page', () => {
-    cy.visit('http://localhost:3000')
 
-    cy.get('a[href*="shop"]').click()
-
-    cy.url().should('include', '/shop')
-  })
-})
+describe("Add to cart", () => {
+  it("should add product to cart", () => {
+    cy.visit("http://localhost:3000");
+    cy.get("[data-cy=add-to-cart]").first().click({ force: true });
+    cy.get("[data-cy=add-to-cart]").last().click({ force: true });
+    cy.get("[data-cy=desktop-cart-total]").invoke("text").should("eq", '2');
+  });
+});

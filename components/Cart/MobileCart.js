@@ -19,7 +19,7 @@ export default function MobileCart() {
     <>
       <div onClick={() => setOpen(!open)}>
         <BsCart2 className={styles["search-icon"]} />
-        <span className={cartStyles["cart-total"]}>{total}</span>
+        <span className={cartStyles["cart-total"]} data-cy='mobile-cart-total'>{total}</span>
       </div>
 
       <Drawer

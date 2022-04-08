@@ -88,6 +88,7 @@ export default function Product({ data, border = true }) {
           onClick={handleAddCart}
           shape="round"
           loading={loading}
+          data-cy="add-to-cart"
         >
           Add to cart
         </Button>

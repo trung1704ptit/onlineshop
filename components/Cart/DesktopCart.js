@@ -28,7 +28,7 @@ export default function DesktopCart() {
         <div className={cartStyles["cart-dropdown"]}>
           <span className={styles["circle-item"]}>
             <BsCart2 />
-            <span className={cartStyles["cart-total"]}>{total}</span>
+            <span className={cartStyles["cart-total"]} data-cy='desktop-cart-total'>{total}</span>
           </span>
 
           <div className={cartStyles["cart-total-cost"]}>

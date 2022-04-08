@@ -13,7 +13,7 @@ export default function CategoryList() {
           mockList.map((item) => (
             <li key={item.id} className={styles["category-item"]}>
               <Link href="/shop">
-                <a className={styles['category-link']}>
+                <a className={styles['category-link']} data-cy="category-link">
                   <item.icon size="25" className={styles["icon"]} />
                   {item.name}
                   {!isEmpty(item.sub) ? (
