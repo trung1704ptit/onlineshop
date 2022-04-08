@@ -1,32 +1,29 @@
 import TopFilter from "@components/Filter/TopFilter";
 import LeftFilter from "@components/Filter/LeftFilter";
 import Section from "@components/Section";
-import { Row, Col, Divider, Pagination } from "antd";
-import styles from "@styles/shop.module.scss";
-import Space from '@components/Space';
+import { Row, Col, Pagination } from "antd";
+import Space from "@components/Space";
+import Product from "@components/Product";
 
 import { products } from "../../data/products";
-import Product from "@components/Product";
-import classNames from "classnames";
-import FilterOnMobile from "@components/Filter/FilterOnMobile";
 
 export default function ProductListWithFilter() {
   return (
     <Section>
       <TopFilter />
-      <div className={styles["wrapper"]}>
+      <div className="d-flex">
         <div className="d-none d-xl-block me-3">
           <LeftFilter />
 
           <Space height={30} />
 
           {/* Ads */}
-          <div className={styles["filter-item"]}>
+          <div>
             <img src="/images/others/1.png" alt="banner" />
           </div>
         </div>
 
-        <div className={classNames(styles["products"], "mt-3")}>
+        <div className="mt-3">
           <Row gutter={16}>
             {products &&
               products.map((item) => (

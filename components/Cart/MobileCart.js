@@ -23,7 +23,7 @@ export default function MobileCart() {
       </div>
 
       <Drawer
-        title="Cart"
+        title="Shopping Cart"
         placement="right"
         onClose={() => setOpen(!open)}
         visible={open}

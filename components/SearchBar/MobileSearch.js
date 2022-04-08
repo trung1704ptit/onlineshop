@@ -24,10 +24,10 @@ export default function MobileSearch() {
 
       <Drawer
         title="Search products"
-        placement={"top"}
+        placement={"left"}
         onClose={() => setOpen(!open)}
         visible={open}
-        key={"top"}
+        key={"left"}
       >
         <div className={styles["mobile-search-input"]}>
           <input placeholder="Search products..." type="text" />

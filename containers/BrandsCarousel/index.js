@@ -1,7 +1,7 @@
 import Slider from "react-slick";
 import { Typography } from "antd";
-import Section from "../../components/Section";
-import styles from "../../styles/brands.module.scss";
+import Section from "@components/Section";
+import styles from "@styles/brands.module.scss";
 
 const { Title } = Typography;
 

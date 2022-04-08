@@ -11,9 +11,11 @@
   height: 100%;
   border: none;
   margin-bottom: 10px;
+
   @media screen and (min-width: 768px) {
     border: 1px solid $gray-color;
   }
+
   .label {
     position: absolute;
     background: $third-color;
@@ -27,10 +29,12 @@
     font-size: 10px;
     font-weight: 600;
   }
+
   .title {
     font-size: 15px;
     font-family: 'Jost';
   }
+
   figure {
     img {
       width: 100%;
@@ -38,34 +42,149 @@
       object-fit: cover;
       margin: auto;
     }
+
     margin-bottom: 20px;
   }
+
   .product-category a {
     color: $gray-text;
     font-size: 13px;
     margin-bottom: 5px;
   }
+
   .product-price {
     font-weight: 600;
     margin-bottom: 20px;
+
     .old-price {
       color: $gray-text;
       margin-right: 6px;
       text-decoration: line-through;
     }
+
     .current-price {
       color: $third-color;
     }
   }
+
   button:hover {
     background: $second-color;
     border: 1px solid $second-color;
     color: #fff;
   }
+
   .product-bottom {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     flex: 1;
+  }
+}
+
+
+// product-banner
+.product-banner {
+  background: rgb(234 234 232);
+  height: 520px;
+  background-position: center;
+  background-size: cover;
+  border-radius: $border-radius-base;
+
+  .content {
+    position: absolute;
+    top: 8%;
+    left: 15%;
+    right: 15%;
+    text-align: center;
+    max-width: 400px;
+    color: #fff;
+
+    @media screen and (min-width: 768px) {
+      top: 35%;
+      left: 10%;
+      right: unset;
+      transform: translate(-10%, -35%);
+      text-align: left;
+    }
+
+    h2 {
+      color: inherit;
+    }
+
+    .sub-title {
+      margin-bottom: 50px;
+      font-size: 18px;
+      font-family: 'Jost';
+    }
+  }
+}
+
+.product-countdown {
+  border: 1px solid $gray-color;
+  border-radius: $border-radius-base;
+  padding: 20px;
+  text-align: left;
+
+  @media screen and (min-width: 768px) {
+    padding: 4vw 6vw;
+  }
+
+  img {
+    max-width: 100%;
+  }
+
+  .title {
+    margin-bottom: 20px;
+  }
+
+  .sub-title {
+    margin-bottom: 25px;
+    font-size: 18px;
+    font-family: 'Jost';
+  }
+
+  .countdown {
+    margin-bottom: 40px;
+
+    &>div {
+      justify-content: start;
+    }
+  }
+}
+
+.product-preview {
+  position: relative;
+  background-size: cover;
+  border-radius: $border-radius-base;
+  height: 100%;
+  min-height: 350px;
+  margin-bottom: 20px;
+
+  .caption {
+    position: absolute;
+    bottom: 5%;
+    left: 50%;
+    transform: translate(-50%, -5%);
+    color: #fff;
+    width: 70%;
+    text-align: center;
+
+    h2 {
+      margin-bottom: 24px;
+      color: inherit;
+      font-family: 'Jost';
+    }
+  }
+}
+
+.product-carousel-heading {
+  margin-bottom: 10px;
+
+  &>div {
+    align-items: center;
+  }
+
+  a {
+    color: #000;
   }
 }

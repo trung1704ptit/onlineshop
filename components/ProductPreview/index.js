@@ -1,5 +1,5 @@
 import { MdKeyboardArrowRight } from "react-icons/md";
-import styles from "../../styles/product-carousel.module.scss";
+import styles from "@styles/product.module.scss";
 import CircleButton from "../Button/CircleButton";
 
 export default function ProductPreview({ imageUrl }) {

@@ -4,13 +4,13 @@ import Link from "next/link";
 import { Col, Row } from "antd";
 import { MdOutlineKeyboardArrowRight } from "react-icons/md";
 import { Typography } from 'antd';
-import Section from "../../components/Section";
-import Product from "../../components/Product";
-import ProductPreview from "../../components/ProductPreview";
+import Section from "@components/Section";
+import Product from "@components/Product";
+import ProductPreview from "@components/ProductPreview";
+import styles from "@styles/product.module.scss";
+import { NextArrow, PrevArrow } from "@utils/helper";
+import Countdown from "@components/CountDown";
 import { products } from "../../data/products";
-import styles from "../../styles/product-carousel.module.scss";
-import { NextArrow, PrevArrow } from "../../utils/helper";
-import Countdown from "../../components/CountDown";
 
 const { Title } = Typography;
 

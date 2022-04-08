@@ -1,5 +1,5 @@
 @import './variables.module.scss';
-@import './common.scss';
+@import './utils.scss';
 
 html,
 body {
@@ -36,9 +36,11 @@ a {
   display: flex;
   justify-content: flex-start;
   align-items: center;
+
   img {
     height: 40px;
   }
+
   .name {
     font-size: 24px;
     font-weight: bold;
@@ -51,6 +53,7 @@ a {
 .logo.white {
   color: #fff;
 }
+
 .logo.black {
   color: #000;
 }
@@ -274,6 +277,7 @@ a:focus {
 
 .btn-circle.gray {
   background: $gray-color;
+
   &:hover {
     background: #000;
     color: #fff;
@@ -302,6 +306,22 @@ a:focus {
   &:before,
   &:before {
     display: none;
+  }
+
+  @media screen and (max-width: 768px) {
+    width: 38px;
+    height: 38px;
+    font-size: 16px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .slick-prev {
+    left: 0;
+  }
+
+  .slick-next {
+    right: 0;
   }
 }
 

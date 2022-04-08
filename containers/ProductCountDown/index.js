@@ -1,9 +1,11 @@
-import { Col, Row } from "antd";
+import { Col, Typography } from "antd";
 import { MdOutlineKeyboardArrowRight } from "react-icons/md";
-import CircleButton from "../../components/Button/CircleButton";
-import Section from "../../components/Section";
-import styles from "../../styles/product-countdown.module.scss";
-import CountDown from "../../components/CountDown";
+import CircleButton from "@components/Button/CircleButton";
+import Section from "@components/Section";
+import styles from "@styles/product.module.scss";
+import CountDown from "@components/CountDown";
+
+const { Title } = Typography;
 
 export default function ProductCountDown() {
   return (
@@ -11,7 +13,7 @@ export default function ProductCountDown() {
       <div className={styles["product-countdown"]}>
         <div className="d-flex flex-wrap">
           <Col sx={24} md={12}>
-            <h2 className={styles["title"]}>Don't just play game</h2>
+            <Title level={2} className={styles["title"]}>Don't just play game</Title>
             <p className={styles["sub-title"]}>
               Explore Alienware and Dell gaming system
             </p>

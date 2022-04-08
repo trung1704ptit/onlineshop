@@ -1,13 +1,12 @@
 import React from "react";
 import Slider from "react-slick";
-import Link from "next/link";
 import { MdOutlineKeyboardArrowRight } from "react-icons/md";
 import Title from "antd/lib/typography/Title";
 
-import Section from "../../components/Section";
-import styles from "../../styles/trending.module.scss";
-import CircleButton from "../../components/Button/CircleButton";
-import { NextArrow, PrevArrow } from '../../utils/helper';
+import Section from "@components/Section";
+import styles from "@styles/trending.module.scss";
+import CircleButton from "@components/Button/CircleButton";
+import { NextArrow, PrevArrow } from '@utils/helper';
 
 
 const settings = {

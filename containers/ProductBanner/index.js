@@ -1,17 +1,16 @@
 import { MdOutlineKeyboardArrowRight } from "react-icons/md";
 import { Typography } from "antd";
-
-import CircleButton from "../../components/Button/CircleButton";
-import styles from "../../styles/category.module.scss";
+import CircleButton from "@components/Button/CircleButton";
+import styles from "@styles/product.module.scss";
 
 const { Title } = Typography;
 
-export default function CategoryBannerFullWidth() {
+export default function CategoryBanner() {
   return (
     <section>
       <div className="container">
         <div
-          className={styles["category-banner-full-width"]}
+          className={styles["product-banner"]}
           style={{ backgroundImage: "url(/images/banner-street-style.jpg)" }}
         >
           <div className="pos-rel h-100">

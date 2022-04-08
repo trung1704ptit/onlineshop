@@ -17,8 +17,8 @@ const ProductCountDown = dynamic(() =>
   import("../containers/ProductCountDown")
 );
 
-const CategoryBannerFullWidth = dynamic(() =>
-  import("../containers/CategoryBanner/CategoryBannerFullWidth")
+const ProductBanner = dynamic(() =>
+  import("../containers/ProductBanner")
 );
 const BestSeller = dynamic(() => import("../containers/BestSeller"));
 
@@ -51,7 +51,7 @@ export default function Home() {
           <BestSeller />
           <Space height={60} />
 
-          <CategoryBannerFullWidth />
+          <ProductBanner />
           <Space height={60} />
 
           <Brands />
