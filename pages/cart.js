@@ -1,12 +1,10 @@
 import Head from "next/head";
 import dynamic from "next/dynamic";
+import Layout from "@components/Layout";
 
-import Layout from "../components/Layout";
-import Space from "../components/Space";
+const Cart = dynamic(() => import("../containers/Cart"));
 
-const CartProgress = dynamic(() => import("@components/Cart/CartProgress"));
-
-export default function Cart() {
+export default function CartPage() {
   return (
     <>
       <Head>
@@ -16,10 +14,7 @@ export default function Cart() {
       </Head>
 
       <Layout>
-        <>
-          <Space height={30} className="d-block d-sm-none" />
-          <CartProgress />
-        </>
+        <Cart />
       </Layout>
     </>
   );

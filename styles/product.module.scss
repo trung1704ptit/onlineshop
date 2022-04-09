@@ -188,3 +188,38 @@
     color: #000;
   }
 }
+
+.product-quantity-control {
+  display: flex;
+  border: 1px solid $gray-color;
+  justify-content: space-between;
+  align-items: center;
+  padding: 8px 16px;
+  max-width: 150px;
+  border-radius: $border-radius-base;
+
+  input {
+    width: 50px;
+    border: none;
+    outline: none;
+    text-align: center;
+
+    &::-webkit-outer-spin-button,
+    &::-webkit-inner-spin-button {
+      -webkit-appearance: none;
+      margin: 0;
+    }
+
+    /* Firefox */
+    &[type=number] {
+      -moz-appearance: textfield;
+    }
+  }
+
+  svg {
+    cursor: pointer;
+    &:hover {
+      color: $second-color;
+    }
+  }
+}

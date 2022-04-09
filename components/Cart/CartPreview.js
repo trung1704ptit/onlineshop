@@ -68,7 +68,7 @@ export default function CartPreview({ products, totalPrice }) {
 
         <CircleButton style="black w-100 mt-3 mb-3">Checkout</CircleButton>
         <div className={styles["view-cart-link"]}>
-          <Link href="#">
+          <Link href="/cart">
             <a className="d-flex align-items-center justify-content-center">
               View Cart <MdOutlineKeyboardArrowRight />
             </a>

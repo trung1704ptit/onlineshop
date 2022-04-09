@@ -2,16 +2,16 @@ export const products = [
   {
     id: "1023211",
     title: "GoPro Action Camera 32GB Waterproof",
-    oldPrice: "20.00",
-    currentPrice: "18.00",
+    oldPrice: 20.00,
+    currentPrice: 18.00,
     images: ["/images/products/gopro.jpg", "/images/products/chair.jpg"],
     categories: ["Electrics"],
   },
   {
     id: "22324532",
     title: "Non-ticking Wooden  Wall Clock",
-    oldPrice: "20.00",
-    currentPrice: "18.00",
+    oldPrice: 20.00,
+    currentPrice: 18.00,
     images: [
       "/images/products/glasses.jpg",
       "/images/products/apple-airpod.jpg",
@@ -21,16 +21,16 @@ export const products = [
   {
     id: "3433343",
     title: "Bag",
-    oldPrice: "20.00",
-    currentPrice: "18.00",
+    oldPrice: 20.00,
+    currentPrice: 18.00,
     images: ["/images/products/smartwatch.jpg"],
     categories: ["Watch"],
   },
   {
     id: "4543333",
     title: "Shoose",
-    oldPrice: "20.00",
-    currentPrice: "18.00",
+    oldPrice: 20.00,
+    currentPrice: 18.00,
     images: ["/images/products/chair.jpg", "/images/products/glasses.jpg"],
     categories: ["Home"],
     quantity: 10,
@@ -38,8 +38,8 @@ export const products = [
   {
     id: "56333",
     title: "Macbook",
-    oldPrice: "20.00",
-    currentPrice: "18.00",
+    oldPrice: 20.00,
+    currentPrice: 18.00,
     images: ["/images/products/macbook.jpg", "/images/products/charger.jpg"],
     categories: ["Laptop"],
     quantity: 10,
@@ -47,8 +47,8 @@ export const products = [
   {
     id: "6543323",
     title: "Smart Watch",
-    oldPrice: "20.00",
-    currentPrice: "18.00",
+    oldPrice: 20.00,
+    currentPrice: 18.00,
     images: ["/images/products/smartwatch2.jpg"],
     categories: ["Home"],
     quantity: 10,
@@ -56,8 +56,8 @@ export const products = [
   {
     id: "76543",
     title: "Fast charger",
-    oldPrice: "20.00",
-    currentPrice: "18.00",
+    oldPrice: 20.00,
+    currentPrice: 18.00,
     images: [
       "/images/products/charger.jpg",
       "/images/products/smartwatch2.jpg",
@@ -68,8 +68,8 @@ export const products = [
   {
     id: "834333",
     title: "Apple Imac",
-    oldPrice: "20.00",
-    currentPrice: "18.00",
+    oldPrice: 20.00,
+    currentPrice: 18.00,
     images: ["/images/products/imac.jpg", "/images/products/charger.jpg"],
     categories: ["Laptop"],
     quantity: 10,
@@ -77,8 +77,8 @@ export const products = [
   {
     id: "54334",
     title: "Apple AirPod",
-    oldPrice: "20.00",
-    currentPrice: "18.00",
+    oldPrice: 20.00,
+    currentPrice: 18.00,
     images: [
       "/images/products/apple-airpod.jpg",
       "/images/products/smartwatch2.jpg",
@@ -101,8 +101,8 @@ export const products = [
   {
     id: "64343",
     title: "Canon",
-    oldPrice: "20.00",
-    currentPrice: "18.00",
+    oldPrice: 20.00,
+    currentPrice: 18.00,
     images: ["/images/products/canon.webp", "/images/products/charger.jpg"],
     categories: ["Laptop"],
     quantity: 10,
@@ -110,8 +110,8 @@ export const products = [
   {
     id: "344544",
     title: "Headphone",
-    oldPrice: "20.00",
-    currentPrice: "18.00",
+    oldPrice: 20.00,
+    currentPrice: 18.00,
     images: ["/images/products/headphone.webp", "/images/products/charger.jpg"],
     categories: ["Laptop"],
     quantity: 2,
@@ -119,8 +119,8 @@ export const products = [
   {
     id: "544333",
     title: "Sony play station 4",
-    oldPrice: "20.00",
-    currentPrice: "18.00",
+    oldPrice: 20.00,
+    currentPrice: 18.00,
     images: [
       "/images/products/sony-play-station.webp",
       "/images/products/charger.jpg",
@@ -131,8 +131,8 @@ export const products = [
   {
     id: "5445676",
     title: "TV JVC 3",
-    oldPrice: "20.00",
-    currentPrice: "18.00",
+    oldPrice: 20.00,
+    currentPrice: 18.00,
     images: ["/images/products/jvc3.webp", "/images/products/charger.jpg"],
     categories: ["Laptop"],
     quantity: 0,
@@ -140,8 +140,8 @@ export const products = [
   {
     id: "75443",
     title: "Sound Echo",
-    oldPrice: "20.00",
-    currentPrice: "18.00",
+    oldPrice: 20.00,
+    currentPrice: 18.00,
     images: ["/images/products/echo2.webp", "/images/products/charger.jpg"],
     categories: ["Laptop"],
     quantity: 6,
@@ -149,8 +149,8 @@ export const products = [
   {
     id: "54433",
     title: "Sport Shoes",
-    oldPrice: "20.00",
-    currentPrice: "18.00",
+    oldPrice: 20.00,
+    currentPrice: 18.00,
     images: [
       "/images/products/sport-shoes.jpg",
       "/images/products/charger.jpg",

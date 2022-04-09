@@ -17,3 +17,7 @@ export function PrevArrow(props) {
     </div>
   );
 }
+
+export function roundPrice(price, qty) {
+  return (price * qty).toFixed(2);
+}
