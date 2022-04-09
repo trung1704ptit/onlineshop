@@ -149,7 +149,7 @@ export default function Footer() {
             </ul>
           </div>
           <div>
-            <img src="/images/payments.png" />
+            <img src="/images/payments.png" alt="payments" />
           </div>
         </div>
       </div>

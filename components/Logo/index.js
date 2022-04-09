@@ -6,7 +6,7 @@ export default function Logo({ white = false }) {
     <Link href="/">
       <a data-cy="logo-link">
         <div className={classNames("logo", white ? "white" : "black")}>
-          <img src="/images/logo/logo.png" alg="logo" />
+          <img src="/images/logo/logo.png" alg="app-lg" />
           <span className="name">Online Shop</span>
         </div>
       </a>
