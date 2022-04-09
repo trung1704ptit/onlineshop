@@ -14,3 +14,11 @@ export const removeFromCart = (product) => dispatch => {
     payload: product,
   })
 }
+
+
+export const updateCart = (product) => dispatch => {
+  dispatch({
+    type: types.UPDATE_CART,
+    payload: product,
+  })
+}

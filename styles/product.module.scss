@@ -194,7 +194,7 @@
   border: 1px solid $gray-color;
   justify-content: space-between;
   align-items: center;
-  padding: 8px 16px;
+  padding: 6px 16px;
   max-width: 150px;
   border-radius: $border-radius-base;
 
@@ -218,6 +218,7 @@
 
   svg {
     cursor: pointer;
+    font-size: 18px;
     &:hover {
       color: $second-color;
     }

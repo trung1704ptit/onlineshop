@@ -11,10 +11,11 @@ const cart = (state = initialState, action) => {
   let product = action.payload;
   let total = 0;
   let totalPrice = 0;
+  let exist = false;
 
   switch (action.type) {
     case types.ADD_TO_CART:
-      const exist = products.find((item) => item.id === action.payload.id);
+      exist = products.find((item) => item.id === action.payload.id);
 
       if (exist) {
         products = products.map((item) =>
@@ -25,11 +26,38 @@ const cart = (state = initialState, action) => {
       }
 
       total = products.reduce((t, { cartQty }) => t + cartQty, 0);
-      totalPrice = products.reduce(
-        (t, { currentPrice, cartQty }) =>
-          t + parseFloat(currentPrice) * cartQty,
-        0
-      ).toFixed(2);
+      totalPrice = products
+        .reduce(
+          (t, { currentPrice, cartQty }) =>
+            t + parseFloat(currentPrice) * cartQty,
+          0
+        )
+        .toFixed(2);
+
+      return {
+        ...state,
+        products,
+        total,
+        totalPrice,
+      };
+
+    case types.UPDATE_CART:
+      exist = products.find((item) => item.id === action.payload.id);
+
+      if (exist) {
+        products = products.map((item) =>
+          item.id === exist.id ? { ...exist, cartQty: product.cartQty } : item
+        );
+      }
+
+      total = products.reduce((t, { cartQty }) => t + cartQty, 0);
+      totalPrice = products
+        .reduce(
+          (t, { currentPrice, cartQty }) =>
+            t + parseFloat(currentPrice) * cartQty,
+          0
+        )
+        .toFixed(2);
 
       return {
         ...state,
@@ -42,11 +70,13 @@ const cart = (state = initialState, action) => {
       const newProducts = products.filter((item) => item.id !== product.id);
 
       total = newProducts.reduce((t, { cartQty }) => t + cartQty, 0);
-      totalPrice = newProducts.reduce(
-        (t, { currentPrice, cartQty }) =>
-          t + parseFloat(currentPrice) * cartQty,
-        0
-      ).toFixed(2);
+      totalPrice = newProducts
+        .reduce(
+          (t, { currentPrice, cartQty }) =>
+            t + parseFloat(currentPrice) * cartQty,
+          0
+        )
+        .toFixed(2);
 
       return {
         ...state,

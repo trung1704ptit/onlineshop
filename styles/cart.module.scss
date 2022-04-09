@@ -128,8 +128,9 @@
   }
 
   td {
-    padding: 5px 0;
+    padding: 10px 0;
     vertical-align: middle;
+    font-size: 16px;
   }
 
   tr:nth-child(even) {
@@ -161,6 +162,11 @@
 
       &:nth-last-child(1) {
         border: none;
+      }
+      .highlight {
+        color: $second-color;
+        font-size: 20px;
+        font-weight: 600;
       }
     }
   }

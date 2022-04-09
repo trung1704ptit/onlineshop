@@ -12,8 +12,6 @@ export default function ColorOptions() {
   const handleClick = (color) => {
     let newList = [];
 
-    console.log(activeList);
-
     if (activeList.includes(color)) {
       newList = activeList.filter((item) => item !== color);
     } else {

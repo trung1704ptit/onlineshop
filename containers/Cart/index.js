@@ -7,9 +7,11 @@ import CartDetail from "./CartDetail";
 export default function Cart() {
   return (
     <Section>
+      <Space height={40} />
       <CartProgress />
 
       <Space height={60} />
+
       <CartDetail />
       <Space height={60} />
     </Section>

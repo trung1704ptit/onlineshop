@@ -1,7 +1,7 @@
-import { Col, Row, Tooltip } from "antd";
+import { Col, Row, Tooltip, message } from "antd";
 import styles from "@styles/cart.module.scss";
 import { AiOutlineClose } from "react-icons/ai";
-import { removeFromCart } from "@redux/actions/cart";
+import { removeFromCart, updateCart } from "@redux/actions/cart";
 import { useDispatch, useSelector } from "react-redux";
 import { roundPrice } from "@utils/helper";
 import Title from "antd/lib/typography/Title";
@@ -17,18 +17,30 @@ export default function CartDetail() {
     dispatch(removeFromCart(product));
   };
 
+  const onUpdateCart = (product, newCartQty) => {
+    // call update redux with new quantity
+    if (newCartQty === 0) {
+      dispatch(removeFromCart(product));
+      message.success(`Removed ${product.title} from cart successful`);
+    } else {
+      product["cartQty"] = newCartQty;
+      dispatch(updateCart(product));
+      message.success("Updated the cart successful");
+    }
+  };
+
   return (
     <div className={styles["cart-detail"]}>
       <Row gutter={32}>
-        <Col xs={24} md={17}>
-          <table>
+        <Col xs={24} md={24} lg={17}>
+          <table className="mb-md-0 mb-5">
             <thead>
               <tr>
                 <th className="text-center">Image</th>
                 <th>Product</th>
-                <th>Price</th>
-                <th>Quantity</th>
-                <th>Subtotal</th>
+                <th className="d-none d-md-table-cell text-center">Price</th>
+                <th className="d-none d-md-table-cell text-center">Quantity</th>
+                <th className="d-none d-md-table-cell text-center">Subtotal</th>
                 <th className="text-center">Remove</th>
               </tr>
             </thead>
@@ -38,12 +50,31 @@ export default function CartDetail() {
                   <td className="text-center">
                     <img src={product.images[0]} alt="product img" />
                   </td>
-                  <td>{product.title}</td>
-                  <td>${product.currentPrice.toFixed(2)}</td>
                   <td>
-                    <ProductQuantityControl quantity={product.cartQty} />
+                    <p className="mb-2 mb-sm-0">{product.title}</p>
+                    <div className="d-block d-sm-none text-center">
+                      <ProductQuantityControl
+                        quantity={product.cartQty}
+                        onUpdateCart={(newCartQty) =>
+                          onUpdateCart(product, newCartQty)
+                        }
+                      />
+                    </div>
                   </td>
-                  <td>${roundPrice(product.currentPrice, product.cartQty)}</td>
+                  <td className="d-none d-md-table-cell text-center">
+                    ${product.currentPrice}
+                  </td>
+                  <td className="d-none d-md-table-cell text-center">
+                    <ProductQuantityControl
+                      quantity={product.cartQty}
+                      onUpdateCart={(newCartQty) =>
+                        onUpdateCart(product, newCartQty)
+                      }
+                    />
+                  </td>
+                  <td className="d-none d-md-table-cell text-center">
+                    ${roundPrice(product.currentPrice, product.cartQty)}
+                  </td>
                   <td className="text-center">
                     <Tooltip title="Remove from cart">
                       <AiOutlineClose
@@ -57,7 +88,7 @@ export default function CartDetail() {
             </tbody>
           </table>
         </Col>
-        <Col xs={24} md={7}>
+        <Col xs={24} md={24} lg={7}>
           <div className={styles["cart-summary"]}>
             <Title level={4} className={styles["title"]}>
               Cart Totals
@@ -74,7 +105,7 @@ export default function CartDetail() {
 
             <div className={styles["summary-item"]}>
               <strong>Total</strong>
-              <span>${totalPrice}</span>
+              <span className={styles["highlight"]}>${totalPrice}</span>
             </div>
             <div className={styles["summary-item"]}>
               <CircleButton style="black w-100">
