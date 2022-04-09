@@ -62,9 +62,8 @@
 
     .right-content {
       display: flex;
-      justify-content: initial;
       width: initial;
-      justify-content: end;
+      justify-content: flex-end;
 
       .price-and-message {
         margin: 0 30px 0 0;
