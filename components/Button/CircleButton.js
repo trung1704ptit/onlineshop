@@ -1,3 +1,4 @@
+import Link from "next/link";
 import PropTypes from "prop-types";
 
 export default function CircleButton({
@@ -15,13 +16,15 @@ export default function CircleButton({
   };
 
   return (
-    <a
-      className={`btn-circle ${size} ${style}`}
-      href={href}
-      onClick={handleClick}
-    >
-      {children}
-    </a>
+    <Link href={href}>
+      <a
+        className={`btn-circle ${size} ${style}`}
+        href={href}
+        onClick={handleClick}
+      >
+        {children}
+      </a>
+    </Link>
   );
 }
 

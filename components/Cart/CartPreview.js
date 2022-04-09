@@ -66,7 +66,7 @@ export default function CartPreview({ products, totalPrice }) {
           <span className={styles["total-price"]}>${totalPrice}</span>
         </div>
 
-        <CircleButton style="black w-100 mt-3 mb-3">Checkout</CircleButton>
+        <CircleButton style="black w-100 mt-3 mb-3" href="/cart">Checkout</CircleButton>
         <div className={styles["view-cart-link"]}>
           <Link href="/cart">
             <a className="d-flex align-items-center justify-content-center">
