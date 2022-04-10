@@ -220,6 +220,7 @@
   svg {
     cursor: pointer;
     font-size: 18px;
+
     &:hover {
       color: $second-color;
     }
@@ -241,5 +242,25 @@
 
   @media screen and (min-width: 768px) {
     padding: 2.5rem;
+  }
+}
+
+.product-description {
+  color: 16px;
+
+  .content {
+    font-size: 16px;
+  }
+
+  table {
+    width: 100%;
+
+    th,
+    td {
+      border: 1px solid $gray-color;
+      padding: 8px;
+      text-align: left;
+      font-size: 16px;
+    }
   }
 }

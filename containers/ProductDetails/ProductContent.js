@@ -3,7 +3,6 @@ import styles from "@styles/product.module.scss";
 import { Space, Divider, Rate } from "antd";
 import ProductGallery from "./ProductGallery";
 import ProductQuantityControl from "@components/ProductQuantityControl";
-import CircleButton from "@components/Button/CircleButton";
 import { BsLinkedin, BsFacebook, BsTwitter, BsYoutube } from "react-icons/bs";
 import ProductAlertMessage from "./ProductAlertMessage";
 
@@ -63,7 +62,6 @@ export default function ProductBreadCrumb() {
                 quantity={1}
                 onUpdateCart={(newQty) => console.log(newQty)}
               />
-              {/* <CircleButton style="black ms-3 w-100">Add to cart</CircleButton> */}
               <Button
                 size="large"
                 // disabled={loading}

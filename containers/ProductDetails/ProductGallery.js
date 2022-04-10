@@ -6,8 +6,8 @@ const images = [
     thumbnail: '/images/products/apple-airpod.jpg',
   },
   {
-    original: '/images/products/canon.webp',
-    thumbnail: '/images/products/canon.webp',
+    original: '/images/products/imac.jpg',
+    thumbnail: '/images/products/imac.jpg',
   },
   {
     original: '/images/products/smartwatch2.jpg',
