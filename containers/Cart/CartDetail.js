@@ -7,6 +7,7 @@ import { roundPrice } from "@utils/helper";
 import Title from "antd/lib/typography/Title";
 import CircleButton from "@components/Button/CircleButton";
 import ProductQuantityControl from "@components/ProductQuantityControl";
+import Link from "next/link";
 
 export default function CartDetail() {
   const dispatch = useDispatch();
@@ -51,7 +52,11 @@ export default function CartDetail() {
                     <img src={product.images[0]} alt="product img" />
                   </td>
                   <td>
-                    <p className="mb-2 mb-sm-0">{product.title}</p>
+                    <p className="mb-2 mb-sm-0">
+                      <Link href={`/product/${product.id}`}>
+                        <a>{product.title}</a>
+                      </Link>
+                    </p>
                     <div className="d-block d-sm-none text-center">
                       <ProductQuantityControl
                         quantity={product.cartQty}

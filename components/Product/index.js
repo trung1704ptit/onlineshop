@@ -56,17 +56,22 @@ export default function Product({ data, border = true }) {
         border ? "border" : "border-0"
       )}
     >
-      <figure>
-        {data.oldPrice !== data.currentPrice ? (
-          <span className={styles["label"]}>Sale!</span>
-        ) : null}
-        <img
-          src={imgSrc}
-          alt="product-img"
-          onMouseEnter={onMouseEnter}
-          onMouseOut={onMouseOut}
-        />
-      </figure>
+      <Link href={`/product/${data.id}`}>
+        <a>
+          <figure>
+            {data.oldPrice !== data.currentPrice ? (
+              <span className={styles["label"]}>Sale!</span>
+            ) : null}
+
+            <img
+              src={imgSrc}
+              alt="product-img"
+              onMouseEnter={onMouseEnter}
+              onMouseOut={onMouseOut}
+            />
+          </figure>
+        </a>
+      </Link>
 
       <div className={styles["product-bottom"]}>
         <div>

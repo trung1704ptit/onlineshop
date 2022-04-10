@@ -34,7 +34,6 @@ export default function CartPreview({ products, totalPrice }) {
       <List
         itemLayout="horizontal"
         dataSource={products}
-        style={{ maxHeight: 500, overflowY: "auto" }}
         renderItem={(item) => (
           <List.Item
             extra={
@@ -53,7 +52,7 @@ export default function CartPreview({ products, totalPrice }) {
                   className={styles["product-img"]}
                 />
               }
-              title={<a href="#">{item.title}</a>}
+              title={<a href={`/product/${item.id}`}>{item.title}</a>}
               description={`${item.cartQty} x $${item.currentPrice}`}
             />
           </List.Item>
@@ -66,7 +65,9 @@ export default function CartPreview({ products, totalPrice }) {
           <span className={styles["total-price"]}>${totalPrice}</span>
         </div>
 
-        <CircleButton style="black w-100 mt-3 mb-3" href="/cart">Checkout</CircleButton>
+        <CircleButton style="black w-100 mt-3 mb-3" href="/cart">
+          Checkout
+        </CircleButton>
         <div className={styles["view-cart-link"]}>
           <Link href="/cart">
             <a className="d-flex align-items-center justify-content-center">
