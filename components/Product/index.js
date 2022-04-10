@@ -8,7 +8,7 @@ import styles from "../../styles/product.module.scss";
 
 const key = "updatable";
 
-export default function Product({ data, border = true }) {
+export default function Product({ data, border = true, className="" }) {
   const [imgSrc, setImgSrc] = useState("");
   const [loading, setLoading] = useState(false);
   const dispatch = useDispatch();
@@ -53,7 +53,8 @@ export default function Product({ data, border = true }) {
     <div
       className={classNames(
         styles["product-item"],
-        border ? "border" : "border-0"
+        border ? "border" : "border-0",
+        className
       )}
     >
       <Link href={`/product/${data.id}`}>

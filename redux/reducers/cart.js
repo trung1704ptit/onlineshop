@@ -19,10 +19,12 @@ const cart = (state = initialState, action) => {
 
       if (exist) {
         products = products.map((item) =>
-          item.id === exist.id ? { ...exist, cartQty: exist.cartQty + 1 } : item
+          item.id === exist.id
+            ? { ...exist, cartQty: exist.cartQty + (product.cartQty || 1) }
+            : item
         );
       } else {
-        products = [...products, { ...product, cartQty: 1 }];
+        products = [...products, { ...product, cartQty: product.cartQty || 1 }];
       }
 
       total = products.reduce((t, { cartQty }) => t + cartQty, 0);

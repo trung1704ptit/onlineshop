@@ -1,14 +1,42 @@
-import { Button, Col, Row, Tag, Typography } from "antd";
+import { Button, Col, message, Row, Tag, Typography } from "antd";
 import styles from "@styles/product.module.scss";
 import { Space, Divider, Rate } from "antd";
 import ProductGallery from "./ProductGallery";
 import ProductQuantityControl from "@components/ProductQuantityControl";
 import { BsLinkedin, BsFacebook, BsTwitter, BsYoutube } from "react-icons/bs";
 import ProductAlertMessage from "./ProductAlertMessage";
+import { addToCart } from "@redux/actions/cart";
+import { useDispatch } from "react-redux";
+import { useState } from "react";
 
 const { Title, Text } = Typography;
+const key = "product-detail";
 
-export default function ProductBreadCrumb() {
+export default function ProductContent({ product }) {
+  const [quantity, setQuantity] = useState(0);
+  const [loading, setLoading] = useState(false);
+
+  const dispatch = useDispatch();
+
+  const handleAddToCart = () => {
+    product["cartQty"] = quantity;
+    dispatch(addToCart(product));
+    openMessage(product.title);
+  };
+
+  const setNewQuantity = (newQty) => {
+    setQuantity(newQty);
+  };
+
+  const openMessage = (title) => {
+    message.loading({ content: `Adding ${title} to Cart`, key });
+    setLoading(true);
+    setTimeout(() => {
+      message.success({ content: `Added ${title}  to Cart`, key, duration: 2 });
+      setLoading(false);
+    }, 800);
+  };
+
   return (
     <div className={styles["product-detail"]}>
       <Title level={3}>Angie's Boomchickapop Sweet & Salty Kettle Corn</Title>
@@ -60,14 +88,14 @@ export default function ProductBreadCrumb() {
             <div className="d-flex">
               <ProductQuantityControl
                 quantity={1}
-                onUpdateCart={(newQty) => console.log(newQty)}
+                onUpdateCart={(newQty) => setNewQuantity(newQty)}
               />
               <Button
                 size="large"
-                // disabled={loading}
-                // onClick={handleAddCart}
+                disabled={loading}
+                onClick={handleAddToCart}
                 shape="round"
-                // loading={loading}
+                loading={loading}
                 data-cy="add-to-cart"
                 type="primary"
                 className="ms-3 w-100"

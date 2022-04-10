@@ -2,7 +2,6 @@ import Head from "next/head";
 import dynamic from "next/dynamic";
 import Layout from "@components/Layout";
 import { useEffect } from "react";
-import Router from 'next/router';
 
 const ProductDetails = dynamic(() => import("../../containers/ProductDetails"));
 
