@@ -73,7 +73,9 @@ export default function Product({ data, border = true }) {
           <div className={styles["product-category"]}>
             <Link href="#">{data.categories[0]}</Link>
           </div>
-          <h3 className={styles["title"]}>{data.title}</h3>
+          <h3 className={styles["title"]}>
+            <Link href={`/product/${data.id}`}>{data.title}</Link>
+          </h3>
           <div className={styles["product-price"]}>
             <span className={styles["old-price"]}>${data.oldPrice}</span>
             <span className={styles["current-price"]}>

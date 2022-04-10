@@ -1,5 +1,6 @@
 @import './variables.module.scss';
 @import './utils.scss';
+@import "~react-image-gallery/styles/scss/image-gallery.scss";
 
 html,
 body {
@@ -378,4 +379,15 @@ a:focus {
 
 .product-top-filter .ant-select-selection-item {
   text-align: right;
+}
+
+.image-gallery-thumbnail {
+  width: 60px;
+}
+
+
+.image-gallery-thumbnail img {
+  width: auto;
+  height: 60px;
+  object-fit: cover;
 }
