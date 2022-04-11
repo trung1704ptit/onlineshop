@@ -3,8 +3,8 @@ import dynamic from "next/dynamic";
 import Layout from "@components/Layout";
 import Loading from "@components/Loading";
 
-const Cart = dynamic(() =>
-  import("../containers/Cart"), {
+const Checkout = dynamic(() =>
+  import("../containers/Checkout"), {
     loading: () => <Loading height="50vh" tip="Loading..." />,
   }
 );
@@ -19,7 +19,7 @@ export default function CartPage() {
       </Head>
 
       <Layout>
-        <Cart />
+        <Checkout />
       </Layout>
     </>
   );
