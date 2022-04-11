@@ -21,7 +21,7 @@ export default function ProductCountDown() {
               <CountDown />
             </div>
             <div className="mb-3">
-              <CircleButton style="transparent" size="medium">
+              <CircleButton className="transparent" size="medium">
                 Buy Laptop Now <MdOutlineKeyboardArrowRight />
               </CircleButton>
             </div>

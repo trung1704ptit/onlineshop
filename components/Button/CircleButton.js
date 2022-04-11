@@ -4,9 +4,9 @@ import PropTypes from "prop-types";
 export default function CircleButton({
   children,
   size = "large",
-  style = "",
   href = "/#",
   onClick,
+  className = "",
 }) {
   const handleClick = (e) => {
     if (onClick) {
@@ -18,7 +18,7 @@ export default function CircleButton({
   return (
     <Link href={href}>
       <a
-        className={`btn-circle ${size} ${style}`}
+        className={`btn-circle ${size} ${className}`}
         href={href}
         onClick={handleClick}
       >
@@ -31,6 +31,6 @@ export default function CircleButton({
 CircleButton.propTypes = {
   children: PropTypes.any,
   size: PropTypes.oneOf(["large", "medium", "small"]),
-  style: PropTypes.oneOf(["transparent", ""]),
+  className: PropTypes.string,
   href: PropTypes.string,
 };

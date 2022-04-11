@@ -10,8 +10,9 @@ export default function ProductQuantityControl({ quantity, onUpdateCart }) {
   }, [quantity]);
 
   const handleChange = (e) => {
-    setValue(e.target.value);
-    onUpdateCart(e.target.value)
+    const qty = parseInt(e.target.value);
+    setValue(qty);
+    onUpdateCart(qty)
   };
 
   const onHandleMinus = () => {
