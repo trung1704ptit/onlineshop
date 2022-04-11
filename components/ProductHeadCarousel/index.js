@@ -3,7 +3,7 @@ import styles from "@styles/product.module.scss";
 import CircleButton from "../Button/CircleButton";
 import Title from "antd/lib/typography/Title";
 
-export default function ProductPreview({ imageUrl }) {
+export default function ProductHeadCarousel({ imageUrl }) {
   return (
     <div
       style={{

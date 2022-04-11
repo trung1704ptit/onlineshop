@@ -6,7 +6,7 @@ import { MdOutlineKeyboardArrowRight } from "react-icons/md";
 import { Typography } from 'antd';
 import Section from "@components/Section";
 import Product from "@components/Product";
-import ProductPreview from "@components/ProductPreview";
+import ProductHeadCarousel from "@components/ProductHeadCarousel";
 import styles from "@styles/product.module.scss";
 import { NextArrow, PrevArrow } from "@utils/helper";
 import Countdown from "@components/CountDown";
@@ -65,7 +65,7 @@ export default function TodayHotDeal() {
 
       <Row gutter={32}>
         <Col xs={24} sm={6}>
-          <ProductPreview imageUrl="/images/products/women.jpg" />
+          <ProductHeadCarousel imageUrl="/images/products/women.jpg" />
         </Col>
 
         <Col xs={24} sm={18}>
