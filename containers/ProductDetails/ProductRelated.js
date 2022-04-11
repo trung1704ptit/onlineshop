@@ -11,8 +11,8 @@ export default function ProductRelated() {
       <Title level={3}>Related Products</Title>
       <Row gutter={16}>
         {productsRelated.map((product) => (
-          <Col xs={24} sm={12} md={8} xl={4} className="mb-3">
-            <Product data={product} key={product.id} className="bg-white" />
+          <Col xs={24} sm={12} md={8} xl={4} className="mb-3" key={product.id}>
+            <Product data={product} className="bg-white" />
           </Col>
         ))}
       </Row>

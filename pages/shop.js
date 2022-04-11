@@ -1,11 +1,21 @@
 import Head from "next/head";
 import dynamic from "next/dynamic";
+import Layout from "@components/Layout";
+import Space from "@components/Space";
+import Loading from "@components/Loading";
 
-import Layout from "../components/Layout";
-import Space from "../components/Space";
+const AdvertiseBanner = dynamic(() =>
+  import("../containers/AdvertiseBanner"), {
+    loading: () => <Loading height="200px" tip="Loading..." />,
+  }
+);
 
-const AdvertiseBanner = dynamic(() => import('../containers/AdvertiseBanner'));
-const ProductListWithFilter = dynamic(() => import('../containers/ProductListWithFilter'));
+const ProductListWithFilter = dynamic(
+  () => import("../containers/ProductListWithFilter"),
+  {
+    loading: () => <Loading height="200px" tip="Loading..." />,
+  }
+);
 
 export default function Shop() {
   return (
@@ -18,7 +28,7 @@ export default function Shop() {
 
       <Layout>
         <>
-          <Space height={16} className="d-md-none"/>
+          <Space height={16} className="d-md-none" />
 
           <AdvertiseBanner />
           <Space height={40} />
