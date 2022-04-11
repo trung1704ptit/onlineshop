@@ -31,7 +31,7 @@ export default function Home() {
 
       <Layout>
         <>
-          <Space height={30} className="d-block d-sm-none" />
+          <Space height={30} className="d-block d-lg-none" />
           <CategoryListAndProductCarousel />
 
           <Services />

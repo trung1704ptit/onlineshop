@@ -1,14 +1,12 @@
 import Link from "next/link";
-import dynamic from "next/dynamic";
 import { BsSuitHeart } from "react-icons/bs";
 import cx from "classnames";
 import styles from "../../styles/header.module.scss";
 import Logo from "@components/Logo";
-
-const MyAccount = dynamic(() => import("./MyAccount"));
-const DesktopSearch = dynamic(() => import("../SearchBar/DesktopSearch"));
-const DesktopCart = dynamic(() => import("../Cart/DesktopCart"));
-const HeaderCategories = dynamic(() => import("./HeaderCategories"));
+import HeaderCategories from "./HeaderCategories";
+import MyAccount from "./MyAccount";
+import DesktopSearch from "../SearchBar/DesktopSearch";
+import DesktopCart from "../Cart/DesktopCart";
 
 export default function DesktopHeader() {
   return (

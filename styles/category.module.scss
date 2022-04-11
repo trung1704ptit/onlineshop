@@ -4,11 +4,12 @@
   display: block;
   position: relative;
   width: 100%;
+  background-color: #fff;
 
   @media screen and (min-width: 768px) {
     margin-right: 30px;
     flex: 0 0 300px;
-    min-width: 300px;
+    width: 300px;
   }
 
   ul {

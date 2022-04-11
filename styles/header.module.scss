@@ -148,6 +148,7 @@
 }
 
 
+
 // Header Categories
 .header-categories {
   width: 100%;
@@ -156,24 +157,6 @@
   align-items: baseline;
   font-weight: 600;
 
-  .left-side {
-    .toggle-categories {
-      width: 280px;
-      font-size: 14px;
-      display: flex;
-      align-items: center;
-
-      svg {
-        margin-left: 10px;
-        font-size: 16px;
-      }
-    }
-  }
-
-  .right-side {
-    //
-  }
-
   ul li {
     display: inline-flex;
     align-items: center;
@@ -181,6 +164,7 @@
 
     .link {
       color: #000;
+
       &:hover {
         color: $text-hover-color;
       }
@@ -188,7 +172,30 @@
   }
 }
 
+.toggle-categories {
+  width: 300px;
+  background: $second-color;
+  border-radius: 20px;
+  padding: 10px 24px;
+  font-size: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  color: #fff;
+  position: relative;
+  cursor: pointer;
 
+  svg {
+    font-size: 13px;
+  }
+
+  .arrow-down {
+    position: absolute;
+    right: 9px;
+    top: 50%;
+    transform: translate(-9px, -50%);
+  }
+}
 
 // Mobile
 .main-mobile-header {
