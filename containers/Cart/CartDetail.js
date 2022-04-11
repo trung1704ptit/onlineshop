@@ -113,7 +113,7 @@ export default function CartDetail() {
               <span className={styles["highlight"]}>${totalPrice}</span>
             </div>
             <div className={styles["summary-item"]}>
-              <CircleButton className="black w-100">
+              <CircleButton className="black w-100" href="/checkout">
                 Process to checkout
               </CircleButton>
             </div>
