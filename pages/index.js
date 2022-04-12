@@ -2,7 +2,7 @@ import Head from "next/head";
 import dynamic from "next/dynamic";
 
 import Layout from "../components/Layout";
-import Space from "../components/Space";
+import BlankSpace from "../components/BlankSpace";
 
 const Brands = dynamic(() => import("../containers/BrandsCarousel"));
 const TodayHotDeal = dynamic(() => import("../containers/TodayHotDeal"));
@@ -31,29 +31,29 @@ export default function Home() {
 
       <Layout>
         <>
-          <Space height={30} className="d-block d-lg-none" />
+          <BlankSpace height={30} className="d-block d-lg-none" />
           <CategoryListAndProductCarousel />
 
           <Services />
-          <Space height={40} />
+          <BlankSpace height={40} />
 
           <TrendingProductCarousel />
-          <Space height={60} />
+          <BlankSpace height={60} />
 
           <TodayHotDeal />
-          <Space height={60} />
+          <BlankSpace height={60} />
 
           <ProductCountDown />
-          <Space height={60} />
+          <BlankSpace height={60} />
 
           <BestSeller />
-          <Space height={60} />
+          <BlankSpace height={60} />
 
           <ProductBanner />
-          <Space height={60} />
+          <BlankSpace height={60} />
 
           <Brands />
-          <Space height={40} />
+          <BlankSpace height={40} />
         </>
       </Layout>
     </>

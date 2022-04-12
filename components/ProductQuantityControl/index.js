@@ -1,8 +1,13 @@
 import styles from "@styles/product.module.scss";
+import classNames from "classnames";
 import { useEffect, useState } from "react";
 import { AiOutlineMinus, AiOutlinePlus } from "react-icons/ai";
 
-export default function ProductQuantityControl({ quantity, onUpdateCart }) {
+export default function ProductQuantityControl({
+  quantity,
+  onUpdateCart,
+  className = "",
+}) {
   const [value, setValue] = useState(quantity);
 
   useEffect(() => {
@@ -12,7 +17,7 @@ export default function ProductQuantityControl({ quantity, onUpdateCart }) {
   const handleChange = (e) => {
     const qty = parseInt(e.target.value);
     setValue(qty);
-    onUpdateCart(qty)
+    onUpdateCart(qty);
   };
 
   const onHandleMinus = () => {
@@ -28,7 +33,7 @@ export default function ProductQuantityControl({ quantity, onUpdateCart }) {
   };
 
   return (
-    <div className={styles["product-quantity-control"]}>
+    <div className={classNames(styles["product-quantity-control"], className)}>
       <AiOutlineMinus onClick={onHandleMinus} />
       <input type="number" value={value} onChange={handleChange} min="0" />
       <AiOutlinePlus onClick={handlePlus} />

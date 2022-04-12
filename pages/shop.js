@@ -1,7 +1,7 @@
 import Head from "next/head";
 import dynamic from "next/dynamic";
 import Layout from "@components/Layout";
-import Space from "@components/Space";
+import BlankSpace from "@components/BlankSpace";
 import Loading from "@components/Loading";
 
 const AdvertiseBanner = dynamic(() =>
@@ -28,13 +28,13 @@ export default function Shop() {
 
       <Layout>
         <>
-          <Space height={16} className="d-md-none" />
+          <BlankSpace height={16} className="d-md-none" />
 
           <AdvertiseBanner />
-          <Space height={40} />
+          <BlankSpace height={40} />
 
           <ProductListWithFilter />
-          <Space height={60} />
+          <BlankSpace height={60} />
         </>
       </Layout>
     </>

@@ -1,4 +1,4 @@
-import { Col, Row, Tooltip, message } from "antd";
+import { Col, Row, Tooltip, message, Divider } from "antd";
 import styles from "@styles/cart.module.scss";
 import { AiOutlineClose } from "react-icons/ai";
 import { removeFromCart, updateCart } from "@redux/actions/cart";
@@ -8,6 +8,7 @@ import Title from "antd/lib/typography/Title";
 import CircleButton from "@components/Button/CircleButton";
 import ProductQuantityControl from "@components/ProductQuantityControl";
 import Link from "next/link";
+import CouponForm from "@components/CouponForm";
 
 export default function CartDetail() {
   const dispatch = useDispatch();
@@ -40,7 +41,7 @@ export default function CartDetail() {
                 <th className="text-center">Image</th>
                 <th>Product</th>
                 <th className="d-none d-md-table-cell text-center">Price</th>
-                <th className="d-none d-md-table-cell text-center">Quantity</th>
+                <th className="d-none d-md-table-cell">Quantity</th>
                 <th className="d-none d-md-table-cell text-center">Subtotal</th>
                 <th className="text-center">Remove</th>
               </tr>
@@ -92,6 +93,9 @@ export default function CartDetail() {
               ))}
             </tbody>
           </table>
+
+          <Divider />
+          <CouponForm />
         </Col>
         <Col xs={24} md={24} lg={7}>
           <div className={styles["cart-summary"]}>

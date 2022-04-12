@@ -2,7 +2,7 @@ import TopFilter from "@components/Filter/TopFilter";
 import LeftFilter from "@components/Filter/LeftFilter";
 import Section from "@components/Section";
 import { Row, Col, Pagination } from "antd";
-import Space from "@components/Space";
+import BlankSpace from "@components/BlankSpace";
 import Product from "@components/Product";
 
 import { products } from "../../data/products";
@@ -15,7 +15,7 @@ export default function ProductListWithFilter() {
         <div className="d-none d-xl-block me-3">
           <LeftFilter />
 
-          <Space height={30} />
+          <BlankSpace height={30} />
 
           {/* Ads */}
           <div>
