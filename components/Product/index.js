@@ -8,7 +8,7 @@ import styles from "../../styles/product.module.scss";
 
 const key = "updatable";
 
-export default function Product({ data, border = true, className="" }) {
+export default function Product({ data, border = true, className = "" }) {
   const [imgSrc, setImgSrc] = useState("");
   const [loading, setLoading] = useState(false);
   const dispatch = useDispatch();
@@ -44,7 +44,11 @@ export default function Product({ data, border = true, className="" }) {
     message.loading({ content: `Adding ${title} to Cart`, key });
     setLoading(true);
     setTimeout(() => {
-      message.success({ content: `Added ${title}  to Cart`, key, duration: 2 });
+      message.success({
+        content: `Added ${title}  to Cart`,
+        key,
+        duration: 2,
+      });
       setLoading(false);
     }, 800);
   };

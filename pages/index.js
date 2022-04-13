@@ -26,7 +26,6 @@ export default function Home() {
       <Head>
         <title>Home | Online shop</title>
         <meta name="description" content="Online shop" />
-        <link rel="icon" href="/favicons/favicon.ico" />
       </Head>
 
       <Layout>

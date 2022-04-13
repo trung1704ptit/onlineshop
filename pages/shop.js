@@ -23,7 +23,6 @@ export default function Shop() {
       <Head>
         <title>Shop | Online shop</title>
         <meta name="description" content="Online shop" />
-        <link rel="icon" href="/favicons/favicon.ico" />
       </Head>
 
       <Layout>

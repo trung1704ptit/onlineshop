@@ -15,7 +15,6 @@ export default function CartPage() {
       <Head>
         <title>Checkout | Online shop</title>
         <meta name="description" content="Checkout - Online shop" />
-        <link rel="icon" href="/favicons/favicon.ico" />
       </Head>
 
       <Layout>

@@ -3,20 +3,20 @@ import dynamic from "next/dynamic";
 import Layout from "@components/Layout";
 import Loading from "@components/Loading";
 
-const Cart = dynamic(() => import("../containers/Cart"), {
+const WishlistTable = dynamic(() => import("../containers/WishlistTable"), {
   loading: () => (<Loading height="50vh" tip="Loading..." />)
 });
 
-export default function CartPage() {
+export default function Wishlist() {
   return (
     <>
       <Head>
-        <title>Cart | Online shop</title>
-        <meta name="description" content="Cart - Online shop" />
+        <title>Wishlist | Online shop</title>
+        <meta name="description" content="Wishlist - Online shop" />
       </Head>
 
       <Layout>
-        <Cart />
+        <WishlistTable />
       </Layout>
     </>
   );
