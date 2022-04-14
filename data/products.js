@@ -5,7 +5,8 @@ export const products = [
     oldPrice: 20.00,
     currentPrice: 18.00,
     images: ["/images/products/gopro.jpg", "/images/products/chair.jpg"],
-    categories: ["Electrics"],
+    categories: ["Electrics", "Camera"],
+    quantity: 10,
   },
   {
     id: "22324532",
@@ -17,6 +18,7 @@ export const products = [
       "/images/products/apple-airpod.jpg",
     ],
     categories: ["Clothing"],
+    quantity: 10,
   },
   {
     id: "3433343",
@@ -25,6 +27,7 @@ export const products = [
     currentPrice: 18.00,
     images: ["/images/products/smartwatch.jpg"],
     categories: ["Watch"],
+    quantity: 10,
   },
   {
     id: "4543333",

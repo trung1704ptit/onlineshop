@@ -17,11 +17,13 @@ export default function ProductDetails() {
 
   // call product detail by id
   useEffect(() => {
-    const exist = products.find((item) => item.id === productId);
-    if (exist) {
-      setProduct(exist);
-    } else {
-      setNotFound(true);
+    if (productId) {
+      const exist = products.find((item) => item.id === productId);
+      if (exist) {
+        setProduct(exist);
+      } else {
+        setNotFound(true);
+      }
     }
   }, [productId]);
 

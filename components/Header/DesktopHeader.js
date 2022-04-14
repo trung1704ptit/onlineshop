@@ -7,6 +7,7 @@ import HeaderCategories from "./HeaderCategories";
 import MyAccount from "./MyAccount";
 import DesktopSearch from "../SearchBar/DesktopSearch";
 import DesktopCart from "../Cart/DesktopCart";
+import HeaderWishlist from "./HeaderWishlist";
 
 export default function DesktopHeader() {
   return (
@@ -23,15 +24,7 @@ export default function DesktopHeader() {
 
             {/*  wishlist */}
             <div className={styles["header-module"]}>
-              <Link href="/wishlist">
-                <a>
-                  <div className={styles["wishlist"]}>
-                    <span className={styles["circle-item"]}>
-                      <BsSuitHeart />
-                    </span>
-                  </div>
-                </a>
-              </Link>
+              <HeaderWishlist />
             </div>
 
             {/* my account */}

@@ -6,8 +6,11 @@ import ProductQuantityControl from "@components/ProductQuantityControl";
 import { BsLinkedin, BsFacebook, BsTwitter, BsYoutube } from "react-icons/bs";
 import ProductAlertMessage from "./ProductAlertMessage";
 import { addToCart } from "@redux/actions/cart";
-import { useDispatch } from "react-redux";
-import { useState } from "react";
+import { useDispatch, useSelector } from "react-redux";
+import { useEffect, useState } from "react";
+import { BsSuitHeart } from "react-icons/bs";
+import classNames from "classnames";
+import { addToWishlist, removeFromWishlist } from "@redux/actions/wishlist";
 
 const { Title, Text } = Typography;
 const key = "product-detail";
@@ -15,6 +18,8 @@ const key = "product-detail";
 export default function ProductContent({ product }) {
   const [quantity, setQuantity] = useState(0);
   const [loading, setLoading] = useState(false);
+  const [isInWishlist, setIsInWishlist] = useState(false);
+  const productsOfWithlist = useSelector(state => state.wishlist.products);
 
   const dispatch = useDispatch();
 
@@ -35,6 +40,25 @@ export default function ProductContent({ product }) {
       message.success({ content: `Added ${title}  to Cart`, key, duration: 2 });
       setLoading(false);
     }, 800);
+  };
+
+  useEffect(() => {
+    const exist = productsOfWithlist.find(p => p.id === product.id);
+    if (exist) {
+      setIsInWishlist(true);
+    } else {
+      setIsInWishlist(false);
+    }
+  }, [productsOfWithlist, product]);
+
+  const handleToggleWishlist = () => {
+    if (isInWishlist) {
+      dispatch(removeFromWishlist(product));
+      message.success(`Removed ${product.title} from wishlist`);
+    } else {
+      dispatch(addToWishlist(product));
+      message.success(`Added ${product.title} to wishlist`);
+    }
   };
 
   return (
@@ -68,11 +92,22 @@ export default function ProductContent({ product }) {
             <ProductGallery />
           </Col>
           <Col xs={24} lg={7}>
-            <div className="mb-2 mt-md-0 mt-4">
-              <span className="fs-4 text-decoration-line-through">
-                <Text type="secondary">$4.29</Text>
+            <div className="mb-2 mt-md-0 mt-4 d-flex align-items-center justify-content-between">
+              <span>
+                <span className="fs-4 text-decoration-line-through">
+                  <Text type="secondary">$4.29</Text>
+                </span>
+                <span className="highlight fs-2">$3.29</span>
               </span>
-              <span className="highlight fs-2">$3.29</span>
+
+              <BsSuitHeart
+                size={22}
+                className={classNames(
+                  styles["wishlist-icon"],
+                  isInWishlist ? styles["active"] : ""
+                )}
+                onClick={handleToggleWishlist}
+              />
             </div>
 
             <Tag color="cyan" className="text-uppercase rounded-pill mb-3">

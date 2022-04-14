@@ -1,5 +1,4 @@
 import * as types from "../types";
-// import axios from "axios";
 
 export const addToCart = (product) => (dispatch) => {
   dispatch({
@@ -8,23 +7,22 @@ export const addToCart = (product) => (dispatch) => {
   });
 };
 
-export const removeFromCart = (product) => dispatch => {
+export const removeFromCart = (product) => (dispatch) => {
   dispatch({
     type: types.REMOVE_FROM_CART,
     payload: product,
-  })
-}
+  });
+};
 
-
-export const updateCart = (product) => dispatch => {
+export const updateCart = (product) => (dispatch) => {
   dispatch({
     type: types.UPDATE_CART,
     payload: product,
-  })
-}
+  });
+};
 
-export const hydrateCart = () => dispatch => {
+export const hydrateCart = () => (dispatch) => {
   dispatch({
     type: types.HYDRATE_CART,
-  })
-}
+  });
+};

@@ -81,7 +81,11 @@ export default function Product({ data, border = true, className = "" }) {
       <div className={styles["product-bottom"]}>
         <div>
           <div className={styles["product-category"]}>
-            <Link href="#">{data.categories[0]}</Link>
+            {data.categories.map((category) => (
+              <Link href={`/category/${category}`} key={category}>
+                <a>{category} </a>
+              </Link>
+            ))}
           </div>
           <h3 className={styles["title"]}>
             <Link href={`/product/${data.id}`}>{data.title}</Link>
