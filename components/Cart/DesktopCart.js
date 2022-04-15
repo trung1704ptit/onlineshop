@@ -37,7 +37,10 @@ export default function DesktopCart() {
   return (
     <div className="col-auto head-col d-flex">
       <div className={styles["header-module"]}>
-        <Dropdown overlay={DropdownContent} placement="bottomRight">
+        <Dropdown
+          overlay={DropdownContent}
+          placement="bottomRight"
+        >
           <div className={cartStyles["cart-dropdown"]}>
             <span className={styles["circle-item"]}>
               <BsCart2 />

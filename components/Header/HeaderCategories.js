@@ -43,6 +43,13 @@ export default function HeaderCategories() {
                 </Link>
                 <span className={"link-badge green"}>New</span>
               </li>
+              <li>
+                <Link href="/contact">
+                  <a className={styles["link"]} data-cy="contact-link">
+                    Contact
+                  </a>
+                </Link>
+              </li>
             </ul>
           </div>
         </div>

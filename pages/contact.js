@@ -3,20 +3,20 @@ import dynamic from "next/dynamic";
 import Layout from "@components/Layout";
 import Loading from "@components/Loading";
 
-const Register = dynamic(() => import("../containers/Register"), {
+const Contact = dynamic(() => import("../containers/Contact"), {
   loading: () => <Loading height="50vh" tip="Loading..." />,
 });
 
-export default function RegisterPage() {
+export default function ContactPage() {
   return (
     <>
       <Head>
-        <title>Register | Online shop</title>
-        <meta name="description" content="Register - Online shop" />
+        <title>Contact | Online shop</title>
+        <meta name="description" content="Contact - Online shop" />
       </Head>
 
       <Layout>
-        <Register />
+        <Contact />
       </Layout>
     </>
   );
