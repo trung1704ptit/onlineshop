@@ -1,8 +1,6 @@
-import Link from "next/link";
-import { BsSuitHeart } from "react-icons/bs";
 import cx from "classnames";
-import styles from "../../styles/header.module.scss";
 import Logo from "@components/Logo";
+import styles from "@styles/header.module.scss";
 import HeaderCategories from "./HeaderCategories";
 import MyAccount from "./MyAccount";
 import DesktopSearch from "../SearchBar/DesktopSearch";

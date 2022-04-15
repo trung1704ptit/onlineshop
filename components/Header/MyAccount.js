@@ -25,8 +25,8 @@ const AccountMenu = () => (
       </Link>
     </Menu.Item>
     <Menu.Item>
-      <Link href="/signup">
-        <a rel="noopener noreferrer">Sign Up</a>
+      <Link href="/register">
+        <a rel="noopener noreferrer">Register</a>
       </Link>
     </Menu.Item>
   </Menu>

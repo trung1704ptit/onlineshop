@@ -1,15 +1,18 @@
-import { useState } from "react";
 import { BsCart2 } from "react-icons/bs";
-import cx from "classnames";
-import dynamic from "next/dynamic";
-
-import styles from "../../styles/header.module.scss";
-import cartStyles from "@styles/cart.module.scss";
 import { useSelector } from "react-redux";
 import { Card, Dropdown } from "antd";
+import dynamic from "next/dynamic";
+import cartStyles from "@styles/cart.module.scss";
+import Loading from "@components/Loading";
 
-const EmptyCart = dynamic(() => import("./EmptyCart"));
-const CartPreview = dynamic(() => import("./CartPreview"));
+import styles from "../../styles/header.module.scss";
+
+const EmptyCart = dynamic(() => import("./EmptyCart"), {
+  loading: () => <Loading height="100px" tip="Loading..." />,
+});
+const CartPreview = dynamic(() => import("./CartPreview"), {
+  loading: () => <Loading height="100px" tip="Loading..." />,
+});
 
 export default function DesktopCart() {
   const products = useSelector((state) => state.cart.products);
