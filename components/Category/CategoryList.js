@@ -10,20 +10,24 @@ export default function CategoryList() {
     <div className={styles["category-list"]}>
       <ul className="list-style-none">
         {categories &&
-          categories.map((item) => (
-            <li key={item.id} className={styles["category-item"]}>
-              <Link href="/shop">
-                <a className={styles['category-link']} data-cy="category-link">
-                  <item.icon className={styles["icon"]} />
-                  {item.name}
-                  {!isEmpty(item.sub) ? (
-                    <IoChevronForwardOutline className={styles["sub-menu-arrow"]} />
-                  ) : null}
-                </a>
-              </Link>
-              {!isEmpty(item.sub) ? <SubCategory /> : null}
-            </li>
-          ))}
+          categories.map((item) => {
+            if (item.isShow) {
+              return (
+                <li key={item.id} className={styles["category-item"]}>
+                  <Link href="/shop">
+                    <a className={styles['category-link']} data-cy="category-link">
+                      <item.icon className={styles["icon"]} />
+                      {item.name}
+                      {!isEmpty(item.sub) ? (
+                        <IoChevronForwardOutline className={styles["sub-menu-arrow"]} />
+                      ) : null}
+                    </a>
+                  </Link>
+                  {!isEmpty(item.sub) ? <SubCategory /> : null}
+                </li>
+              )
+            }
+          })}
       </ul>
     </div>
   );

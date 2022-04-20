@@ -11,13 +11,12 @@
   }
 
   .image {
-    height: 60vh;
     max-height: 100%;
     object-fit: cover;
     width: 100%;
 
-    @media screen and(min-width: 480px) {
-      max-height: 495px;
+    @media screen and(max-width: 480px) {
+      height: 60vh;
       width: 100%;
     }
   }

@@ -8,6 +8,7 @@ export const categories = [
         name: "Smart Phones",
         slug: "smart-phones",
         icon: GiSmartphone,
+        isShow: true,
         sub: [{}],
     },
     {
@@ -15,6 +16,7 @@ export const categories = [
         name: "Computer & Accessories",
         slug: "computer-acccessories",
         icon: BsLaptop,
+        isShow: true,
         sub: [{}],
     },
     {
@@ -22,6 +24,7 @@ export const categories = [
         name: "Television & Video",
         slug: "television-video",
         icon: MdOutlineDesktopMac,
+        isShow: true,
         sub: [{}],
     },
     {
@@ -29,6 +32,7 @@ export const categories = [
         name: "Smartwatches",
         slug: "smartwatches",
         icon: BsSmartwatch,
+        isShow: true,
         sub: [{}],
     },
     {
@@ -36,6 +40,7 @@ export const categories = [
         name: "Headphones",
         slug: "headphones",
         icon: BsHeadphones,
+        isShow: true,
         sub: [],
     },
     {
@@ -43,6 +48,7 @@ export const categories = [
         name: "Camera & Photo",
         slug: "camera & photo",
         icon: BsCamera,
+        isShow: true,
         sub: [],
     },
     {
@@ -50,6 +56,7 @@ export const categories = [
         name: "Sport and Outdoor",
         slug: "sport-and-outdoor",
         icon: MdSportsTennis,
+        isShow: true,
         sub: [{}],
     },
     {
@@ -57,6 +64,7 @@ export const categories = [
         name: "Fashion",
         slug: "fashion",
         icon: GiSonicShoes,
+        isShow: true,
         sub: [],
     },
     {
@@ -64,6 +72,7 @@ export const categories = [
         name: "Books",
         slug: "books",
         icon: BsBook,
+        isShow: true,
         sub: [],
     },
     {
@@ -71,6 +80,7 @@ export const categories = [
         name: "Best Sellers",
         slug: "best-sellers",
         icon: BsArrowDownUp,
+        isShow: true,
         sub: [],
     },
     {
@@ -78,12 +88,14 @@ export const categories = [
         name: "New Arrivals",
         slug: "new-arrivals",
         icon: BsClockHistory,
+        isShow: true,
         sub: [],
     }, {
         id: "11",
         name: "Hot Deals",
         slug: "hot-deals",
         icon: MdFlashOn,
+        isShow: true,
         sub: [],
     }
 ];
