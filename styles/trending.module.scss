@@ -20,6 +20,7 @@
       right: 0;
       bottom: 0;
     }
+
     .caption {
       max-width: 200px;
       text-align: left;
@@ -29,11 +30,11 @@
       left: 20%;
       transform: translate(-20%, -50%);
       z-index: 10;
+
       h4 {
         font-size: 24px;
         margin-bottom: 30px;
         color: inherit;
-        font-family: 'Jost';
         font-weight: normal;
       }
     }

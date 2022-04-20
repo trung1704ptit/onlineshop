@@ -2,7 +2,7 @@ import Section from "@components/Section";
 import { useEffect, useState } from "react";
 import { products } from "data/products";
 import { useRouter } from "next/router";
-import ProductBreadCrumb from "./ProductBreadCrumb";
+import ProductBreadCrumb from "@components/BreadCrumb/ProductBreadCrumb";
 import ProductContent from "./ProductContent";
 import ProductDescription from "./ProductDescription";
 import ProductRelated from "./ProductRelated";
