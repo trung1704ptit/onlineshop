@@ -14,7 +14,7 @@ export default function CategoryList() {
             if (item.isShow) {
               return (
                 <li key={item.id} className={styles["category-item"]}>
-                  <Link href="/shop">
+                  <Link href={`/product-category/${item.slug}`}>
                     <a className={styles['category-link']} data-cy="category-link">
                       <item.icon className={styles["icon"]} />
                       {item.name}
@@ -23,7 +23,7 @@ export default function CategoryList() {
                       ) : null}
                     </a>
                   </Link>
-                  {!isEmpty(item.sub) ? <SubCategory data={item.sub} /> : null}
+                  {!isEmpty(item.sub) ? <SubCategory data={item.sub} groupCategoryId={item.slug} /> : null}
                 </li>
               )
             }
@@ -34,7 +34,7 @@ export default function CategoryList() {
 }
 
 
-export const SubCategory = ({ data }) => {
+export const SubCategory = ({ data, groupCategoryId }) => {
   return (
     <div className={styles["sub-category-list"]}>
       {data && data.map(item => {
@@ -46,7 +46,7 @@ export const SubCategory = ({ data }) => {
                 <ul className="list-style-none">
                   {item.sub && item.sub.map(subItem => (
                     <li key={subItem.id}>
-                      <Link href={`/category/${subItem.slug}`}>
+                      <Link href={`/product-category/${groupCategoryId}/${subItem.slug}`}>
                         <a className={classNames(styles["link"], "link-animated")}>
                           {subItem.name}
                         </a>

@@ -41,8 +41,12 @@
 }
 
 .left-filter {
-  min-width: 250px;
+  width: 100%;
   padding-bottom: 40px;
+
+  @media screen and (min-width: 780px) {
+    width: $category-desktop-width;
+  }
 
   .filter-item {
     padding-right: 15px;

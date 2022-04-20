@@ -19,7 +19,7 @@ export default function ProductListWithFilter() {
 
           {/* Ads */}
           <div>
-            <img src="/images/others/1.png" alt="banner" />
+            <img src="/images/others/sidebar-banner.gif" alt="banner" width={280}/>
           </div>
         </div>
 
