@@ -1,10 +1,9 @@
 import { NextArrow, PrevArrow } from "@utils/helper";
 import { ImArrowRight2 } from "react-icons/im";
 import Slider from "react-slick";
-import styles from "../../styles/carousel.module.scss";
-import CircleButton from "../Button/CircleButton";
-
+import styles from "@styles/carousel.module.scss";
 import Title from "antd/lib/typography/Title";
+import CircleButton from "../Button/CircleButton";
 
 const settings = {
   dots: false,

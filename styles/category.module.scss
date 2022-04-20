@@ -9,15 +9,15 @@
 
   @media screen and (min-width: 768px) {
     margin-right: 30px;
-    flex: 0 0 300px;
-    width: 300px;
+    flex: 0 0 $category-desktop-width;
+    width: $category-desktop-width;
   }
 
   ul {
     .category-item {
       display: flex;
       align-items: center;
-      height: 45px;
+      height: 44px;
       border-bottom: 1px solid $gray-color;
       border-right: 1px solid $gray-color;
       border-left: 1px solid $gray-color;
