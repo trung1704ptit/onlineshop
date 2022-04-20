@@ -1,0 +1,89 @@
+import { MdSportsTennis } from "react-icons/md";
+import { GiSmartphone, GiSonicShoes } from 'react-icons/gi'
+import { BsLaptop, BsSmartwatch, BsClockHistory, BsCamera, BsArrowDownUp, BsHeadphones, BsBook } from 'react-icons/bs';
+import { MdFlashOn, MdOutlineDesktopMac } from 'react-icons/md'
+export const categories = [
+    {
+        id: "0",
+        name: "Smart Phones",
+        slug: "smart-phones",
+        icon: GiSmartphone,
+        sub: [{}],
+    },
+    {
+        id: "1",
+        name: "Computer & Accessories",
+        slug: "computer-acccessories",
+        icon: BsLaptop,
+        sub: [{}],
+    },
+    {
+        id: "2",
+        name: "Television & Video",
+        slug: "television-video",
+        icon: MdOutlineDesktopMac,
+        sub: [{}],
+    },
+    {
+        id: "3",
+        name: "Smartwatches",
+        slug: "smartwatches",
+        icon: BsSmartwatch,
+        sub: [{}],
+    },
+    {
+        id: "4",
+        name: "Headphones",
+        slug: "headphones",
+        icon: BsHeadphones,
+        sub: [],
+    },
+    {
+        id: "5",
+        name: "Camera & Photo",
+        slug: "camera & photo",
+        icon: BsCamera,
+        sub: [],
+    },
+    {
+        id: "6",
+        name: "Sport and Outdoor",
+        slug: "sport-and-outdoor",
+        icon: MdSportsTennis,
+        sub: [{}],
+    },
+    {
+        id: "7",
+        name: "Fashion",
+        slug: "fashion",
+        icon: GiSonicShoes,
+        sub: [],
+    },
+    {
+        id: "8",
+        name: "Books",
+        slug: "books",
+        icon: BsBook,
+        sub: [],
+    },
+    {
+        id: "9",
+        name: "Best Sellers",
+        slug: "best-sellers",
+        icon: BsArrowDownUp,
+        sub: [],
+    },
+    {
+        id: "10",
+        name: "New Arrivals",
+        slug: "new-arrivals",
+        icon: BsClockHistory,
+        sub: [],
+    }, {
+        id: "11",
+        name: "Hot Deals",
+        slug: "hot-deals",
+        icon: MdFlashOn,
+        sub: [],
+    }
+];
