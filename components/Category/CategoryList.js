@@ -23,7 +23,7 @@ export default function CategoryList() {
                       ) : null}
                     </a>
                   </Link>
-                  {!isEmpty(item.sub) ? <SubCategory /> : null}
+                  {!isEmpty(item.sub) ? <SubCategory data={item.sub} /> : null}
                 </li>
               )
             }
@@ -34,161 +34,35 @@ export default function CategoryList() {
 }
 
 
-export const SubCategory = () => {
+export const SubCategory = ({ data }) => {
   return (
     <div className={styles["sub-category-list"]}>
-      <div className={styles["sub-category-block"]}>
-        <div>
-          <h3 className={styles["sub-cat-title"]}>smartphones</h3>
-          <ul className="list-style-none">
-            <li>
-              <Link href="#">
-                <a className={classNames(styles["link"], "link-animated")}>
-                  iPhone 14 Pro
-                </a>
-              </Link>
-            </li>
-            <li>
-              <Link href="#">
-                <a className={classNames(styles["link"], "link-animated")}>
-                  Samsung Galaxy
-                </a>
-              </Link>
-            </li>
-            <li>
-              <Link href="#">
-                <a className={classNames(styles["link"], "link-animated")}>
-                  Realme Note
-                </a>
-              </Link>
-            </li>
-            <li>
-              <Link href="#">
-                <a className={classNames(styles["link"], "link-animated")}>
-                  Sony Xperia Series
-                </a>
-              </Link>
-            </li>
-          </ul>
-        </div>
-        <div className={styles["category-img"]}>
-          <img src="/images/iphone13pro.png" alt="category-img" />
-        </div>
-      </div>
-      <div className={styles["sub-category-block"]}>
-        <div>
-          <h3 className={styles["sub-cat-title"]}>laptop</h3>
-          <ul className="list-style-none">
-            <li>
-              <Link href="#">
-                <a className={classNames(styles["link"], "link-animated")}>
-                  iPhone 14 Pro
-                </a>
-              </Link>
-            </li>
-            <li>
-              <Link href="#">
-                <a className={classNames(styles["link"], "link-animated")}>
-                  Samsung Galaxy
-                </a>
-              </Link>
-            </li>
-            <li>
-              <Link href="#">
-                <a className={classNames(styles["link"], "link-animated")}>
-                  Realme Note
-                </a>
-              </Link>
-            </li>
-            <li>
-              <Link href="#">
-                <a className={classNames(styles["link"], "link-animated")}>
-                  Sony Xperia Series
-                </a>
-              </Link>
-            </li>
-          </ul>
-        </div>
-        <div className={styles["category-img"]}>
-          <img src="/images/macbook.jpg" alt="category-img" />
-        </div>
-      </div>
-      <div className={styles["sub-category-block"]}>
-        <div>
-          <h3 className={styles["sub-cat-title"]}>headphone</h3>
-          <ul className="list-style-none">
-            <li>
-              <Link href="#">
-                <a className={classNames(styles["link"], "link-animated")}>
-                  iPhone 14 Pro
-                </a>
-              </Link>
-            </li>
-            <li>
-              <Link href="#">
-                <a className={classNames(styles["link"], "link-animated")}>
-                  Samsung Galaxy
-                </a>
-              </Link>
-            </li>
-            <li>
-              <Link href="#">
-                <a className={classNames(styles["link"], "link-animated")}>
-                  Realme Note
-                </a>
-              </Link>
-            </li>
-            <li>
-              <Link href="#">
-                <a className={classNames(styles["link"], "link-animated")}>
-                  Sony Xperia Series
-                </a>
-              </Link>
-            </li>
-          </ul>
-        </div>
-        <div className={styles["category-img"]}>
-          <img src="/images/headphone.png" alt="category-img" />
-        </div>
-      </div>
-      <div className={styles["sub-category-block"]}>
-        <div>
-          <h3 className={styles["sub-cat-title"]}>Xbox</h3>
-          <ul className="list-style-none">
-            <li>
-              <Link href="#">
-                <a className={classNames(styles["link"], "link-animated")}>
-                  iPhone 14 Pro
-                </a>
-              </Link>
-            </li>
-            <li>
-              <Link href="#">
-                <a className={classNames(styles["link"], "link-animated")}>
-                  Samsung Galaxy
-                </a>
-              </Link>
-            </li>
-            <li>
-              <Link href="#">
-                <a className={classNames(styles["link"], "link-animated")}>
-                  Realme Note
-                </a>
-              </Link>
-            </li>
-            <li>
-              <Link href="#">
-                <a className={classNames(styles["link"], "link-animated")}>
-                  Sony Xperia Series
-                </a>
-              </Link>
-            </li>
-          </ul>
-        </div>
-        <div className={styles["category-img"]}>
-          <img src="/images/xbox.jpg" alt="category-img" />
-        </div>
-      </div>
+      {data && data.map(item => {
+        if (item.isShow) {
+          return (
+            <div className={styles["sub-category-block"]} key={item.id}>
+              <div>
+                <h3 className={styles["sub-cat-title"]}>{item.name}</h3>
+                <ul className="list-style-none">
+                  {item.sub && item.sub.map(subItem => (
+                    <li key={subItem.id}>
+                      <Link href={`/category/${subItem.slug}`}>
+                        <a className={classNames(styles["link"], "link-animated")}>
+                          {subItem.name}
+                        </a>
+                      </Link>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+              {item.image ? <div className={styles["category-img"]}>
+                <img src={item.image} alt="category-img" />
+              </div> : null}
+            </div>
+          )
+        }
+      }
+      )}
     </div>
   );
 }
