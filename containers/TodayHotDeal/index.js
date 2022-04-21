@@ -20,7 +20,7 @@ const settings = {
   speed: 800,
   autoplay: true,
   autoplaySpeed: 5000,
-  slidesToShow: 3,
+  slidesToShow: 4,
   slidesToScroll: 1,
   initialSlide: 0,
   arrows: true,
@@ -28,6 +28,13 @@ const settings = {
   nextArrow: <NextArrow />,
   prevArrow: <PrevArrow />,
   responsive: [
+    {
+      breakpoint: 1366,
+      settings: {
+        slidesToShow: 3,
+        slidesToScroll: 1,
+      },
+    },
     {
       breakpoint: 992,
       settings: {
@@ -72,7 +79,7 @@ export default function TodayHotDeal() {
           <Slider {...settings}>
             {products &&
               products.map((item) => (
-                <Product data={item} key={item.id} border={false} />
+                <Product data={item} key={item.id} />
               ))}
           </Slider>
         </Col>

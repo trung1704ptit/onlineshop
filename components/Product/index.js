@@ -4,7 +4,9 @@ import { useState } from "react";
 import { useDispatch } from "react-redux";
 import { Button, message } from "antd";
 import { addToCart } from "@redux/actions/cart";
-import styles from "../../styles/product.module.scss";
+import styles from "@styles/product.module.scss";
+import { getBrand } from '@utils/helper';
+import { brands } from "data/brands";
 
 const key = "updatable";
 
@@ -53,6 +55,8 @@ export default function Product({ data, border = true, className = "" }) {
     }, 800);
   };
 
+  const productBrands = getBrand(data.brands, brands).map(item => item.name).join(', ');
+
   return (
     <div
       className={classNames(
@@ -80,12 +84,8 @@ export default function Product({ data, border = true, className = "" }) {
 
       <div className={styles["product-bottom"]}>
         <div>
-          <div className={styles["product-category"]}>
-            {data.categories.map((category) => (
-              <Link href={`/category/${category}`} key={category}>
-                <a>{category} </a>
-              </Link>
-            ))}
+          <div className={styles["product-brands"]}>
+            {productBrands}
           </div>
           <h3 className={styles["title"]}>
             <Link href={`/product/${data.id}`}>{data.title}</Link>

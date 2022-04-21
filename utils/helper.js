@@ -21,3 +21,38 @@ export function PrevArrow(props) {
 export function roundPrice(price, qty) {
   return (price * qty).toFixed(2);
 }
+
+function findCategory(id, categoryList) {
+  let result = null;
+  for (let item of categoryList) {
+    if (item.id === id) {
+      return item;
+    } else if (item.sub && item.sub.length > 0) {
+      result = findCategory(id, item.sub);
+      if (result) {
+        return result;
+      }
+    }
+  }
+
+  return result;
+}
+
+function findBrand(id, brandList) {
+  return brandList.find(item => item.id === id);
+}
+
+
+export function getCategories(productCategories, allCategories) {
+  if (productCategories && allCategories) {
+    return productCategories.map(categoryId => findCategory(categoryId, allCategories)).filter(item => item)
+  }
+  return []
+}
+
+export function getBrand(productBrands, allBrands) {
+  if (productBrands && allBrands) {
+    return productBrands.map(brandId => findBrand(brandId, allBrands)).filter(item => item)
+  }
+  return []
+}
