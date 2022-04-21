@@ -91,10 +91,16 @@ export default function Product({ data, border = true, className = "" }) {
             <Link href={`/product/${data.id}`}>{data.title}</Link>
           </h3>
           <div className={styles["product-price"]}>
-            <span className={styles["old-price"]}>${data.oldPrice}</span>
-            <span className={styles["current-price"]}>
+            {data.oldPrice !== data.currentPrice ? (
+              <>
+                <span className={styles["old-price"]}>${data.oldPrice}</span>
+                <span className={styles["current-price"]}>
+                  ${data.currentPrice}
+                </span>
+              </>
+            ) : <span className={styles["current-price"]}>
               ${data.currentPrice}
-            </span>
+            </span>}
           </div>
         </div>
 
