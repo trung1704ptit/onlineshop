@@ -50,7 +50,7 @@ export const categories = [
             id: '0-1',
             name: 'Samsung',
             slug: 'samsung',
-            image: '/images/products/samsung-galaxy-s22-ultra.png',
+            image: '/images/products/samsung-galaxy-s22/samsung-galaxy-s22.png',
             isShow: true,
             parent: '0',
             sub: [
@@ -249,7 +249,59 @@ export const categories = [
         slug: "smartwatches",
         icon: BsSmartwatch,
         isShow: true,
-        sub: [],
+        sub: [
+            {
+                id: '3-0',
+                name: 'Apple watch',
+                slug: 'apple-watch',
+                image: '/images/products/apple-watch/apple-watch-7.png',
+                isShow: true,
+                parent: '3',
+                sub: [
+                    {
+                        id: '3-0-0',
+                        name: 'Apple watch 7 series',
+                        slug: 'apple-watch-7-series',
+                        parent: '3-0',
+                        isShow: true,
+                    }
+                ]
+            },
+            {
+                id: '3-1',
+                name: 'Samsung watch',
+                slug: 'samsung-watch',
+                image: '/images/products/samsung-watch/samsung-watch-4.png',
+                isShow: true,
+                parent: '3',
+                sub: [
+                    {
+                        id: '3-1-0',
+                        name: 'Samsung Galaxy Watch 4',
+                        slug: 'samsung-galaxy-watch-4',
+                        parent: '3-1',
+                        isShow: true,
+                    }
+                ]
+            },
+            {
+                id: '3-2',
+                name: 'Garmin watch',
+                slug: 'garmin-watch',
+                image: '/images/products/garmin-watch/garmin-venu.png',
+                isShow: true,
+                parent: '3',
+                sub: [
+                    {
+                        id: '3-2-0',
+                        name: 'Garmin Venu',
+                        slug: 'garmin-venu',
+                        parent: '3-2',
+                        isShow: true,
+                    }
+                ]
+            }
+        ],
     },
     {
         id: "4",

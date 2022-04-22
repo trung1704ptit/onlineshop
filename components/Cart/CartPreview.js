@@ -47,7 +47,7 @@ export default function CartPreview({ products, totalPrice }) {
           >
             <List.Item.Meta
               avatar={
-                <Avatar
+                <img
                   src={item.images[0]}
                   className={styles["product-img"]}
                 />

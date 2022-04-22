@@ -6,6 +6,16 @@ export const products = [
     oldPrice: 590,
     currentPrice: 515,
     images: ["/images/products/iphone-11/iphone-11.png", "/images/products/iphone-11/iphone-11_2.png"],
+    colors: [{
+      name: 'purple',
+      image: '/images/products/iphone-11/iphone-11.png'
+    }, {
+      name: 'black',
+      image: '/images/products/iphone-11/iphone-11_2.png'
+    }, {
+      name: 'white',
+      image: '/images/products/iphone-11/iphone-11_3.png'
+    }],
     categories: ["0-0-0"],
     quantity: 10,
     brands: ['0']
@@ -19,7 +29,17 @@ export const products = [
     images: ["/images/products/iphone-12/iphone-12.png", "/images/products/iphone-12/iphone-12_2.png"],
     categories: ["0-0-0"],
     quantity: 10,
-    brands: ['0']
+    brands: ['0'],
+    colors: [{
+      name: 'red',
+      image: '/images/products/iphone-12/iphone-12.png'
+    }, {
+      name: 'white',
+      image: '/images/products/iphone-12/iphone-12_1.png'
+    }, {
+      name: 'green',
+      image: '/images/products/iphone-12/iphone-12_1.png'
+    }],
   },
   {
     id: "0003",
@@ -30,7 +50,17 @@ export const products = [
     images: ["/images/products/iphone-13/iphone-13.png", "/images/products/iphone-13/iphone-13_2.png"],
     categories: ["0-0-0"],
     quantity: 10,
-    brands: ['0']
+    brands: ['0'],
+    colors: [{
+      name: 'pink',
+      image: '/images/products/iphone-13/iphone-13.png'
+    }, {
+      name: 'midnight',
+      image: '/images/products/iphone-13/iphone-13_1.png'
+    }, {
+      name: 'green',
+      image: '/images/products/iphone-13/iphone-13_2.png'
+    }],
   },
   {
     id: "0004",
@@ -41,7 +71,17 @@ export const products = [
     images: ["/images/products/iphone-13/iphone-13_2.png"],
     categories: ["0-0-0"],
     quantity: 10,
-    brands: ['0']
+    brands: ['0'],
+    colors: [{
+      name: 'pink',
+      image: '/images/products/iphone-13/iphone-13.png'
+    }, {
+      name: 'midnight',
+      image: '/images/products/iphone-13/iphone-13_1.png'
+    }, {
+      name: 'green',
+      image: '/images/products/iphone-13/iphone-13_2.png'
+    }],
   },
   {
     id: "0005",
@@ -52,7 +92,14 @@ export const products = [
     images: ["/images/products/iphone-13-pro-max/iphone-13-pro-max_1.png", "/images/products/iphone-13-pro-max/iphone-13-pro-max.png"],
     categories: ["0-0-0"],
     quantity: 10,
-    brands: ['0']
+    brands: ['0'],
+    colors: [{
+      name: 'sierra blue',
+      image: '/images/products/iphone-13-pro-max/iphone-13-pro-max_1.png'
+    }, {
+      name: 'white',
+      image: '/images/products/iphone-13-pro-max/iphone-13-pro-max.png'
+    }],
   },
   {
     id: "0006",
@@ -63,7 +110,17 @@ export const products = [
     images: ["/images/products/iphone-12/iphone-12.png", "/images/products/iphone-12/iphone-12_2.png"],
     categories: ["0-0-0"],
     quantity: 10,
-    brands: ['0']
+    brands: ['0'],
+    colors: [{
+      name: 'red',
+      image: '/images/products/iphone-12/iphone-12.png'
+    }, {
+      name: 'white',
+      image: '/images/products/iphone-12/iphone-12_1.png'
+    }, {
+      name: 'green',
+      image: '/images/products/iphone-12/iphone-12_1.png'
+    }],
   },
   {
     id: "0007",
@@ -74,7 +131,14 @@ export const products = [
     images: ["/images/products/iphone-13-pro-max/iphone-13-pro-max.png", "/images/products/iphone-13-pro-max/iphone-13-pro-max_1.png"],
     categories: ["0-0-0"],
     quantity: 10,
-    brands: ['0']
+    brands: ['0'],
+    colors: [{
+      name: 'sierra blue',
+      image: '/images/products/iphone-13-pro-max/iphone-13-pro-max_1.png'
+    }, {
+      name: 'white',
+      image: '/images/products/iphone-13-pro-max/iphone-13-pro-max.png'
+    }],
   },
   {
     id: "0008",
@@ -85,7 +149,14 @@ export const products = [
     images: ["/images/products/samsung-galaxy-s22/samsung-galaxy-s22.png", "/images/products/samsung-galaxy-s22/samsung-galaxy-s22_1.png"],
     categories: ["0-1-0"],
     quantity: 10,
-    brands: ['1']
+    brands: ['1'],
+    colors: [{
+      name: 'pink',
+      image: '/images/products/samsung-galaxy-s22/samsung-galaxy-s22.png'
+    }, {
+      name: 'green',
+      image: '/images/products/samsung-galaxy-s22/samsung-galaxy-s22_1.png'
+    }],
   },
   {
     id: "0009",
@@ -96,7 +167,14 @@ export const products = [
     images: ["/images/products/samsung-galaxy-s21/samsung-galaxy-s21-plus.png", "/images/products/samsung-galaxy-s21/samsung-galaxy-s21-plus_1.png"],
     categories: ["0-1-0"],
     quantity: 10,
-    brands: ['1']
+    brands: ['1'],
+    colors: [{
+      name: 'white',
+      image: '/images/products/samsung-galaxy-s21/samsung-galaxy-s21-plus.png'
+    }, {
+      name: 'black',
+      image: '/images/products/samsung-galaxy-s21/samsung-galaxy-s21-plus_1.png'
+    }],
   },
   {
     id: "0010",
@@ -111,7 +189,14 @@ export const products = [
     ],
     categories: ["0-1-0"],
     quantity: 10,
-    brands: ['1']
+    brands: ['1'],
+    colors: [{
+      name: 'white',
+      image: '/images/products/samsung-galaxy-s21/samsung-galaxy-s21-plus.png'
+    }, {
+      name: 'black',
+      image: '/images/products/samsung-galaxy-s21/samsung-galaxy-s21-plus_1.png'
+    }],
   },
   {
     id: "0011",
@@ -124,6 +209,13 @@ export const products = [
       "/images/products/samsung-galaxy-a/samsung-galaxy-a23.png",
       "/images/products/samsung-galaxy-a/samsung-galaxy-a23_1.png",
     ],
+    colors: [{
+      name: 'black',
+      image: '/images/products/samsung-galaxy-a/samsung-galaxy-a23.png'
+    }, {
+      name: 'white',
+      image: '/images/products/samsung-galaxy-a/samsung-galaxy-a23_1.png'
+    }],
     categories: ["0-1-0"],
     quantity: 10,
     brands: ['1']
@@ -141,7 +233,14 @@ export const products = [
     ],
     categories: ["0-1-0"],
     quantity: 10,
-    brands: ['1']
+    brands: ['1'],
+    colors: [{
+      name: 'black',
+      image: '/images/products/samsung-galaxy-a/samsung-galaxy-a33.png'
+    }, {
+      name: 'white',
+      image: '/images/products/samsung-galaxy-a/samsung-galaxy-a33_1.png'
+    }],
   },
   {
     id: "0013",
@@ -156,7 +255,14 @@ export const products = [
     ],
     categories: ["0-1-0"],
     quantity: 10,
-    brands: ['1']
+    brands: ['1'],
+    colors: [{
+      name: 'green',
+      image: '/images/products/samsung-galaxy-a/samsung-galaxy-a52s.png'
+    }, {
+      name: 'white',
+      image: '/images/products/samsung-galaxy-a/samsung-galaxy-a52s_1.png'
+    }],
   },
   {
     id: "0014",
@@ -171,7 +277,14 @@ export const products = [
     ],
     categories: ["0-1-0"],
     quantity: 10,
-    brands: ['1']
+    brands: ['1'],
+    colors: [{
+      name: 'green',
+      image: '/images/products/samsung-galaxy-a/samsung-galaxy-a52s.png'
+    }, {
+      name: 'white',
+      image: '/images/products/samsung-galaxy-a/samsung-galaxy-a52s_1.png'
+    }],
   },
   {
     id: '0015',
@@ -189,7 +302,14 @@ export const products = [
       '/images/products/laptop-mac-pro/macbook-pro-16-2021.png'
     ],
     quantity: 10,
-    brands: ['0']
+    brands: ['0'],
+    colors: [{
+      name: 'gray',
+      image: '/images/products/laptop-mac-pro/macbook-pro-16-2021.png'
+    }, {
+      name: 'silver',
+      image: '/images/products/laptop-mac-pro/macbook-pro-16-2021_1.png'
+    }],
   },
   {
     id: '0016',
@@ -207,7 +327,14 @@ export const products = [
       '/images/products/laptop-mac-air/macbook-air-13-inch_1.png'
     ],
     quantity: 10,
-    brands: ['0']
+    brands: ['0'],
+    colors: [{
+      name: 'gold',
+      image: '/images/products/laptop-mac-air/macbook-air-13-inch.png'
+    }, {
+      name: 'space gray',
+      image: '/images/products/laptop-mac-air/macbook-air-13-inch_1.png'
+    }],
   },
   {
     id: '0017',
@@ -225,15 +352,23 @@ export const products = [
       '/images/products/laptop-mac-pro/macbook-pro-14-2021_1.png',
       '/images/products/laptop-mac-pro/macbook-pro-14-2021_2.png',
       '/images/products/laptop-mac-pro/macbook-pro-14-2021_3.png',
-      '/images/products/laptop-mac-pro/macbook-pro-14-2021_4.png'
+      '/images/products/laptop-mac-pro/macbook-pro-14-2021_4.png',
+      '/images/products/laptop-mac-pro/macbook-pro-14-2021_5.png'
     ],
     quantity: 10,
-    brands: ['0']
+    brands: ['0'],
+    colors: [{
+      name: 'gray',
+      image: '/images/products/laptop-mac-pro/macbook-pro-14-2021.png'
+    }, {
+      name: 'space gray',
+      image: '/images/products/laptop-mac-pro/macbook-pro-14-2021_5.png'
+    }],
   },
   {
     id: '0017',
-    title: 'Macbook Pro 14" 2021 - M1 Pro 14 Core GPU/512GB',
-    slug: 'macbook-pro-14-2021-m1-pro-14-core-gpu-512gb',
+    title: 'Macbook Pro 14" 2021 - M1 Pro 8 Core GPU/256GB',
+    slug: 'macbook-pro-14-2021-m1-pro-8-core-gpu-256gb',
     oldPrice: 2200.00,
     currentPrice: 2190.00,
     ram: 16,
@@ -249,7 +384,14 @@ export const products = [
       '/images/products/laptop-mac-pro/macbook-pro-14-2021_4.png'
     ],
     quantity: 10,
-    brands: ['0']
+    brands: ['0'],
+    colors: [{
+      name: 'gray',
+      image: '/images/products/laptop-mac-pro/macbook-pro-14-2021.png'
+    }, {
+      name: 'space gray',
+      image: '/images/products/laptop-mac-pro/macbook-pro-14-2021_5.png'
+    }],
   },
   {
     id: '0018',
@@ -271,6 +413,120 @@ export const products = [
       '/images/products/imac/imac-2021_5.png'
     ],
     quantity: 10,
-    brands: ['0']
+    brands: ['0'],
+    colors: [{
+      name: 'blue',
+      image: '/images/products/imac/imac-2021.png'
+    }, {
+      name: 'pink',
+      image: '/images/products/imac/imac-2021_1.png'
+    },
+    {
+      name: 'red',
+      image: '/images/products/imac/imac-2021_3.png'
+    }, {
+      name: 'green',
+      image: '/images/products/imac/imac-green.png'
+    }],
+  }, {
+    id: '0019',
+    title: 'Smartwatch Garmin Venu',
+    slug: 'smartwatch-garmin-venu',
+    oldPrice: 260.00,
+    currentPrice: 255.00,
+    ram: 2,
+    ramType: 'DDR4',
+    storage: 256,
+    storageType: 'SSD',
+    categories: ["3-2-0"],
+    images: [
+      '/images/products/garmin-watch/garmin-venu.png',
+      '/images/products/garmin-watch/garmin-venu_1.png',
+      '/images/products/garmin-watch/garmin-venu_2.png',
+      '/images/products/garmin-watch/garmin-venu_3.png',
+      '/images/products/garmin-watch/garmin-venu_4.png',
+    ],
+    quantity: 200,
+    brands: ['7'],
+    colors: [{
+      name: 'black/gold',
+      image: '/images/products/garmin-watch/garmin-venu.png'
+    }, {
+      name: 'white/gold',
+      image: '/images/products/garmin-watch/garmin-venu_1.png'
+    },
+    {
+      name: 'black/black',
+      image: '/images/products/garmin-watch/garmin-venu_2.png'
+    },
+    {
+      name: 'black/gray',
+      image: '/images/products/garmin-watch/garmin-venu_3.png'
+    }],
+  },
+  {
+    id: '0020',
+    title: 'Smartwatch Garmin Forerunner',
+    slug: 'smartwatch-garmin-forerunner',
+    oldPrice: 320.00,
+    currentPrice: 315.00,
+    ram: 2,
+    ramType: 'DDR4',
+    storage: 256,
+    storageType: 'SSD',
+    categories: ["3-2-0"],
+    images: [
+      '/images/products/garmin-watch/garmin-forerunner.png',
+      '/images/products/garmin-watch/garmin-forerunner_1.png',
+    ],
+    quantity: 200,
+    brands: ['7'],
+    colors: [{
+      name: 'black/black',
+      image: '/images/products/garmin-watch/garmin-forerunner.png'
+    }, {
+      name: 'yellow/black',
+      image: '/images/products/garmin-watch/garmin-forerunner_1.png'
+    }],
+  },
+  {
+    id: '0021',
+    title: 'Smartwatch Garmin Instinct',
+    slug: 'smartwatch-garmin-instinct',
+    oldPrice: 290.00,
+    currentPrice: 235.00,
+    ram: 2,
+    ramType: 'DDR4',
+    storage: 256,
+    storageType: 'SSD',
+    categories: ["3-2-0"],
+    images: [
+      '/images/products/garmin-watch/garmin-instinct.png',
+      '/images/products/garmin-watch/garmin-instinct_1.png',
+      '/images/products/garmin-watch/garmin-instinct_2.png',
+      '/images/products/garmin-watch/garmin-instinct_3.png',
+      '/images/products/garmin-watch/garmin-instinct_4.png',
+    ],
+    quantity: 200,
+    brands: ['7'],
+    colors: [{
+      name: 'black',
+      image: '/images/products/garmin-watch/garmin-instinct.png'
+    }, {
+      name: 'red',
+      image: '/images/products/garmin-watch/garmin-instinct_1.png'
+    },
+    {
+      name: 'seafoam',
+      image: '/images/products/garmin-watch/garmin-instinct_2.png'
+    },
+    {
+      name: 'sunburt',
+      image: '/images/products/garmin-watch/garmin-instinct_3.png'
+    },
+    {
+      name: 'gray',
+      image: '/images/products/garmin-watch/garmin-instinct_4.png'
+    }],
   }
 ];

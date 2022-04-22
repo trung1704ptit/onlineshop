@@ -4,6 +4,7 @@ import isEmpty from "lodash/isEmpty";
 import styles from "@styles/category.module.scss";
 import classNames from "classnames";
 import { categories } from "../../data/categories";
+import { Col, Row } from "antd";
 
 export default function CategoryList() {
   return (
@@ -37,32 +38,36 @@ export default function CategoryList() {
 export const SubCategory = ({ data, groupCategoryId }) => {
   return (
     <div className={styles["sub-category-list"]}>
-      {data && data.map(item => {
-        if (item.isShow) {
-          return (
-            <div className={styles["sub-category-block"]} key={item.id}>
-              <div>
-                <h3 className={styles["sub-cat-title"]}>{item.name}</h3>
-                <ul className="list-style-none">
-                  {item.sub && item.sub.map(subItem => (
-                    <li key={subItem.id}>
-                      <Link href={`/product-category/${groupCategoryId}/${subItem.slug}`}>
-                        <a className={classNames(styles["link"], "link-animated")}>
-                          {subItem.name}
-                        </a>
-                      </Link>
-                    </li>
-                  ))}
-                </ul>
-              </div>
-              {item.image ? <div className={styles["category-img"]}>
-                <img src={item.image} alt="category-img" />
-              </div> : null}
-            </div>
-          )
+      <Row gutter={32} className="w-100">
+        {data && data.map(item => {
+          if (item.isShow) {
+            return (
+              <Col xs={24} lg={12}>
+                <div className={styles["sub-category-block"]} key={item.id}>
+                  <div>
+                    <h3 className={styles["sub-cat-title"]}>{item.name}</h3>
+                    <ul className="list-style-none">
+                      {item.sub && item.sub.map(subItem => (
+                        <li key={subItem.id}>
+                          <Link href={`/product-category/${groupCategoryId}/${subItem.slug}`}>
+                            <a className={classNames(styles["link"], "link-animated")}>
+                              {subItem.name}
+                            </a>
+                          </Link>
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+                  {item.image ? <div className={styles["category-img"]}>
+                    <img src={item.image} alt="category-img" />
+                  </div> : null}
+                </div>
+              </Col>
+            )
+          }
         }
-      }
-      )}
+        )}
+      </Row>
     </div>
   );
 }

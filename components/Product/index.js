@@ -88,7 +88,7 @@ export default function Product({ data, border = true, className = "" }) {
             {productBrands}
           </div>
           <h3 className={styles["title"]}>
-            <Link href={`/product/${data.id}`}>{data.title}</Link>
+            <Link href={`/product/${data.slug}`}>{data.title}</Link>
           </h3>
           <div className={styles["product-price"]}>
             {data.oldPrice !== data.currentPrice ? (

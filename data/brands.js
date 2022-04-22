@@ -34,4 +34,9 @@ export const brands = [
         name: 'Philips',
         slug: 'philips',
     },
+    {
+        id: '7',
+        name: 'Garmin',
+        slug: 'garmin'
+    }
 ]
