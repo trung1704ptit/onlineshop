@@ -410,7 +410,8 @@ export const products = [
       '/images/products/imac/imac-2021_2.png',
       '/images/products/imac/imac-2021_3.png',
       '/images/products/imac/imac-2021_4.png',
-      '/images/products/imac/imac-2021_5.png'
+      '/images/products/imac/imac-2021_5.png',
+      '/images/products/imac/imac-green.png'
     ],
     quantity: 10,
     brands: ['0'],

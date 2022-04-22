@@ -4,13 +4,14 @@ import { Space, Divider, Rate } from "antd";
 import ProductGallery from "./ProductGallery";
 import ProductQuantityControl from "@components/ProductQuantityControl";
 import { BsLinkedin, BsFacebook, BsTwitter, BsYoutube } from "react-icons/bs";
-import ProductAlertMessage from "./ProductAlertMessage";
 import { addToCart } from "@redux/actions/cart";
 import { useDispatch, useSelector } from "react-redux";
 import { useEffect, useState } from "react";
 import { BsSuitHeart } from "react-icons/bs";
 import classNames from "classnames";
 import { addToWishlist, removeFromWishlist } from "@redux/actions/wishlist";
+import ColorOptions from './ColorOptions';
+import ProductAlertMessage from "./ProductAlertMessage";
 
 const { Title, Text } = Typography;
 const key = "product-detail";
@@ -89,7 +90,7 @@ export default function ProductContent({ product }) {
       <div className="mt-3 mb-3">
         <Row gutter={48}>
           <Col xs={24} lg={10}>
-            <ProductGallery images={product.images}/>
+            <ProductGallery images={product.images} />
           </Col>
           <Col xs={24} lg={7}>
             <div className="mb-2 mt-md-0 mt-4 d-flex align-items-center justify-content-between">
@@ -113,6 +114,10 @@ export default function ProductContent({ product }) {
             <Tag color="cyan" className="text-uppercase rounded-pill mb-3">
               In stock
             </Tag>
+
+            <div className="mb-2">
+              <ColorOptions data={product.colors} />
+            </div>
 
             <p className="mb-3">
               Vivamus adipiscing nisl ut dolor dignissim semper. Nulla luctus
