@@ -18,7 +18,7 @@ export default function ProductDetails() {
   // call product detail by id
   useEffect(() => {
     if (productId) {
-      const exist = products.find((item) => item.id === productId);
+      const exist = products.find((item) => item.slug === productId);
       if (exist) {
         setProduct(exist);
       } else {

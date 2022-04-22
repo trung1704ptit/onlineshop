@@ -1,29 +1,19 @@
 import ImageGallery from 'react-image-gallery';
 
-const images = [
-  {
-    original: '/images/products/apple-airpod.jpg',
-    thumbnail: '/images/products/apple-airpod.jpg',
-  },
-  {
-    original: '/images/products/imac.jpg',
-    thumbnail: '/images/products/imac.jpg',
-  },
-  {
-    original: '/images/products/smartwatch2.jpg',
-    thumbnail: '/images/products/smartwatch2.jpg',
-  },
-];
+export default function ProductGallery({ images }) {
+  if (images) {
+    const list = images.map(item => ({ original: item, thumbnail: item }));
+    return (
+      <ImageGallery
+        items={list}
+        showBullets={false}
+        showNav={false}
+        thumbnailHeight='30px'
+        thumbnailWidth="30px"
+        thumbnailPosition="left"
+      />
+    );
+  }
 
-export default function ProductGallery() {
-  return (
-    <ImageGallery
-      items={images}
-      showBullets={false}
-      showNav={false}
-      thumbnailHeight='30px'
-      thumbnailWidth="30px"
-      thumbnailPosition="left"
-    />
-  );
+  return null;
 }

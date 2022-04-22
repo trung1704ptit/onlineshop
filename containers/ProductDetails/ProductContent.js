@@ -63,7 +63,7 @@ export default function ProductContent({ product }) {
 
   return (
     <div className={styles["product-detail"]}>
-      <Title level={3}>Angie's Boomchickapop Sweet & Salty Kettle Corn</Title>
+      <Title level={3}>{product.title}</Title>
 
       <div className={styles["product-meta"]}>
         <Space split={<Divider type="vertical" />}>
@@ -89,15 +89,15 @@ export default function ProductContent({ product }) {
       <div className="mt-3 mb-3">
         <Row gutter={48}>
           <Col xs={24} lg={10}>
-            <ProductGallery />
+            <ProductGallery images={product.images}/>
           </Col>
           <Col xs={24} lg={7}>
             <div className="mb-2 mt-md-0 mt-4 d-flex align-items-center justify-content-between">
               <span>
                 <span className="fs-4 text-decoration-line-through">
-                  <Text type="secondary">$4.29</Text>
+                  <Text type="secondary">${product.oldPrice}</Text>
                 </span>
-                <span className="highlight fs-2">$3.29</span>
+                <span className="highlight fs-2">${product.currentPrice}</span>
               </span>
 
               <BsSuitHeart

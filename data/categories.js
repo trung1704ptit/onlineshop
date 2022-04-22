@@ -178,7 +178,62 @@ export const categories = [
         slug: "computer-acccessories",
         icon: BsLaptop,
         isShow: true,
-        sub: [],
+        sub: [{
+            id: '1-0',
+            name: 'Macbook',
+            slug: 'macbook',
+            image: '/images/products/laptop-mac-pro/macbook-pro-16-2021_1.png',
+            isShow: true,
+            parent: '1',
+            sub: [
+                {
+                    id: '1-0-0',
+                    name: 'Macbook pro 16 series',
+                    slug: 'macbook pro 16 series',
+                    parent: '1-0',
+                    isShow: true,
+                },
+                {
+                    id: '1-0-1',
+                    name: 'Macbook pro 13 series',
+                    slug: 'Macbook pro 13 series',
+                    parent: '1-0',
+                    isShow: true,
+                },
+                {
+                    id: '1-0-2',
+                    name: 'Macbook air series',
+                    slug: 'Macbook air series',
+                    parent: '1-0',
+                    isShow: true,
+                }
+            ]
+        },
+        {
+            id: '1-1',
+            name: 'iMac',
+            slug: 'imac',
+            image: '/images/products/imac/imac-green.png',
+            isShow: true,
+            parent: '1',
+            sub: [
+                {
+                    id: '1-1-0',
+                    name: 'iMac 2021 series',
+                    slug: 'imac-2021-series',
+                    parent: '1-1',
+                    isShow: true,
+                },
+                {
+                    id: '1-1-1',
+                    name: 'iMac 2020 series',
+                    slug: 'imac-2020-series',
+                    parent: '1-1',
+                    isShow: true,
+                },
+            ]
+        }
+    ],
     },
     {
         id: "2",

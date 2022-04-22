@@ -65,7 +65,7 @@ export default function Product({ data, border = true, className = "" }) {
         className
       )}
     >
-      <Link href={`/product/${data.id}`}>
+      <Link href={`/product/${data.slug}`}>
         <a>
           <figure>
             {data.oldPrice !== data.currentPrice ? (
