@@ -3,9 +3,9 @@ import { IoChevronForwardOutline } from "react-icons/io5";
 import isEmpty from "lodash/isEmpty";
 import styles from "@styles/category.module.scss";
 import classNames from "classnames";
-import { categories } from "../../data/categories";
 import { Col, Row } from "antd";
 import { PRODUCT_CATEGORY_BASE } from "@utils/constants";
+import { categories } from "data/categories";
 
 
 export default function CategoryList() {
@@ -51,7 +51,7 @@ export const SubCategory = ({ data, groupCategoryId }) => {
                     <ul className="list-style-none">
                       {item.sub && item.sub.map(subItem => (
                         <li key={subItem.id}>
-                          <Link href={`${PRODUCT_CATEGORY_BASE}/${groupCategoryId}/${subItem.slug}`}>
+                          <Link href={`${PRODUCT_CATEGORY_BASE}/${groupCategoryId}/${item.slug}/${subItem.slug}`}>
                             <a className={classNames(styles["link"], "link-animated")}>
                               {subItem.name}
                             </a>

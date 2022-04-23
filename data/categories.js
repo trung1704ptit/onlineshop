@@ -12,8 +12,8 @@ export const categories = [
         isShow: true,
         sub: [{
             id: '0-0',
-            name: 'Apple',
-            slug: 'apple',
+            name: 'iPhone',
+            slug: 'iphone',
             image: '/images/iphone13pro.png',
             isShow: true,
             parent: '0',
@@ -48,8 +48,8 @@ export const categories = [
         },
         {
             id: '0-1',
-            name: 'Samsung',
-            slug: 'samsung',
+            name: 'Samsung Galaxy',
+            slug: 'samsung-galaxy',
             image: '/images/products/samsung-galaxy-s22/samsung-galaxy-s22.png',
             isShow: true,
             parent: '0',

@@ -10,22 +10,14 @@ export default function ProductBreadCrumb({ product }) {
   // We can improve this for better
   if (product && product.categories) {
     const parentCategoryId = product.categories[0];
-    if (parentCategoryId) {
-      const parentCategory = findCategory(parentCategoryId, categoryList);
-      if (parentCategory) {
-        catList.push(parentCategory)
-        if (parentCategory.parent) {
-          const brandCategory = findCategory(parentCategory.parent, categoryList);
-          if (brandCategory) {
-            catList.push(brandCategory)
-            if (brandCategory.parent) {
-              const rootCategory = findCategory(brandCategory.parent, categoryList);
-              if (rootCategory) {
-                catList.push(rootCategory)
-              }
-            }
-          }
-        }
+    const parentCategory = findCategory(parentCategoryId, categoryList);
+    catList.push(parentCategory)
+    if (parentCategory && parentCategory.parent) {
+      const brandCategory = findCategory(parentCategory.parent, categoryList);
+      catList.push(brandCategory)
+      if (brandCategory && brandCategory.parent) {
+        const rootCategory = findCategory(brandCategory.parent, categoryList);
+        catList.push(rootCategory)
       }
     }
   }
@@ -38,12 +30,14 @@ export default function ProductBreadCrumb({ product }) {
       <Breadcrumb>
         <Breadcrumb.Item>Home</Breadcrumb.Item>
         {catList && catList.map(cat => {
-          href += `/${cat?.slug}`
-          return (
-            <Breadcrumb.Item>
-              <Link href={href}>{cat?.name}</Link>
-            </Breadcrumb.Item>
-          )
+          if (cat) {
+            href += `/${cat?.slug}`
+            return (
+              <Breadcrumb.Item>
+                <Link href={href}>{cat?.name}</Link>
+              </Breadcrumb.Item>
+            )
+          }
         })
         }
 
