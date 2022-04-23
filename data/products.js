@@ -366,7 +366,7 @@ export const products = [
     }],
   },
   {
-    id: '0017',
+    id: '0018',
     title: 'Macbook Pro 14" 2021 - M1 Pro 8 Core GPU/256GB',
     slug: 'macbook-pro-14-2021-m1-pro-8-core-gpu-256gb',
     oldPrice: 2200.00,
@@ -394,7 +394,7 @@ export const products = [
     }],
   },
   {
-    id: '0018',
+    id: '0019',
     title: 'Apple iMac 2021 M1 24" 8 Core GPU - 256GB',
     slug: 'apple-imac-2021-m1-8-24-256gb',
     oldPrice: 1600.00,
@@ -430,7 +430,7 @@ export const products = [
       image: '/images/products/imac/imac-green.png'
     }],
   }, {
-    id: '0019',
+    id: '0020',
     title: 'Smartwatch Garmin Venu',
     slug: 'smartwatch-garmin-venu',
     oldPrice: 260.00,
@@ -466,7 +466,7 @@ export const products = [
     }],
   },
   {
-    id: '0020',
+    id: '0021',
     title: 'Smartwatch Garmin Forerunner',
     slug: 'smartwatch-garmin-forerunner',
     oldPrice: 320.00,
@@ -491,7 +491,7 @@ export const products = [
     }],
   },
   {
-    id: '0021',
+    id: '0022',
     title: 'Smartwatch Garmin Instinct',
     slug: 'smartwatch-garmin-instinct',
     oldPrice: 290.00,

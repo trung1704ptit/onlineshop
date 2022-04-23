@@ -22,10 +22,10 @@ export function roundPrice(price, qty) {
   return (price * qty).toFixed(2);
 }
 
-function findCategory(id, categoryList) {
+export function findCategory(id, categoryList) {
   let result = null;
   for (let item of categoryList) {
-    if (item.id === id) {
+    if (item.id === id || item.slug === id) {
       return item;
     } else if (item.sub && item.sub.length > 0) {
       result = findCategory(id, item.sub);
@@ -55,4 +55,8 @@ export function getBrand(productBrands, allBrands) {
     return productBrands.map(brandId => findBrand(brandId, allBrands)).filter(item => item)
   }
   return []
+}
+
+export function getCategoriesTree(categorySlug, allCategories) {
+  
 }

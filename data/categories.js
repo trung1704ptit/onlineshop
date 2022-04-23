@@ -189,21 +189,21 @@ export const categories = [
                 {
                     id: '1-0-0',
                     name: 'Macbook pro 16 series',
-                    slug: 'macbook pro 16 series',
+                    slug: 'macbook-pro-16-series',
                     parent: '1-0',
                     isShow: true,
                 },
                 {
                     id: '1-0-1',
                     name: 'Macbook pro 13 series',
-                    slug: 'Macbook pro 13 series',
+                    slug: 'macbook-pro-13-series',
                     parent: '1-0',
                     isShow: true,
                 },
                 {
                     id: '1-0-2',
-                    name: 'Macbook air series',
-                    slug: 'Macbook air series',
+                    name: 'Macbook-air-series',
+                    slug: 'macbook-air-series',
                     parent: '1-0',
                     isShow: true,
                 }

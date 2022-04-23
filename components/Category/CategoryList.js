@@ -5,6 +5,8 @@ import styles from "@styles/category.module.scss";
 import classNames from "classnames";
 import { categories } from "../../data/categories";
 import { Col, Row } from "antd";
+import { PRODUCT_CATEGORY_BASE } from "@utils/constants";
+
 
 export default function CategoryList() {
   return (
@@ -15,7 +17,7 @@ export default function CategoryList() {
             if (item.isShow) {
               return (
                 <li key={item.id} className={styles["category-item"]}>
-                  <Link href={`/product-category/${item.slug}`}>
+                  <Link href={`${PRODUCT_CATEGORY_BASE}/${item.slug}`}>
                     <a className={styles['category-link']} data-cy="category-link">
                       <item.icon className={styles["icon"]} />
                       {item.name}
@@ -49,7 +51,7 @@ export const SubCategory = ({ data, groupCategoryId }) => {
                     <ul className="list-style-none">
                       {item.sub && item.sub.map(subItem => (
                         <li key={subItem.id}>
-                          <Link href={`/product-category/${groupCategoryId}/${subItem.slug}`}>
+                          <Link href={`${PRODUCT_CATEGORY_BASE}/${groupCategoryId}/${subItem.slug}`}>
                             <a className={classNames(styles["link"], "link-animated")}>
                               {subItem.name}
                             </a>

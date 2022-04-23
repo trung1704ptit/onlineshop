@@ -43,3 +43,6 @@ export const FILTER = {
   product_status: [],
   colors: ['green', 'red', 'orange', 'black', 'blue', 'purple']
 };
+
+
+export const PRODUCT_CATEGORY_BASE = '/product-category';
