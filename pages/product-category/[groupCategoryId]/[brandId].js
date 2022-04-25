@@ -3,7 +3,7 @@ import dynamic from "next/dynamic";
 import Layout from "@components/Layout";
 import BlankSpace from "@components/BlankSpace";
 import Loading from "@components/Loading";
-import PageBreadCrumb from '@components/BreadCrumb/PageBreadCrumb';
+import CategoryBreadCrumb from '@components/BreadCrumb/CategoryBreadCrumb';
 
 const AdvertiseBanner = dynamic(() =>
   import("../../../containers/AdvertiseBanner"), {
@@ -28,7 +28,7 @@ export default function Shop() {
 
       <Layout>
         <>
-          <PageBreadCrumb pageName="Product Category" />
+          <CategoryBreadCrumb pageName="Product Category" />
           <BlankSpace height={16} className="d-md-none" />
 
 

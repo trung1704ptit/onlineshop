@@ -41,7 +41,12 @@ export const FILTER = {
   ],
   prices: {},
   product_status: [],
-  colors: ['green', 'red', 'orange', 'black', 'blue', 'purple']
+  colors: ['green', 'red', 'orange', 'black', 'blue', 'purple'],
+  categories: '*',
+  minPrice: 0,
+  maxPrice: 10000000000,
+  brands: [],
+  size: ['small', 'medium', 'large', 'xtra-large']
 };
 
 

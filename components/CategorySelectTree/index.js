@@ -32,7 +32,6 @@ const formatData = (list) => {
 const CategorySelectTree = () => {
   const [expandedKeys, setExpandedKeys] = useState([]);
   const [checkedKeys, setCheckedKeys] = useState([]);
-  const [selectedKeys, setSelectedKeys] = useState([]);
   const [autoExpandParent, setAutoExpandParent] = useState(true);
   const [treeData, setTreeData] = useState([]);
   const router = useRouter();
@@ -53,6 +52,9 @@ const CategorySelectTree = () => {
         const data = formatData(groupCategory.sub);
         setTreeData(data);
       }
+    } else {
+      const data = formatData(categories);
+      setTreeData(data);
     }
   }, [router])
 
@@ -62,13 +64,22 @@ const CategorySelectTree = () => {
   };
 
   const onCheck = (checkedKeysValue) => {
-    console.log("onCheck", checkedKeysValue);
+    let catids = '*';
     setCheckedKeys(checkedKeysValue);
-  };
 
-  const onSelect = (selectedKeysValue, info) => {
-    console.log("onSelect", info);
-    setSelectedKeys(selectedKeysValue);
+    if (checkedKeysValue.length > 0) {
+      catids = checkedKeysValue
+    }
+    const query = router.query;
+    const pathname = router.pathname;
+
+    var newQuery = new URLSearchParams({
+      ...query,
+      catids: catids
+    });
+     
+    var url = `${pathname}?${newQuery.toString()}`
+    router.push(url)
   };
 
   return (
@@ -79,9 +90,8 @@ const CategorySelectTree = () => {
       autoExpandParent={autoExpandParent}
       onCheck={onCheck}
       checkedKeys={checkedKeys}
-      onSelect={onSelect}
-      selectedKeys={selectedKeys}
       treeData={treeData}
+      selectable={false}
     />
   );
 };
