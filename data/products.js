@@ -17,8 +17,9 @@ export const products = [
       image: '/images/products/iphone-11/iphone-11_3.png'
     }],
     categories: ["0-0-0"],
-    quantity: 10,
-    brands: ['0']
+    quantity: 20,
+    brands: ['0'],
+    sku: '389k82'
   },
   {
     id: "0002",
@@ -26,7 +27,7 @@ export const products = [
     slug: 'apple-iphone-12-128gb',
     oldPrice: 720.00,
     currentPrice: 680,
-    images: ["/images/products/iphone-12/iphone-12.png", "/images/products/iphone-12/iphone-12_2.png"],
+    images: ["/images/products/iphone-12/iphone-12.png", "/images/products/iphone-12/iphone-12_1.png", "/images/products/iphone-12/iphone-12_2.png"],
     categories: ["0-0-0"],
     quantity: 10,
     brands: ['0'],
@@ -38,8 +39,9 @@ export const products = [
       image: '/images/products/iphone-12/iphone-12_1.png'
     }, {
       name: 'green',
-      image: '/images/products/iphone-12/iphone-12_1.png'
+      image: '/images/products/iphone-12/iphone-12_2.png'
     }],
+    sku: '90sxs2'
   },
   {
     id: "0003",
@@ -61,6 +63,7 @@ export const products = [
       name: 'green',
       image: '/images/products/iphone-13/iphone-13_2.png'
     }],
+    sku: '43xcd2'
   },
   {
     id: "0004",
@@ -82,6 +85,7 @@ export const products = [
       name: 'green',
       image: '/images/products/iphone-13/iphone-13_2.png'
     }],
+    sku: '5433sd'
   },
   {
     id: "0005",
@@ -100,6 +104,7 @@ export const products = [
       name: 'white',
       image: '/images/products/iphone-13-pro-max/iphone-13-pro-max.png'
     }],
+    sku: '34334s'
   },
   {
     id: "0006",
@@ -109,7 +114,7 @@ export const products = [
     currentPrice: 740.00,
     images: ["/images/products/iphone-12/iphone-12.png", "/images/products/iphone-12/iphone-12_2.png"],
     categories: ["0-0-0"],
-    quantity: 10,
+    quantity: 0,
     brands: ['0'],
     colors: [{
       name: 'red',
@@ -121,6 +126,7 @@ export const products = [
       name: 'green',
       image: '/images/products/iphone-12/iphone-12_1.png'
     }],
+    sku: '45sd2s'
   },
   {
     id: "0007",
@@ -139,6 +145,7 @@ export const products = [
       name: 'white',
       image: '/images/products/iphone-13-pro-max/iphone-13-pro-max.png'
     }],
+    sku: '43fs54'
   },
   {
     id: "0008",
@@ -157,6 +164,7 @@ export const products = [
       name: 'green',
       image: '/images/products/samsung-galaxy-s22/samsung-galaxy-s22_1.png'
     }],
+    sku: '45sd343'
   },
   {
     id: "0009",
@@ -175,6 +183,7 @@ export const products = [
       name: 'black',
       image: '/images/products/samsung-galaxy-s21/samsung-galaxy-s21-plus_1.png'
     }],
+    sku: '4s2ssd3'
   },
   {
     id: "0010",
@@ -197,6 +206,7 @@ export const products = [
       name: 'black',
       image: '/images/products/samsung-galaxy-s21/samsung-galaxy-s21-plus_1.png'
     }],
+    sku: '32dsds5'
   },
   {
     id: "0011",
@@ -218,7 +228,8 @@ export const products = [
     }],
     categories: ["0-1-0"],
     quantity: 10,
-    brands: ['1']
+    brands: ['1'],
+    sku: '32dsd65'
   },
   {
     id: "0012",
@@ -241,6 +252,7 @@ export const products = [
       name: 'white',
       image: '/images/products/samsung-galaxy-a/samsung-galaxy-a33_1.png'
     }],
+    sku: '43dcds3'
   },
   {
     id: "0013",
@@ -263,6 +275,7 @@ export const products = [
       name: 'white',
       image: '/images/products/samsung-galaxy-a/samsung-galaxy-a52s_1.png'
     }],
+    sku: 'dfds23s'
   },
   {
     id: "0014",
@@ -285,6 +298,7 @@ export const products = [
       name: 'white',
       image: '/images/products/samsung-galaxy-a/samsung-galaxy-a52s_1.png'
     }],
+    sku: '3ds33ds'
   },
   {
     id: '0015',
@@ -310,6 +324,7 @@ export const products = [
       name: 'silver',
       image: '/images/products/laptop-mac-pro/macbook-pro-16-2021_1.png'
     }],
+    sku: '342asd'
   },
   {
     id: '0016',
@@ -335,6 +350,7 @@ export const products = [
       name: 'space gray',
       image: '/images/products/laptop-mac-air/macbook-air-13-inch_1.png'
     }],
+    sku: '323dssa'
   },
   {
     id: '0017',
@@ -364,6 +380,7 @@ export const products = [
       name: 'space gray',
       image: '/images/products/laptop-mac-pro/macbook-pro-14-2021_5.png'
     }],
+    sku: '323ss2s'
   },
   {
     id: '0018',
@@ -392,6 +409,7 @@ export const products = [
       name: 'space gray',
       image: '/images/products/laptop-mac-pro/macbook-pro-14-2021_5.png'
     }],
+    sku: '32sssd23'
   },
   {
     id: '0019',
@@ -429,6 +447,7 @@ export const products = [
       name: 'green',
       image: '/images/products/imac/imac-green.png'
     }],
+    sku: '75dfs2'
   }, {
     id: '0020',
     title: 'Smartwatch Garmin Venu',
@@ -445,7 +464,6 @@ export const products = [
       '/images/products/garmin-watch/garmin-venu_1.png',
       '/images/products/garmin-watch/garmin-venu_2.png',
       '/images/products/garmin-watch/garmin-venu_3.png',
-      '/images/products/garmin-watch/garmin-venu_4.png',
     ],
     quantity: 200,
     brands: ['7'],
@@ -464,6 +482,7 @@ export const products = [
       name: 'black/gray',
       image: '/images/products/garmin-watch/garmin-venu_3.png'
     }],
+    sku: '23dsd3'
   },
   {
     id: '0021',
@@ -489,6 +508,7 @@ export const products = [
       name: 'yellow/black',
       image: '/images/products/garmin-watch/garmin-forerunner_1.png'
     }],
+    sku: '744xdfs2'
   },
   {
     id: '0022',
@@ -529,5 +549,6 @@ export const products = [
       name: 'gray',
       image: '/images/products/garmin-watch/garmin-instinct_4.png'
     }],
+    sku: '25df2s2'
   }
 ];

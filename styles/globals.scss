@@ -392,3 +392,6 @@ a:focus {
   height: 60px;
   object-fit: cover;
 }
+.image-gallery-thumbnail:hover, .image-gallery-thumbnail.active, .image-gallery-thumbnail:focus {
+  padding: 3px;
+}

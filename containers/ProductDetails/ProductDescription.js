@@ -17,28 +17,7 @@ const ProductDescription = () => (
       <Tabs defaultActiveKey="1" onChange={callback}>
         <TabPane tab="DESCRIPTION" key="1">
           <div className={styles["content"]}>
-            <p>
-              Quisque varius diam vel metus mattis, id aliquam diam rhoncus.
-              Proin vitae magna in dui finibus malesuada et at nulla. Morbi elit
-              ex, viverra vitae ante vel, blandit feugiat ligula. Fusce
-              fermentum iaculis nibh, at sodales leo maximus a. Nullam ultricies
-              sodales nunc, in pellentesque lorem mattis quis. Cras imperdiet
-              est in nunc tristique lacinia. Nullam aliquam mauris eu accumsan
-              tincidunt. Suspendisse velit ex, aliquet vel ornare vel, dignissim
-              a tortor.
-            </p>
-            <p>
-              Morbi ut sapien vitae odio accumsan gravida. Morbi vitae erat
-              auctor, eleifend nunc a, lobortis neque. Praesent aliquam
-              dignissim viverra. Maecenas lacus odio, feugiat eu nunc sit amet,
-              maximus sagittis dolor. Vivamus nisi sapien, elementum sit amet
-              eros sit amet, ultricies cursus ipsum. Sed consequat luctus
-              ligula. Curabitur laoreet rhoncus blandit. Aenean vel diam ut arcu
-              pharetra dignissim ut sed leo. Vivamus faucibus, ipsum in
-              vestibulum vulputate, lorem orci convallis quam, sit amet
-              consequat nulla felis pharetra lacus. Duis semper erat mauris, sed
-              egestas purus commodo vel.
-            </p>
+            <div> <h2>Description</h2> <p>The Aspire 5 is a compact laptop in a thin case with a metal cover, a high-quality Full HD IPS display and a rich set of interfaces. Thanks to its powerful components, the laptop can handle resource-intensive tasks perfectly and is also suitable for most games.</p> <p>Key Features:</p> <ul> <li>slim body with metal cover</li> <li>latest Intel Core i5-1135G7 processor (4 cores / 8 threads)</li> <li>8GB DDR4 RAM and fast 512GB PCIe SSD</li> <li>NVIDIA GeForce MX350 2GB GDDR5 graphics card</li> <li>backlit keyboard, touchpad with gesture support</li> </ul></div>
           </div>
         </TabPane>
         <TabPane tab="SPECIFICATION" key="2">

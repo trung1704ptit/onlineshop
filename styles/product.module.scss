@@ -251,6 +251,10 @@
     color: $third-color
   }
 
+  .product-sku {
+    text-transform: uppercase;
+  }
+
   @media screen and (min-width: 768px) {
     padding: 2.5rem;
   }

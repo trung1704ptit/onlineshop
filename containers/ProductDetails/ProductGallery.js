@@ -10,9 +10,8 @@ export default function ProductGallery({ images }) {
         showNav={false}
         thumbnailHeight='30px'
         thumbnailWidth="30px"
-        thumbnailPosition="left"
       />
-    );
+    );  
   }
 
   return null;

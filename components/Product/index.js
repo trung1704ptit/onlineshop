@@ -106,7 +106,7 @@ export default function Product({ data, border = true, className = "" }) {
 
         <Button
           size="large"
-          disabled={loading}
+          disabled={loading || data.quantity === 0}
           onClick={handleAddCart}
           shape="round"
           loading={loading}

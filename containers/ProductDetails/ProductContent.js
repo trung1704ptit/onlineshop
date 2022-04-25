@@ -12,6 +12,9 @@ import classNames from "classnames";
 import { addToWishlist, removeFromWishlist } from "@redux/actions/wishlist";
 import ColorOptions from './ColorOptions';
 import ProductAlertMessage from "./ProductAlertMessage";
+import { findCategory, getBrand } from "@utils/helper";
+import { brands } from "data/brands";
+import { categories } from "data/categories";
 
 const { Title, Text } = Typography;
 const key = "product-detail";
@@ -61,6 +64,14 @@ export default function ProductContent({ product }) {
       message.success(`Added ${product.title} to wishlist`);
     }
   };
+  
+  let parentCategory;
+
+  if (product && product.categories) {
+    const parentCategoryId = product.categories[0];
+    parentCategory = findCategory(parentCategoryId, categories);
+  }
+
 
   return (
     <div className={styles["product-detail"]}>
@@ -69,7 +80,7 @@ export default function ProductContent({ product }) {
       <div className={styles["product-meta"]}>
         <Space split={<Divider type="vertical" />}>
           <div className={styles["product-brand"]}>
-            <Text type="secondary">Brands: </Text>Frito Lay, Oreo, Welch's
+            <Text type="secondary">Brands: </Text>{getBrand(product.brands, brands).map(item => item.name).join(', ')}
           </div>
           <div className={styles["product-rating"]}>
             <Rate
@@ -83,7 +94,7 @@ export default function ProductContent({ product }) {
             </Text>
           </div>
           <div className={styles["product-sku"]}>
-            <Text type="secondary">SKU: </Text> BE4CURT
+            <Text type="secondary">SKU: </Text> {product.sku}
           </div>
         </Space>
       </div>
@@ -111,8 +122,8 @@ export default function ProductContent({ product }) {
               />
             </div>
 
-            <Tag color="cyan" className="text-uppercase rounded-pill mb-3">
-              In stock
+            <Tag color={product.quantity > 0 ? "cyan" : 'red'} className="text-uppercase rounded-pill mb-3">
+              {product.quantity > 0 ? "In stock" : "Sold out"}
             </Tag>
 
             <div className="mb-2">
@@ -132,7 +143,7 @@ export default function ProductContent({ product }) {
               />
               <Button
                 size="large"
-                disabled={loading}
+                disabled={loading || product.quantity === 0}
                 onClick={handleAddToCart}
                 shape="round"
                 loading={loading}
@@ -147,33 +158,34 @@ export default function ProductContent({ product }) {
             <Divider />
 
             <div className="pb-4">
-              <Text type="secondary">Category: Biscuits & Snacks</Text>
+              <Text type="secondary">Category: {parentCategory?.name}</Text>
             </div>
 
-            <div>
+            <div className="d-inline-flex">
               <Tag
-                icon={<BsTwitter />}
+                icon={<BsTwitter className="me-1" />}
                 color="#55acee"
                 className="d-inline-flex align-items-center"
               >
                 Twitter
               </Tag>
+
               <Tag
-                icon={<BsYoutube />}
+                icon={<BsYoutube className="me-1" />}
                 color="#cd201f"
                 className="d-inline-flex align-items-center"
               >
                 Youtube
               </Tag>
               <Tag
-                icon={<BsFacebook />}
+                icon={<BsFacebook className="me-1" />}
                 color="#3b5999"
                 className="d-inline-flex align-items-center"
               >
                 Facebook
               </Tag>
               <Tag
-                icon={<BsLinkedin />}
+                icon={<BsLinkedin className="me-1" />}
                 color="#55acee"
                 className="d-inline-flex align-items-center"
               >
