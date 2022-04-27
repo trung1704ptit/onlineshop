@@ -98,7 +98,7 @@ export const products = [
     quantity: 10,
     brands: ['0'],
     colors: [{
-      name: 'sierra blue',
+      name: 'sierra-blue',
       image: '/images/products/iphone-13-pro-max/iphone-13-pro-max_1.png'
     }, {
       name: 'white',
@@ -139,7 +139,7 @@ export const products = [
     quantity: 10,
     brands: ['0'],
     colors: [{
-      name: 'sierra blue',
+      name: 'sierra-blue',
       image: '/images/products/iphone-13-pro-max/iphone-13-pro-max_1.png'
     }, {
       name: 'white',
@@ -347,7 +347,7 @@ export const products = [
       name: 'gold',
       image: '/images/products/laptop-mac-air/macbook-air-13-inch.png'
     }, {
-      name: 'space gray',
+      name: 'space-gray',
       image: '/images/products/laptop-mac-air/macbook-air-13-inch_1.png'
     }],
     sku: '323dssa'
@@ -377,7 +377,7 @@ export const products = [
       name: 'gray',
       image: '/images/products/laptop-mac-pro/macbook-pro-14-2021.png'
     }, {
-      name: 'space gray',
+      name: 'space-gray',
       image: '/images/products/laptop-mac-pro/macbook-pro-14-2021_5.png'
     }],
     sku: '323ss2s'
@@ -406,7 +406,7 @@ export const products = [
       name: 'gray',
       image: '/images/products/laptop-mac-pro/macbook-pro-14-2021.png'
     }, {
-      name: 'space gray',
+      name: 'space-gray',
       image: '/images/products/laptop-mac-pro/macbook-pro-14-2021_5.png'
     }],
     sku: '32sssd23'

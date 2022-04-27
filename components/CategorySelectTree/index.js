@@ -11,7 +11,7 @@ const formatItem = (item) => {
   }
   return {
     title: item.name,
-    key: item.slug,
+    key: item.id,
     children,
   };
 };

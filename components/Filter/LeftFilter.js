@@ -1,10 +1,10 @@
 import CategorySelectTree from "@components/CategorySelectTree";
-import ColorOptions from "@components/ColorOptions";
 import styles from "@styles/filter.module.scss";
 import { Divider } from "antd";
 import { Typography } from "antd";
 import classNames from "classnames";
 import PriceFilter from "./PriceFilter";
+import ColorFilter from "./ColorFilter";
 
 const { Title } = Typography;
 
@@ -28,7 +28,7 @@ export default function LeftFilter({ noCategory = false }) {
 
       <div className={styles["filter-item"]}>
         <h6 className={styles["title"]}>Filter by color</h6>
-        <ColorOptions />
+        <ColorFilter />
       </div>
     </div>
   );

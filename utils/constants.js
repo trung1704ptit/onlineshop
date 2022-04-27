@@ -41,13 +41,81 @@ export const FILTER = {
   ],
   prices: {},
   product_status: [],
-  colors: ['green', 'red', 'orange', 'black', 'blue', 'purple'],
-  categories: '*',
+  colors: [
+    {
+      label: "White",
+      value: "white",
+    },
+    {
+      label: "Green",
+      value: "green",
+    },
+    {
+      label: "Red",
+      value: "red",
+    },
+    {
+      label: "Yellow",
+      value: "yellow",
+    },
+    {
+      label: "Gray",
+      value: "gray",
+    },
+    {
+      label: "Space Gray",
+      value: "space-gray",
+    },
+    {
+      label: "Silver",
+      value: "silver",
+    },
+    {
+      label: "Blue",
+      value: "blue",
+    },
+    {
+      label: "Purple",
+      value: "purple",
+    },
+    {
+      label: "Black",
+      value: "black",
+    },
+    {
+      label: "Pink",
+      value: "pink",
+    },
+    {
+      label: "Gold",
+      value: "gold",
+    },
+    {
+      label: "Orange",
+      value: "orange",
+    },
+    {
+      label: "Sierra Blue",
+      value: "sierra-blue",
+    },
+    {
+      label: "Midnight",
+      value: "midnight",
+    },
+    {
+      label: "Seafoam",
+      value: "seafoam",
+    },
+    {
+      label: "Sunburt",
+      value: "sunburt",
+    },
+  ],
+  categories: "*",
   minPrice: 0,
   maxPrice: 10000000000,
   brands: [],
-  size: ['small', 'medium', 'large', 'xtra-large']
+  size: ["small", "medium", "large", "xtra-large"],
 };
 
-
-export const PRODUCT_CATEGORY_BASE = '/product-category';
+export const PRODUCT_CATEGORY_BASE = "/product-category";

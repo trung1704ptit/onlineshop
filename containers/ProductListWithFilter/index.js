@@ -1,11 +1,8 @@
 import TopFilter from "@components/Filter/TopFilter";
 import LeftFilter from "@components/Filter/LeftFilter";
 import Section from "@components/Section";
-import { Row, Col, Pagination } from "antd";
 import BlankSpace from "@components/BlankSpace";
-import Product from "@components/Product";
-
-import { products } from "../../data/products";
+import ProductFilter from './ProductFilter'
 
 export default function ProductListWithFilter({ noCategory }) {
   return (
@@ -27,22 +24,7 @@ export default function ProductListWithFilter({ noCategory }) {
           </div>
         </div>
 
-        <div className="mt-3">
-          <Row gutter={16}>
-            {products &&
-              products.map((item) => (
-                <Col xs={12} md={8} xl={6} key={item.id}>
-                  <div className="pb-4 h-100">
-                    <Product data={item} />
-                  </div>
-                </Col>
-              ))}
-          </Row>
-
-          <div className="text-center">
-            <Pagination defaultCurrent={1} total={50} />
-          </div>
-        </div>
+        <ProductFilter />
       </div>
     </Section>
   );
