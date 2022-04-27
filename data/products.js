@@ -28,7 +28,7 @@ export const products = [
     oldPrice: 720.00,
     currentPrice: 680,
     images: ["/images/products/iphone-12/iphone-12.png", "/images/products/iphone-12/iphone-12_1.png", "/images/products/iphone-12/iphone-12_2.png"],
-    categories: ["0-0-0"],
+    categories: ["0-0-1"],
     quantity: 10,
     brands: ['0'],
     colors: [{
@@ -50,7 +50,7 @@ export const products = [
     oldPrice: 1320.00,
     currentPrice: 1300,
     images: ["/images/products/iphone-13/iphone-13.png", "/images/products/iphone-13/iphone-13_2.png"],
-    categories: ["0-0-0"],
+    categories: ["0-0-2"],
     quantity: 10,
     brands: ['0'],
     colors: [{
@@ -72,7 +72,7 @@ export const products = [
     oldPrice: 1320.00,
     currentPrice: 1300,
     images: ["/images/products/iphone-13/iphone-13_2.png"],
-    categories: ["0-0-0"],
+    categories: ["0-0-2"],
     quantity: 10,
     brands: ['0'],
     colors: [{
@@ -94,7 +94,7 @@ export const products = [
     oldPrice: 1600.00,
     currentPrice: 1600.00,
     images: ["/images/products/iphone-13-pro-max/iphone-13-pro-max_1.png", "/images/products/iphone-13-pro-max/iphone-13-pro-max.png"],
-    categories: ["0-0-0"],
+    categories: ["0-0-2"],
     quantity: 10,
     brands: ['0'],
     colors: [{
@@ -113,7 +113,7 @@ export const products = [
     oldPrice: 740.00,
     currentPrice: 740.00,
     images: ["/images/products/iphone-12/iphone-12.png", "/images/products/iphone-12/iphone-12_2.png"],
-    categories: ["0-0-0"],
+    categories: ["0-0-1"],
     quantity: 0,
     brands: ['0'],
     colors: [{
@@ -135,7 +135,7 @@ export const products = [
     oldPrice: 1600.00,
     currentPrice: 1580.00,
     images: ["/images/products/iphone-13-pro-max/iphone-13-pro-max.png", "/images/products/iphone-13-pro-max/iphone-13-pro-max_1.png"],
-    categories: ["0-0-0"],
+    categories: ["0-0-2"],
     quantity: 10,
     brands: ['0'],
     colors: [{

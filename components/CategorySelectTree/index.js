@@ -5,29 +5,29 @@ import { useRouter } from "next/router";
 import { findCategory } from "@utils/helper";
 
 const formatItem = (item) => {
-  let children = []
+  let children = [];
   if (item.sub && item.sub.length > 0) {
-    children = formatData(item.sub) || []
+    children = formatData(item.sub) || [];
   }
-  return ({
+  return {
     title: item.name,
     key: item.slug,
-    children
-  })
-}
+    children,
+  };
+};
 
 const formatData = (list) => {
   if (!list) {
-    return []
+    return [];
   }
 
-  return list.map(item => {
+  return list.map((item) => {
     const exist = findCategory(item.id, categories);
     if (exist) {
-      return formatItem(exist)
+      return formatItem(exist);
     }
-  })
-}
+  });
+};
 
 const CategorySelectTree = () => {
   const [expandedKeys, setExpandedKeys] = useState([]);
@@ -39,11 +39,11 @@ const CategorySelectTree = () => {
   useEffect(() => {
     const { groupCategoryId, brandId, categoryId } = router.query;
     if (categoryId) {
-      setCheckedKeys([categoryId])
+      setCheckedKeys([categoryId]);
       setExpandedKeys([categoryId]);
     } else if (brandId) {
       setExpandedKeys([brandId]);
-      setCheckedKeys([brandId])
+      setCheckedKeys([brandId]);
     }
 
     if (groupCategoryId) {
@@ -56,7 +56,7 @@ const CategorySelectTree = () => {
       const data = formatData(categories);
       setTreeData(data);
     }
-  }, [router])
+  }, [router]);
 
   const onExpand = (expandedKeysValue) => {
     setExpandedKeys(expandedKeysValue);
@@ -64,22 +64,22 @@ const CategorySelectTree = () => {
   };
 
   const onCheck = (checkedKeysValue) => {
-    let catids = '*';
+    let catids = "*";
     setCheckedKeys(checkedKeysValue);
 
     if (checkedKeysValue.length > 0) {
-      catids = checkedKeysValue
+      catids = checkedKeysValue;
     }
     const query = router.query;
     const pathname = router.pathname;
 
     var newQuery = new URLSearchParams({
       ...query,
-      catids: catids
+      catids: catids,
     });
-     
-    var url = `${pathname}?${newQuery.toString()}`
-    router.push(url)
+
+    var url = `${pathname}?${newQuery.toString()}`;
+    router.push(url);
   };
 
   return (

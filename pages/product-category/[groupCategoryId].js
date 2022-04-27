@@ -35,7 +35,7 @@ export default function Shop() {
           <AdvertiseBanner />
           <BlankSpace height={40} />
 
-          <ProductListWithFilter />
+          <ProductListWithFilter noCategory={true} />
           <BlankSpace height={60} />
         </>
       </Layout>

@@ -31,11 +31,10 @@ export default function Shop() {
           <CategoryBreadCrumb pageName="Product Category" />
           <BlankSpace height={16} className="d-md-none" />
 
-
           <AdvertiseBanner />
           <BlankSpace height={40} />
 
-          <ProductListWithFilter />
+          <ProductListWithFilter noCategory={true} />
           <BlankSpace height={60} />
         </>
       </Layout>

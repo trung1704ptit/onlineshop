@@ -1,15 +1,14 @@
-import CircleButton from "@components/Button/CircleButton";
 import CategorySelectTree from "@components/CategorySelectTree";
 import ColorOptions from "@components/ColorOptions";
 import styles from "@styles/filter.module.scss";
-import { Divider, Slider } from "antd";
-import cx from "classnames";
+import { Divider } from "antd";
 import { Typography } from "antd";
 import classNames from "classnames";
+import PriceFilter from "./PriceFilter";
 
 const { Title } = Typography;
 
-export default function LeftFilter() {
+export default function LeftFilter({ noCategory = false }) {
   return (
     <div className={styles["left-filter"]}>
       <div className={classNames(styles["filter-item"], "d-none d-xl-block")}>
@@ -17,27 +16,15 @@ export default function LeftFilter() {
         <Divider />
       </div>
 
-      <div className={styles["filter-item"]}>
-        <h6 className={styles["title"]}>Filter by Categories</h6>
-        <CategorySelectTree />
-        <Divider />
-      </div>
-
-      <div className={cx(styles["price-slider"], styles["filter-item"])}>
-        <h6 className={styles["title"]}>Filter by price</h6>
-
-        <Slider defaultValue={50} style={{ margin: 0 }} />
-
-        <div className={styles["text-price"]}>
-          <span>
-            <span className={styles["text"]}>Price: </span>$0 - $15,000
-          </span>
-          <CircleButton size="small" style="gray">
-            Filter
-          </CircleButton>
+      {!noCategory && (
+        <div className={styles["filter-item"]}>
+          <h6 className={styles["title"]}>Filter by Categories</h6>
+          <CategorySelectTree />
+          <Divider />
         </div>
-        <Divider />
-      </div>
+      )}
+
+      <PriceFilter />
 
       <div className={styles["filter-item"]}>
         <h6 className={styles["title"]}>Filter by color</h6>

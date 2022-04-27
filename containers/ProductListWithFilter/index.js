@@ -7,19 +7,23 @@ import Product from "@components/Product";
 
 import { products } from "../../data/products";
 
-export default function ProductListWithFilter() {
+export default function ProductListWithFilter({ noCategory }) {
   return (
     <Section>
       <TopFilter />
       <div className="d-flex">
         <div className="d-none d-xl-block me-3">
-          <LeftFilter />
+          <LeftFilter noCategory={noCategory} />
 
           <BlankSpace height={30} />
 
           {/* Ads */}
           <div>
-            <img src="/images/others/sidebar-banner.gif" alt="banner" width={280}/>
+            <img
+              src="/images/others/sidebar-banner.gif"
+              alt="banner"
+              width={280}
+            />
           </div>
         </div>
 
