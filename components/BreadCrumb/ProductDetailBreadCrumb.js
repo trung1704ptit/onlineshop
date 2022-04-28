@@ -1,7 +1,7 @@
 import { PRODUCT_CATEGORY_BASE } from "@utils/constants";
 import { findCategory } from "@utils/helper";
 import { Breadcrumb } from "antd";
-import { categoryList } from "data/categories";
+import { categories } from "data/categories";
 import Link from "next/link";
 
 export default function ProductBreadCrumb({ product }) {
@@ -10,13 +10,13 @@ export default function ProductBreadCrumb({ product }) {
   // We can improve this for better
   if (product && product.categories) {
     const parentCategoryId = product.categories[0];
-    const parentCategory = findCategory(parentCategoryId, categoryList);
+    const parentCategory = findCategory(parentCategoryId, categories);
     catList.push(parentCategory)
     if (parentCategory && parentCategory.parent) {
-      const brandCategory = findCategory(parentCategory.parent, categoryList);
+      const brandCategory = findCategory(parentCategory.parent, categories);
       catList.push(brandCategory)
       if (brandCategory && brandCategory.parent) {
-        const rootCategory = findCategory(brandCategory.parent, categoryList);
+        const rootCategory = findCategory(brandCategory.parent, categories);
         catList.push(rootCategory)
       }
     }

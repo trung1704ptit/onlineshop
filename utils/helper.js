@@ -56,3 +56,27 @@ export function getBrand(productBrands, allBrands) {
   }
   return []
 }
+
+export function getAllCategoryByBrandId(brandId, allCategories) {
+  let result = []
+  const brand = findCategory(brandId, allCategories);
+  if (brand && brand.sub) {
+    const catIds = brand.sub.map(item => item.id);
+    return catIds;
+  }
+
+  return result;
+}
+
+export function getAllCategoryByGroupCategoryId(groupCategoryId, allCategories) {
+  let result = [];
+  const group = findCategory(groupCategoryId, allCategories);
+  if (group && group.sub) {
+    for(let item of group.sub) {
+      const brandCats = getAllCategoryByBrandId(item.id, allCategories);
+      result = [...result, ...brandCats]
+    }
+  }
+
+  return result;
+}

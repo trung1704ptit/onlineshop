@@ -3,7 +3,11 @@ import { Row, Col, Pagination, Empty } from "antd";
 import Product from "@components/Product";
 import { products } from "data/products";
 import { useRouter } from "next/router";
-import { findCategory } from "@utils/helper";
+import {
+  findCategory,
+  getAllCategoryByBrandId,
+  getAllCategoryByGroupCategoryId,
+} from "@utils/helper";
 import { categories } from "data/categories";
 
 const isInPartOfList = (str, list) => {
@@ -28,18 +32,36 @@ export default function ProductFilter() {
     } = query;
 
     let productFilter = [];
+    let allProductCatIds = [];
 
-    if (categoryId) {
-      const category = findCategory(categoryId, categories);
-      if (category) {
-        productFilter = products.filter((item) =>
-          item.categories.includes(category.id)
+    if (!categoryId && !brandId && !groupCategoryId) {
+      productFilter = products;
+    } else {
+      if (categoryId) {
+        const category = findCategory(categoryId, categories);
+        if (category) {
+          allProductCatIds = [category.id];
+        }
+      } else if (brandId) {
+        allProductCatIds = getAllCategoryByBrandId(brandId, categories);
+      } else if (groupCategoryId) {
+        allProductCatIds = getAllCategoryByGroupCategoryId(
+          groupCategoryId,
+          categories
         );
       }
+      productFilter = products.filter((item) => {
+        if (
+          item.categories.filter((pCat) => allProductCatIds.includes(pCat))
+            .length > 0
+        ) {
+          return item;
+        }
+      });
     }
 
     if (colors && colors !== "*") {
-      colors = colors.split(',');
+      colors = colors.split(",");
       productFilter = productFilter.filter((item) => {
         const productColors = item.colors.map((item) => item.name);
         for (let color of colors) {
@@ -54,10 +76,14 @@ export default function ProductFilter() {
     }
 
     if (minPrice) {
-      productFilter = productFilter.filter(item => item.currentPrice >= minPrice)
+      productFilter = productFilter.filter(
+        (item) => item.currentPrice >= minPrice
+      );
     }
     if (maxPrice) {
-      productFilter = productFilter.filter(item => item.currentPrice <= maxPrice)
+      productFilter = productFilter.filter(
+        (item) => item.currentPrice <= maxPrice
+      );
     }
 
     setList(productFilter);
