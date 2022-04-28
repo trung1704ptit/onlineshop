@@ -60,6 +60,20 @@ export default function ProductFilter() {
       });
     }
 
+    if (!catids || catids === "*") {
+      productFilter = products;
+    } else {
+      allProductCatIds = catids.split(",");
+      productFilter = products.filter((item) => {
+        if (
+          item.categories.filter((pCat) => allProductCatIds.includes(pCat))
+            .length > 0
+        ) {
+          return item;
+        }
+      });
+    }
+
     if (colors && colors !== "*") {
       colors = colors.split(",");
       productFilter = productFilter.filter((item) => {
