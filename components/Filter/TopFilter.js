@@ -1,3 +1,4 @@
+import { useState } from "react";
 import { Select } from "antd";
 import styles from "@styles/filter.module.scss";
 import { FILTER } from "utils/constants";
@@ -5,10 +6,8 @@ import { IoGridOutline, IoList } from "react-icons/io5";
 import { Tooltip } from "antd";
 import cx from "classnames";
 import classNames from "classnames";
-
 import { FiFilter } from "react-icons/fi";
 import FilterOnMobile from "./FilterOnMobile";
-import { useState } from "react";
 
 const { Option } = Select;
 
@@ -16,16 +15,16 @@ export default function LeftFilter() {
   const [filterMobileOpen, setFilterMobleOpen] = useState(false);
 
   const handleOpenFilterOnMobile = () => {
-    setFilterMobleOpen(true)
-  }
+    setFilterMobleOpen(true);
+  };
 
   const handleCloseFilterOnMobile = () => {
-    setFilterMobleOpen(false)
-  }
+    setFilterMobleOpen(false);
+  };
 
   return (
     <div className={classNames(styles["top-filter"], "product-top-filter")}>
-      <div className="d-none d-xl-flex">Showing 1-16 of 66 results</div>
+      <div className="d-none d-xl-flex"></div>
 
       <div
         className="d-flex align-items-center d-xl-none"

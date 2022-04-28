@@ -53,6 +53,13 @@ export default function ProductFilter() {
       });
     }
 
+    if (minPrice) {
+      productFilter = productFilter.filter(item => item.currentPrice >= minPrice)
+    }
+    if (maxPrice) {
+      productFilter = productFilter.filter(item => item.currentPrice <= maxPrice)
+    }
+
     setList(productFilter);
   }, [router]);
 
