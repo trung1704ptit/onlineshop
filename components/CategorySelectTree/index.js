@@ -29,33 +29,40 @@ const formatData = (list) => {
   });
 };
 
+const treeData = formatData(categories);
+
 const CategorySelectTree = () => {
   const [expandedKeys, setExpandedKeys] = useState([]);
   const [checkedKeys, setCheckedKeys] = useState([]);
   const [autoExpandParent, setAutoExpandParent] = useState(true);
-  const [treeData, setTreeData] = useState([]);
+  // const [treeData, setTreeData] = useState([]);
   const router = useRouter();
 
-  useEffect(() => {
-    const { groupCategoryId, brandId, categoryId } = router.query;
-    if (categoryId) {
-      setCheckedKeys([categoryId]);
-      setExpandedKeys([categoryId]);
-    } else if (brandId) {
-      setExpandedKeys([brandId]);
-      setCheckedKeys([brandId]);
-    }
 
-    if (groupCategoryId) {
-      const groupCategory = findCategory(groupCategoryId, categories);
-      if (groupCategory && groupCategory.sub) {
-        const data = formatData(groupCategory.sub);
-        setTreeData(data);
-      }
-    } else {
-      const data = formatData(categories);
-      setTreeData(data);
+  useEffect(() => {
+    const { catids } = router.query;
+    if (catids && catids !== '*') {
+      const catList = catids.split(',')
+      setCheckedKeys(catList);
+      setExpandedKeys(catList);
     }
+    // if (categoryId) {
+    //   setCheckedKeys([categoryId]);
+    // } else if (brandId) {
+    //   setExpandedKeys([brandId]);
+    //   setCheckedKeys([brandId]);
+    // }
+
+    // if (groupCategoryId) {
+    //   const groupCategory = findCategory(groupCategoryId, categories);
+    //   if (groupCategory && groupCategory.sub) {
+    //     const data = formatData(groupCategory.sub);
+    //     setTreeData(data);
+    //   }
+    // } else {
+    //   const data = formatData(categories);
+    //   setTreeData(data);
+    // }
   }, [router]);
 
   const onExpand = (expandedKeysValue) => {
