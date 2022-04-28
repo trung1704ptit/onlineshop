@@ -35,35 +35,18 @@ const CategorySelectTree = () => {
   const [expandedKeys, setExpandedKeys] = useState([]);
   const [checkedKeys, setCheckedKeys] = useState([]);
   const [autoExpandParent, setAutoExpandParent] = useState(true);
-  // const [treeData, setTreeData] = useState([]);
+  const [firstLoaded, setFirstLoaded] = useState(false);
   const router = useRouter();
-
 
   useEffect(() => {
     const { catids } = router.query;
-    if (catids && catids !== '*') {
-      const catList = catids.split(',')
+    if (catids && catids !== "*" && !firstLoaded) {
+      const catList = catids.split(",");
       setCheckedKeys(catList);
       setExpandedKeys(catList);
+      setFirstLoaded(true);
     }
-    // if (categoryId) {
-    //   setCheckedKeys([categoryId]);
-    // } else if (brandId) {
-    //   setExpandedKeys([brandId]);
-    //   setCheckedKeys([brandId]);
-    // }
-
-    // if (groupCategoryId) {
-    //   const groupCategory = findCategory(groupCategoryId, categories);
-    //   if (groupCategory && groupCategory.sub) {
-    //     const data = formatData(groupCategory.sub);
-    //     setTreeData(data);
-    //   }
-    // } else {
-    //   const data = formatData(categories);
-    //   setTreeData(data);
-    // }
-  }, [router]);
+  }, [router.query.catids, firstLoaded]);
 
   const onExpand = (expandedKeysValue) => {
     setExpandedKeys(expandedKeysValue);
