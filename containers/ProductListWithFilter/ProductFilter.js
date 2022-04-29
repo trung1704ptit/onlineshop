@@ -9,6 +9,7 @@ import {
   getAllCategoryByGroupCategoryId,
 } from "@utils/helper";
 import { categories } from "data/categories";
+import { PRODUCT_VIEW } from "@utils/constants";
 
 const isInPartOfList = (str, list) => {
   const exist = list.find((ele) => ele.includes(str));
@@ -18,6 +19,7 @@ const isInPartOfList = (str, list) => {
 export default function ProductFilter() {
   const router = useRouter();
   const [list, setList] = useState([]);
+  const [productView, setProductView] = useState(PRODUCT_VIEW.grid);
 
   useEffect(() => {
     const { query } = router;
@@ -29,6 +31,9 @@ export default function ProductFilter() {
       categoryId,
       brandId,
       groupCategoryId,
+      product_view,
+      per_page,
+      order_by,
     } = query;
 
     let productFilter = [];
@@ -60,9 +65,7 @@ export default function ProductFilter() {
       });
     }
 
-    if (!catids || catids === "*") {
-      productFilter = products;
-    } else {
+    if (catids && catids !== '*') {
       allProductCatIds = catids.split(",");
       productFilter = products.filter((item) => {
         if (
@@ -101,20 +104,38 @@ export default function ProductFilter() {
     }
 
     setList(productFilter);
+    if (product_view) {
+      if (product_view === PRODUCT_VIEW.list) {
+        setProductView(PRODUCT_VIEW.list);
+      } else {
+        setProductView(PRODUCT_VIEW.grid);
+      }
+    }
   }, [router]);
 
   return (
     <div className="mt-3 w-100">
-      <Row gutter={16}>
-        {list &&
-          list.map((item) => (
-            <Col xs={12} md={8} xl={6} key={item.id}>
-              <div className="pb-4 h-100">
-                <Product data={item} />
+      {productView === PRODUCT_VIEW.grid ? (
+        <Row gutter={16}>
+          {list &&
+            list.map((item) => (
+              <Col xs={12} md={8} xl={6} key={item.id}>
+                <div className="pb-4 h-100">
+                  <Product data={item} />
+                </div>
+              </Col>
+            ))}
+        </Row>
+      ) : (
+        <div>
+          {list &&
+            list.map((item) => (
+              <div className="w-100" key={item.id}>
+                <Product data={item} view="horizontal" />
               </div>
-            </Col>
-          ))}
-      </Row>
+            ))}
+        </div>
+      )}
 
       {list.length > 0 ? (
         <div className="text-center">

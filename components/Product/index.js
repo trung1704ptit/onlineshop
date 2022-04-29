@@ -2,15 +2,20 @@ import Link from "next/link";
 import classNames from "classnames";
 import { useState } from "react";
 import { useDispatch } from "react-redux";
-import { Button, message } from "antd";
+import { Button, message, Rate } from "antd";
 import { addToCart } from "@redux/actions/cart";
 import styles from "@styles/product.module.scss";
-import { getBrand } from '@utils/helper';
-import { brands } from "data/brands";
+// import { getBrand } from "@utils/helper";
+// import { brands } from "data/brands";
 
 const key = "updatable";
 
-export default function Product({ data, border = true, className = "" }) {
+export default function Product({
+  data,
+  border = true,
+  className = "",
+  view = "grid",
+}) {
   const [imgSrc, setImgSrc] = useState("");
   const [loading, setLoading] = useState(false);
   const dispatch = useDispatch();
@@ -55,14 +60,17 @@ export default function Product({ data, border = true, className = "" }) {
     }, 800);
   };
 
-  const productBrands = getBrand(data.brands, brands).map(item => item.name).join(', ');
+  // const productBrands = getBrand(data.brands, brands)
+  //   .map((item) => item.name)
+  //   .join(", ");
 
   return (
     <div
       className={classNames(
         styles["product-item"],
         border ? "border" : "border-0",
-        className
+        className,
+        styles[view]
       )}
     >
       <Link href={`/product/${data.slug}`}>
@@ -84,12 +92,10 @@ export default function Product({ data, border = true, className = "" }) {
 
       <div className={styles["product-bottom"]}>
         <div>
-          <div className={styles["product-brands"]}>
-            {productBrands}
-          </div>
           <h3 className={styles["title"]}>
             <Link href={`/product/${data.slug}`}>{data.title}</Link>
           </h3>
+          {/* <div className={styles["product-brands"]}>{productBrands}</div> */}
           <div className={styles["product-price"]}>
             {data.oldPrice !== data.currentPrice ? (
               <>
@@ -98,10 +104,19 @@ export default function Product({ data, border = true, className = "" }) {
                   ${data.currentPrice}
                 </span>
               </>
-            ) : <span className={styles["current-price"]}>
-              ${data.currentPrice}
-            </span>}
+            ) : (
+              <span className={styles["current-price"]}>
+                ${data.currentPrice}
+              </span>
+            )}
           </div>
+
+          <Rate
+            allowHalf
+            defaultValue={4}
+            disabled={true}
+            className={styles['product-rating']}
+          />
         </div>
 
         <Button

@@ -119,3 +119,8 @@ export const FILTER = {
 };
 
 export const PRODUCT_CATEGORY_BASE = "/product-category";
+
+export const PRODUCT_VIEW = {
+  grid: "grid",
+  list: "list",
+};
