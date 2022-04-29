@@ -100,10 +100,10 @@ export default function ProductContent({ product }) {
       </div>
       <div className="mt-3 mb-3">
         <Row gutter={48}>
-          <Col xs={24} lg={10}>
+          <Col xs={24} lg={7}>
             <ProductGallery images={product.images} />
           </Col>
-          <Col xs={24} lg={7}>
+          <Col xs={24} lg={10}>
             <div className="mb-2 mt-md-0 mt-4 d-flex align-items-center justify-content-between">
               <span>
                 <span className="fs-4 text-decoration-line-through">

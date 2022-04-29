@@ -26,21 +26,21 @@ export default function Product({
     }
   }, [data.images]);
 
-  const onMouseEnter = () => {
-    if (data && data.images) {
-      if (data.images.length > 1) {
-        setImgSrc(data.images[1]);
-      }
-    }
-  };
+  // const onMouseEnter = () => {
+  //   if (data && data.images) {
+  //     if (data.images.length > 1) {
+  //       setImgSrc(data.images[1]);
+  //     }
+  //   }
+  // };
 
-  const onMouseOut = () => {
-    if (data && data.images) {
-      if (data.images.length > 1) {
-        setImgSrc(data.images[0]);
-      }
-    }
-  };
+  // const onMouseOut = () => {
+  //   if (data && data.images) {
+  //     if (data.images.length > 1) {
+  //       setImgSrc(data.images[0]);
+  //     }
+  //   }
+  // };
 
   const handleAddCart = () => {
     dispatch(addToCart(data));
@@ -81,10 +81,8 @@ export default function Product({
             ) : null}
 
             <img
-              src={imgSrc}
+              src={data.images[0]}
               alt="product-img"
-              onMouseEnter={onMouseEnter}
-              onMouseOut={onMouseOut}
             />
           </figure>
         </a>
