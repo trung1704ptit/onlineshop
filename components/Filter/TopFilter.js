@@ -30,20 +30,20 @@ export default function LeftFilter() {
 
     var newQuery = new URLSearchParams({
       ...query,
-      order_by: value,
+      orderBy: value,
     });
 
     var url = `${pathname}?${newQuery.toString()}`;
     router.push(url);
   };
 
-  const handleChangePerPage = (value) => {
+  const handleChangePageSize = (value) => {
     const query = router.query;
     const pathname = router.pathname;
 
     var newQuery = new URLSearchParams({
       ...query,
-      per_page: value,
+      pageSize: value,
     });
 
     var url = `${pathname}?${newQuery.toString()}`;
@@ -94,9 +94,9 @@ export default function LeftFilter() {
           <span className={styles["show-text"]}>Show:</span>
           <div className={styles["select-no-items"]}>
             <Select
-              defaultValue="16"
+              defaultValue={16}
               bordered={false}
-              onChange={handleChangePerPage}
+              onChange={handleChangePageSize}
             >
               {FILTER.showItems.map((item) => (
                 <Option value={item.value} key={item.value}>

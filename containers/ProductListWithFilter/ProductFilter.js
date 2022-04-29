@@ -4,12 +4,14 @@ import Product from "@components/Product";
 import { products } from "data/products";
 import { useRouter } from "next/router";
 import {
+  filterProductBySorting,
   findCategory,
   getAllCategoryByBrandId,
   getAllCategoryByGroupCategoryId,
 } from "@utils/helper";
 import { categories } from "data/categories";
-import { PRODUCT_VIEW } from "@utils/constants";
+import { FILTER, PRODUCT_VIEW } from "@utils/constants";
+import ProductPagintation from "./ProductPagintation";
 
 const isInPartOfList = (str, list) => {
   const exist = list.find((ele) => ele.includes(str));
@@ -20,6 +22,7 @@ export default function ProductFilter() {
   const router = useRouter();
   const [list, setList] = useState([]);
   const [productView, setProductView] = useState(PRODUCT_VIEW.grid);
+  const [total, setTotal] = useState(0);
 
   useEffect(() => {
     const { query } = router;
@@ -32,8 +35,9 @@ export default function ProductFilter() {
       brandId,
       groupCategoryId,
       product_view,
-      per_page,
-      order_by,
+      pageSize,
+      page = 1,
+      orderBy,
     } = query;
 
     let productFilter = [];
@@ -65,7 +69,7 @@ export default function ProductFilter() {
       });
     }
 
-    if (catids && catids !== '*') {
+    if (catids && catids !== "*") {
       allProductCatIds = catids.split(",");
       productFilter = products.filter((item) => {
         if (
@@ -103,7 +107,16 @@ export default function ProductFilter() {
       );
     }
 
+    setTotal(productFilter.length);
+
+    pageSize = pageSize ? parseInt(pageSize) : FILTER.showItems[0].value;
+    productFilter = productFilter.slice(pageSize * (page - 1), pageSize * page);
+
+    orderBy = orderBy ? orderBy : FILTER.sorting[2].value;
+    productFilter = filterProductBySorting(productFilter, orderBy);
+
     setList(productFilter);
+
     if (product_view) {
       if (product_view === PRODUCT_VIEW.list) {
         setProductView(PRODUCT_VIEW.list);
@@ -111,7 +124,7 @@ export default function ProductFilter() {
         setProductView(PRODUCT_VIEW.grid);
       }
     }
-  }, [router]);
+  }, [router, FILTER]);
 
   return (
     <div className="mt-3 w-100">
@@ -137,9 +150,9 @@ export default function ProductFilter() {
         </div>
       )}
 
-      {list.length > 0 ? (
+      {total > 0 ? (
         <div className="text-center">
-          <Pagination defaultCurrent={1} total={list.length} />
+          <ProductPagintation list={list} total={total} />
         </div>
       ) : (
         <Empty description="There are no products found." />

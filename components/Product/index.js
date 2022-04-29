@@ -113,7 +113,7 @@ export default function Product({
 
           <Rate
             allowHalf
-            defaultValue={4}
+            defaultValue={data.rating}
             disabled={true}
             className={styles['product-rating']}
           />

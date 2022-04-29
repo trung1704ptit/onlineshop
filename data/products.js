@@ -324,7 +324,9 @@ export const products = [
       name: 'white',
       image: '/images/products/samsung-galaxy-a/samsung-galaxy-a52s_1.png'
     }],
-    sku: '3ds33ds'
+    sku: '3ds33ds',
+    rating: 4,
+    createdAt: 1651217682272
   },
   {
     id: '0015',

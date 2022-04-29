@@ -80,3 +80,18 @@ export function getAllCategoryByGroupCategoryId(groupCategoryId, allCategories) 
 
   return result;
 }
+
+export function filterProductBySorting (products, orderBy) {
+  switch (orderBy) {
+    case 'rating':
+      return products.sort((a, b) => b.rating - a.rating);
+    case 'latest':
+      return products.sort((a, b) => b.createdAt - a.createdAt);
+    case 'low_to_high':
+      return products.sort((a, b) => a.currentPrice - b.currentPrice);
+    case 'high_to_low':
+      return products.sort((a, b) => b.currentPrice - a.currentPrice);
+    default:
+      return products;
+  }
+}

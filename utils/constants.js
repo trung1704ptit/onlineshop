@@ -24,19 +24,19 @@ export const FILTER = {
   showItems: [
     {
       label: "16 items",
-      value: "16",
+      value: 16,
     },
     {
       label: "32 items",
-      value: "32",
+      value: 32,
     },
     {
       label: "48 items",
-      value: "48",
+      value: 48,
     },
     {
       label: "64 items",
-      value: "64",
+      value: 64,
     },
   ],
   prices: {},
