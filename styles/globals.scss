@@ -16,9 +16,11 @@ body {
   color: #000000;
   margin: 0;
 }
+
 main {
   padding-bottom: 40px;
 }
+
 a {
   color: #000;
   text-decoration: none;
@@ -392,6 +394,9 @@ a:focus {
   height: 60px;
   object-fit: cover;
 }
-.image-gallery-thumbnail:hover, .image-gallery-thumbnail.active, .image-gallery-thumbnail:focus {
+
+.image-gallery-thumbnail:hover,
+.image-gallery-thumbnail.active,
+.image-gallery-thumbnail:focus {
   padding: 3px;
 }

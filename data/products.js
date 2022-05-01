@@ -134,7 +134,7 @@ export const products = [
       image: '/images/products/iphone-12/iphone-12_1.png'
     }, {
       name: 'green',
-      image: '/images/products/iphone-12/iphone-12_1.png'
+      image: '/images/products/iphone-12/iphone-12_2.png'
     }],
     sku: '45sd2s',
     rating: 2,

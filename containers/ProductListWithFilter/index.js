@@ -3,6 +3,7 @@ import LeftFilter from "@components/Filter/LeftFilter";
 import Section from "@components/Section";
 import BlankSpace from "@components/BlankSpace";
 import ProductFilter from './ProductFilter'
+import SidebarProductAds from "./SidebarProductAds";
 
 export default function ProductListWithFilter({ noCategory }) {
   return (
@@ -13,15 +14,7 @@ export default function ProductListWithFilter({ noCategory }) {
           <LeftFilter noCategory={noCategory} />
 
           <BlankSpace height={30} />
-
-          {/* Ads */}
-          <div>
-            <img
-              src="/images/others/sidebar-banner.gif"
-              alt="banner"
-              width={280}
-            />
-          </div>
+          <SidebarProductAds />
         </div>
 
         <ProductFilter />

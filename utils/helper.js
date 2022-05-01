@@ -39,59 +39,67 @@ export function findCategory(id, categoryList) {
 }
 
 function findBrand(id, brandList) {
-  return brandList.find(item => item.id === id);
+  return brandList.find((item) => item.id === id);
 }
-
 
 export function getCategories(productCategories, allCategories) {
   if (productCategories && allCategories) {
-    return productCategories.map(categoryId => findCategory(categoryId, allCategories)).filter(item => item)
+    return productCategories
+      .map((categoryId) => findCategory(categoryId, allCategories))
+      .filter((item) => item);
   }
-  return []
+  return [];
 }
 
 export function getBrand(productBrands, allBrands) {
   if (productBrands && allBrands) {
-    return productBrands.map(brandId => findBrand(brandId, allBrands)).filter(item => item)
+    return productBrands
+      .map((brandId) => findBrand(brandId, allBrands))
+      .filter((item) => item);
   }
-  return []
+  return [];
 }
 
 export function getAllCategoryByBrandId(brandId, allCategories) {
-  let result = []
+  let result = [];
   const brand = findCategory(brandId, allCategories);
   if (brand && brand.sub) {
-    const catIds = brand.sub.map(item => item.id);
+    const catIds = brand.sub.map((item) => item.id);
     return catIds;
   }
 
   return result;
 }
 
-export function getAllCategoryByGroupCategoryId(groupCategoryId, allCategories) {
+export function getAllCategoryByGroupCategoryId(
+  groupCategoryId,
+  allCategories
+) {
   let result = [];
   const group = findCategory(groupCategoryId, allCategories);
   if (group && group.sub) {
-    for(let item of group.sub) {
+    for (let item of group.sub) {
       const brandCats = getAllCategoryByBrandId(item.id, allCategories);
-      result = [...result, ...brandCats]
+      result = [...result, ...brandCats];
     }
   }
 
   return result;
 }
 
-export function filterProductBySorting (products, orderBy) {
+export function filterProductBySorting(products, orderBy) {
   switch (orderBy) {
-    case 'rating':
+    case "rating":
       return products.sort((a, b) => b.rating - a.rating);
-    case 'latest':
+    case "latest":
       return products.sort((a, b) => b.createdAt - a.createdAt);
-    case 'low_to_high':
+    case "low_to_high":
       return products.sort((a, b) => a.currentPrice - b.currentPrice);
-    case 'high_to_low':
+    case "high_to_low":
       return products.sort((a, b) => b.currentPrice - a.currentPrice);
     default:
       return products;
   }
 }
+
+export const isBrowser = () => typeof window !== "undefined"

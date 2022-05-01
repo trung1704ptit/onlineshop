@@ -90,6 +90,10 @@ export default function ProductFilter() {
             productColors.includes(color) ||
             isInPartOfList(color, productColors)
           ) {
+            const colorOfProduct = item.colors.find(c => c.name.includes(color));
+            if (colorOfProduct) {
+              item.images[0] = colorOfProduct.image;
+            }
             return item;
           }
         }
@@ -129,7 +133,7 @@ export default function ProductFilter() {
   return (
     <div className="mt-3 w-100">
       {productView === PRODUCT_VIEW.grid ? (
-        <Row gutter={16}>
+        <Row gutter={8}>
           {list &&
             list.map((item) => (
               <Col xs={12} md={8} xl={6} key={item.id}>

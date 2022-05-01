@@ -50,8 +50,8 @@ export const SubCategory = ({ data, groupCategoryId }) => {
           data.map((item) => {
             if (item.isShow) {
               return (
-                <Col xs={24} lg={12}>
-                  <div className={styles["sub-category-block"]} key={item.id}>
+                <Col xs={24} lg={12} key={item.id}>
+                  <div className={styles["sub-category-block"]}>
                     <div>
                       <h3 className={styles["sub-cat-title"]}>
                         <a
