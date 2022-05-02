@@ -40,7 +40,7 @@ export default function CategoryList({ screen }) {
                       <IoChevronForwardOutline
                         className={classNames(
                           styles["sub-menu-arrow"],
-                          "hidden d-sm-block"
+                          "d-none d-sm-block"
                         )}
                         onClick={(e) => handleOpenSubMenu(e, item.id)}
                       />

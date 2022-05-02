@@ -1,6 +1,6 @@
 import cx from "classnames";
 import dynamic from "next/dynamic";
-import styles from "../../styles/header.module.scss";
+import styles from "@styles/header.module.scss";
 import Logo from "@components/Logo";
 
 const MobileSearch = dynamic(() => import("../SearchBar/MobileSearch"));
@@ -25,7 +25,7 @@ export default function MobileHeader() {
       </div>
 
       <div className={cx(styles["mobile-header-item"], styles["right-side"])}>
-        <div className={styles["right-item"]}>
+        <div className={cx(styles["right-item"], 'd-flex')}>
           <MobileCategoryList />
         </div>
       </div>
