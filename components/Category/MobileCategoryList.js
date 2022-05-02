@@ -20,7 +20,7 @@ export default function MobileMenu() {
         placement="right"
         onClose={() => setOpen(!open)}
         visible={open}
-        bodyStyle={{ padding: 0 }}
+        bodyStyle={{ padding: '8px' }}
       >
         <DesktopCategoryList screen="mobile" />
       </Drawer>
