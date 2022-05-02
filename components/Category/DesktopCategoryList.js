@@ -7,7 +7,7 @@ import { Col, Row } from "antd";
 import { PRODUCT_CATEGORY_BASE } from "@utils/constants";
 import { categories } from "data/categories";
 import { useState } from "react";
-import { IoIosArrowDown } from "react-icons/io";
+import { MdOutlineKeyboardArrowDown } from "react-icons/md";
 
 export default function CategoryList({ screen }) {
   const [openSub, setOpenSub] = useState("");
@@ -46,10 +46,10 @@ export default function CategoryList({ screen }) {
                       />
                     ) : null}
                     {!isEmpty(item.sub) ? (
-                      <IoIosArrowDown
+                      <MdOutlineKeyboardArrowDown
                         className={classNames(
                           styles["sub-menu-arrow"],
-                          "d-block d-sm-none"
+                          "d-block d-sm-none fs-4"
                         )}
                         onClick={(e) => handleOpenSubMenu(e, item.id)}
                       />
