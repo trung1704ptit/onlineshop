@@ -80,10 +80,7 @@ export default function Product({
               <span className={styles["label"]}>Sale!</span>
             ) : null}
 
-            <img
-              src={data.images[0]}
-              alt="product-img"
-            />
+            <img src={data.images[0]} alt="product-img" />
           </figure>
         </a>
       </Link>
@@ -113,7 +110,7 @@ export default function Product({
             allowHalf
             defaultValue={data.rating}
             disabled={true}
-            className={styles['product-rating']}
+            className={styles["product-rating"]}
           />
         </div>
 
@@ -125,7 +122,7 @@ export default function Product({
           loading={loading}
           data-cy="add-to-cart"
         >
-          Add to cart
+          {data.quantity === 0 ? "Sold Out" : "Add to cart"}
         </Button>
       </div>
     </div>

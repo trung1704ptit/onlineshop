@@ -2,7 +2,7 @@ import Header from "../Header";
 import Footer from "../Footer";
 import ScrollToTop from "react-scroll-to-top";
 import { FaArrowUp } from "react-icons/fa";
-import Newsletter from "../../containers/Newsletters";
+import Newsletter from "@containers/Newsletters";
 import { useEffect } from "react";
 import { useDispatch } from "react-redux";
 import { hydrateCart } from "@redux/actions/cart";

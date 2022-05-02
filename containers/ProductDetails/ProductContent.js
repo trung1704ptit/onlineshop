@@ -24,6 +24,7 @@ export default function ProductContent({ product }) {
   const [loading, setLoading] = useState(false);
   const [isInWishlist, setIsInWishlist] = useState(false);
   const productsOfWithlist = useSelector(state => state.wishlist.products);
+  const [activeImage, setActiveImage] = useState('');
 
   const dispatch = useDispatch();
 
@@ -36,6 +37,16 @@ export default function ProductContent({ product }) {
   const setNewQuantity = (newQty) => {
     setQuantity(newQty);
   };
+
+  const handleChangeColor = (value) => {
+    const colorExist = product.colors.find(c => c.name.includes(value));
+    if (colorExist) {
+      const imageIndex = product.images.findIndex(img => img === colorExist.image);
+      if (imageIndex !== -1) {
+        setActiveImage(imageIndex);
+      }
+    }
+  }
 
   const openMessage = (title) => {
     message.loading({ content: `Adding ${title} to Cart`, key });
@@ -101,7 +112,7 @@ export default function ProductContent({ product }) {
       <div className="mt-3 mb-3">
         <Row gutter={48}>
           <Col xs={24} lg={7}>
-            <ProductGallery images={product.images} />
+            <ProductGallery images={product.images} activeImage={activeImage}/>
           </Col>
           <Col xs={24} lg={10}>
             <div className="mb-2 mt-md-0 mt-4 d-flex align-items-center justify-content-between">
@@ -127,7 +138,7 @@ export default function ProductContent({ product }) {
             </Tag>
 
             <div className="mb-2">
-              <ColorOptions data={product.colors} />
+              <ColorOptions data={product.colors} handleChange={handleChangeColor} />
             </div>
 
             <p className="mb-3">
@@ -151,7 +162,7 @@ export default function ProductContent({ product }) {
                 type="primary"
                 className="ms-3 w-100"
               >
-                Add to cart
+                {product.quantity === 0 ? "Sold Out" : "Add to cart"}
               </Button>
             </div>
 
