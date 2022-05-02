@@ -1,9 +1,9 @@
 import { AiOutlineClose } from "react-icons/ai";
 import { useState } from "react";
-import { BsGrid3X3Gap } from 'react-icons/bs';
+import { BsGrid3X3Gap } from "react-icons/bs";
+import { Drawer } from "antd";
 import styles from "@styles/header.module.scss";
-import CollapseFullscreen from "../Collapse/CollapseFullscreen";
-import CategoryList from "../Category/CategoryList";
+import DesktopCategoryList from "./DesktopCategoryList";
 
 export default function MobileMenu() {
   const [open, setOpen] = useState(false);
@@ -21,9 +21,15 @@ export default function MobileMenu() {
           className={styles["search-icon"]}
         />
       )}
-      <CollapseFullscreen active={open}>
-        <CategoryList />
-      </CollapseFullscreen>
+      <Drawer
+        title="Category"
+        placement="right"
+        onClose={() => setOpen(!open)}
+        visible={open}
+        bodyStyle={{ padding: 0 }}
+      >
+        <DesktopCategoryList screen="mobile" />
+      </Drawer>
     </>
   );
 }

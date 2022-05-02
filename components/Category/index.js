@@ -1,7 +1,7 @@
 import { Dropdown } from "antd";
 import { FaChevronDown, FaBars } from "react-icons/fa";
 import styles from "@styles/header.module.scss";
-import CategoryList from "./CategoryList";
+import DesktopCategoryList from "./DesktopCategoryList";
 import { useEffect, useState } from "react";
 import { useRouter } from "next/router";
 
@@ -19,7 +19,7 @@ export default function Category() {
 
   return (
     <Dropdown
-      overlay={<CategoryList />}
+      overlay={<DesktopCategoryList screen="desktop" />}
       disabled={disabled}
       trigger={["hover", "click"]}
     >

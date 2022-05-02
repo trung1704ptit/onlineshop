@@ -5,7 +5,7 @@ import Logo from "@components/Logo";
 
 const MobileSearch = dynamic(() => import("../SearchBar/MobileSearch"));
 const MobileCart = dynamic(() => import("../Cart/MobileCart"));
-const MobileMenu = dynamic(() => import("../Menu/MobileMenu"));
+const MobileCategoryList = dynamic(() => import("../Category/MobileCategoryList"));
 
 
 export default function MobileHeader() {
@@ -26,7 +26,7 @@ export default function MobileHeader() {
 
       <div className={cx(styles["mobile-header-item"], styles["right-side"])}>
         <div className={styles["right-item"]}>
-          <MobileMenu />
+          <MobileCategoryList />
         </div>
       </div>
     </header>

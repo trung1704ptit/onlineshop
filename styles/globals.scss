@@ -114,52 +114,6 @@ a:focus {
   position: relative;
 }
 
-.module-dropdown {
-  position: absolute;
-  top: 100%;
-  z-index: 20;
-  background-color: #fff;
-  text-align: left;
-}
-
-.dropdown-fade-onhover {
-  display: block !important;
-  height: auto;
-  pointer-events: none;
-  opacity: 0;
-  visibility: hidden;
-  transform: translateY(10px);
-  transition: all 1s cubic-bezier(0.19, 1, 0.22, 1);
-  transition-property: transform, opacity, visibility;
-}
-
-.module-dropdown.left {
-  right: auto;
-  left: 0;
-}
-
-.module-dropdown.right {
-  right: 0;
-  left: auto;
-}
-
-
-.module-dropdown.active {
-  opacity: 1;
-  transform: translateY(0);
-  visibility: visible;
-  pointer-events: auto;
-}
-
-.collapse-full-screen {
-  position: fixed;
-  top: 55px;
-  left: 0;
-  width: 100vw;
-  height: 100vh;
-  background: #fff;
-}
-
 .link-badge {
   display: flex;
   align-items: center;

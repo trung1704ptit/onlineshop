@@ -6,8 +6,21 @@ import classNames from "classnames";
 import { Col, Row } from "antd";
 import { PRODUCT_CATEGORY_BASE } from "@utils/constants";
 import { categories } from "data/categories";
+import { useState } from "react";
+import { IoIosArrowDown } from "react-icons/io";
 
-export default function CategoryList() {
+export default function CategoryList({ screen }) {
+  const [openSub, setOpenSub] = useState("");
+
+  const handleOpenSubMenu = (e, id) => {
+    e.preventDefault();
+    if (id !== openSub) {
+      setOpenSub(id);
+    } else {
+      setOpenSub("");
+    }
+  };
+
   return (
     <div className={styles["category-list"]}>
       <ul className="list-style-none">
@@ -25,13 +38,34 @@ export default function CategoryList() {
                     {item.name}
                     {!isEmpty(item.sub) ? (
                       <IoChevronForwardOutline
-                        className={styles["sub-menu-arrow"]}
+                        className={classNames(
+                          styles["sub-menu-arrow"],
+                          "hidden d-sm-block"
+                        )}
+                        onClick={(e) => handleOpenSubMenu(e, item.id)}
+                      />
+                    ) : null}
+                    {!isEmpty(item.sub) ? (
+                      <IoIosArrowDown
+                        className={classNames(
+                          styles["sub-menu-arrow"],
+                          "d-block d-sm-none"
+                        )}
+                        onClick={(e) => handleOpenSubMenu(e, item.id)}
                       />
                     ) : null}
                   </a>
 
-                  {!isEmpty(item.sub) ? (
+                  {!isEmpty(item.sub) && screen !== "mobile" ? (
                     <SubCategory data={item.sub} groupCategoryId={item.slug} />
+                  ) : null}
+
+                  {!isEmpty(item.sub) && openSub === item.id ? (
+                    <SubCategory
+                      data={item.sub}
+                      groupCategoryId={item.slug}
+                      screen={screen}
+                    />
                   ) : null}
                 </li>
               );
@@ -42,9 +76,9 @@ export default function CategoryList() {
   );
 }
 
-export const SubCategory = ({ data, groupCategoryId }) => {
+export const SubCategory = ({ data, groupCategoryId, screen }) => {
   return (
-    <div className={styles["sub-category-list"]}>
+    <div className={classNames(styles["sub-category-list"], styles[screen])}>
       <Row gutter={32} className="w-100">
         {data &&
           data.map((item) => {
