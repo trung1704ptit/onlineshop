@@ -128,7 +128,7 @@ export default function ProductFilter() {
         setProductView(PRODUCT_VIEW.grid);
       }
     }
-  }, [router, FILTER]);
+  }, [router]);
 
   return (
     <div className="mt-3 w-100">

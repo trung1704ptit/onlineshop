@@ -204,11 +204,11 @@ export const products = [
     colors: [
       {
         name: "sierra-blue",
-        image: "/images/products/iphone-13-pro-max/iphone-13-pro-max_1.png",
+        image: "/images/products/iphone-13-pro-max/iphone-13-pro-max.png",
       },
       {
         name: "white",
-        image: "/images/products/iphone-13-pro-max/iphone-13-pro-max.png",
+        image: "/images/products/iphone-13-pro-max/iphone-13-pro-max_1.png",
       },
     ],
     sku: "43fs54",
@@ -316,7 +316,7 @@ export const products = [
         image: "/images/products/samsung-galaxy-a/samsung-galaxy-a23.png",
       },
       {
-        name: "white",
+        name: "blue",
         image: "/images/products/samsung-galaxy-a/samsung-galaxy-a23_1.png",
       },
     ],
