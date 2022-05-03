@@ -5,9 +5,7 @@ import BlankSpace from "@components/BlankSpace";
 import Loading from "@components/Loading";
 import PageBreadCrumb from "@components/BreadCrumb/PageBreadCrumb";
 
-const AdvertiseBanner = dynamic(() => import("@containers/AdvertiseBanner"), {
-  loading: () => <Loading height="200px" tip="Loading..." />,
-});
+const AdvertiseBanner = dynamic(() => import("@containers/AdvertiseBanner"));
 
 const ProductListWithFilter = dynamic(
   () => import("@containers/ProductListWithFilter"),

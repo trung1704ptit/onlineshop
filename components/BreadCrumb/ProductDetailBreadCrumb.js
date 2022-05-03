@@ -33,7 +33,7 @@ export default function ProductBreadCrumb({ product }) {
           if (cat) {
             href += `/${cat?.slug}`
             return (
-              <Breadcrumb.Item>
+              <Breadcrumb.Item key={cat.id}>
                 <Link href={href}>{cat?.name}</Link>
               </Breadcrumb.Item>
             )

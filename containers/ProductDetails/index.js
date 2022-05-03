@@ -15,6 +15,12 @@ export default function ProductDetails() {
   const router = useRouter();
   const { productId } = router.query;
 
+  useEffect(() => {
+    window.scrollTo({
+      top: 0,
+    });
+  }, []);
+
   // call product detail by id
   useEffect(() => {
     if (productId) {

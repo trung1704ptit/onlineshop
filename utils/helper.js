@@ -102,4 +102,4 @@ export function filterProductBySorting(products, orderBy) {
   }
 }
 
-export const isBrowser = () => typeof window !== "undefined"
+export const isBrowser = () => typeof window !== "undefined";
