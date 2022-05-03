@@ -8,11 +8,19 @@ export const products = [
     images: [
       "/images/products/iphone-11/iphone-11.png",
       "/images/products/iphone-11/iphone-11_2.png",
+      "/images/products/iphone-11/iphone-11-black_2.png",
+      "/images/products/iphone-11/iphone-11-white.png",
+      "/images/products/iphone-11/iphone-11-white_2.png",
+      "/images/products/iphone-11/iphone-11-red.png",
+      "/images/products/iphone-11/iphone-11-red_2.png",
+      "/images/products/iphone-11/iphone-11-green.png",
+      "/images/products/iphone-11/iphone-11-purple.png",
+      "/images/products/iphone-11/iphone-11-purple_2.png",
     ],
     colors: [
       {
         name: "purple",
-        image: "/images/products/iphone-11/iphone-11.png",
+        image: "/images/products/iphone-11/iphone-11-purple.png",
       },
       {
         name: "black",
@@ -20,7 +28,7 @@ export const products = [
       },
       {
         name: "white",
-        image: "/images/products/iphone-11/iphone-11_3.png",
+        image: "/images/products/iphone-11/iphone-11-white.png",
       },
     ],
     categories: ["0-0-0"],
