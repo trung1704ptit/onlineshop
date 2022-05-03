@@ -3,7 +3,7 @@ import dynamic from "next/dynamic";
 import Layout from "@components/Layout";
 import Loading from "@components/Loading";
 
-const WishlistTable = dynamic(() => import("../containers/WishlistTable"), {
+const WishlistTable = dynamic(() => import("@containers/WishlistTable"), {
   loading: () => (<Loading height="50vh" tip="Loading..." />)
 });
 

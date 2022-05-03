@@ -1,24 +1,22 @@
 import Head from "next/head";
 import dynamic from "next/dynamic";
 
-import Layout from "../components/Layout";
-import BlankSpace from "../components/BlankSpace";
+import Layout from "@components/Layout";
+import BlankSpace from "@components/BlankSpace";
 
-const Brands = dynamic(() => import("../containers/BrandsCarousel"));
-const TodayHotDeal = dynamic(() => import("../containers/TodayHotDeal"));
+const Brands = dynamic(() => import("@containers/BrandsCarousel"));
+const TodayHotDeal = dynamic(() => import("@containers/TodayHotDeal"));
 const CategoryListAndProductCarousel = dynamic(() =>
-  import("../containers/CategoryListAndProductCarousel")
+  import("@containers/CategoryListAndProductCarousel")
 );
-const Services = dynamic(() => import("../containers/Services"));
+const Services = dynamic(() => import("@containers/Services"));
 const TrendingProductCarousel = dynamic(() =>
-  import("../containers/TrendingProductCarousel")
+  import("@containers/TrendingProductCarousel")
 );
-const ProductCountDown = dynamic(() =>
-  import("../containers/ProductCountDown")
-);
+const ProductCountDown = dynamic(() => import("@containers/ProductCountDown"));
 
-const ProductBanner = dynamic(() => import("../containers/ProductBanner"));
-const BestSeller = dynamic(() => import("../containers/BestSeller"));
+const ProductBanner = dynamic(() => import("@containers/ProductBanner"));
+const BestSeller = dynamic(() => import("@containers/BestSeller"));
 
 export default function Home() {
   return (
@@ -29,31 +27,29 @@ export default function Home() {
       </Head>
 
       <Layout>
-        <>
-          <BlankSpace height={30} className="d-block d-lg-none" />
-          <CategoryListAndProductCarousel />
+        <BlankSpace height={30} className="d-block d-lg-none" />
+        <CategoryListAndProductCarousel />
 
-          <Services />
-          <BlankSpace height={40} />
+        <Services />
+        <BlankSpace height={40} />
 
-          <TrendingProductCarousel />
-          <BlankSpace height={60} />
+        <TrendingProductCarousel />
+        <BlankSpace height={60} />
 
-          <TodayHotDeal />
-          <BlankSpace height={60} />
+        <TodayHotDeal />
+        <BlankSpace height={60} />
 
-          <ProductCountDown />
-          <BlankSpace height={60} />
+        <ProductCountDown />
+        <BlankSpace height={60} />
 
-          <BestSeller />
-          <BlankSpace height={60} />
+        <BestSeller />
+        <BlankSpace height={60} />
 
-          <ProductBanner />
-          <BlankSpace height={60} />
+        <ProductBanner />
+        <BlankSpace height={60} />
 
-          <Brands />
-          <BlankSpace height={40} />
-        </>
+        <Brands />
+        <BlankSpace height={40} />
       </Layout>
     </>
   );

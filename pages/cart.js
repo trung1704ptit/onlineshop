@@ -3,7 +3,7 @@ import dynamic from "next/dynamic";
 import Layout from "@components/Layout";
 import Loading from "@components/Loading";
 
-const Cart = dynamic(() => import("../containers/Cart"), {
+const Cart = dynamic(() => import("@containers/Cart"), {
   loading: () => (<Loading height="50vh" tip="Loading..." />)
 });
 

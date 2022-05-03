@@ -3,16 +3,14 @@ import dynamic from "next/dynamic";
 import Layout from "@components/Layout";
 import BlankSpace from "@components/BlankSpace";
 import Loading from "@components/Loading";
-import PageBreadCrumb from '@components/BreadCrumb/PageBreadCrumb';
+import PageBreadCrumb from "@components/BreadCrumb/PageBreadCrumb";
 
-const AdvertiseBanner = dynamic(() =>
-  import("../containers/AdvertiseBanner"), {
-    loading: () => <Loading height="200px" tip="Loading..." />,
-  }
-);
+const AdvertiseBanner = dynamic(() => import("@containers/AdvertiseBanner"), {
+  loading: () => <Loading height="200px" tip="Loading..." />,
+});
 
 const ProductListWithFilter = dynamic(
-  () => import("../containers/ProductListWithFilter"),
+  () => import("@containers/ProductListWithFilter"),
   {
     loading: () => <Loading height="200px" tip="Loading..." />,
   }
@@ -30,7 +28,6 @@ export default function Shop() {
         <>
           <PageBreadCrumb pageName="Shop" />
           <BlankSpace height={16} className="d-md-none" />
-
 
           <AdvertiseBanner />
           <BlankSpace height={40} />

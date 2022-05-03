@@ -3,7 +3,7 @@ import dynamic from "next/dynamic";
 import Layout from "@components/Layout";
 import Loading from "@components/Loading";
 
-const Contact = dynamic(() => import("../containers/Contact"), {
+const Contact = dynamic(() => import("@containers/Contact"), {
   loading: () => <Loading height="50vh" tip="Loading..." />,
 });
 

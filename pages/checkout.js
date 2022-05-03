@@ -4,7 +4,7 @@ import Layout from "@components/Layout";
 import Loading from "@components/Loading";
 
 const Checkout = dynamic(() =>
-  import("../containers/Checkout"), {
+  import("@containers/Checkout"), {
     loading: () => <Loading height="50vh" tip="Loading..." />,
   }
 );

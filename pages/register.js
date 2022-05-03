@@ -3,7 +3,7 @@ import dynamic from "next/dynamic";
 import Layout from "@components/Layout";
 import Loading from "@components/Loading";
 
-const Register = dynamic(() => import("../containers/Register"), {
+const Register = dynamic(() => import("@containers/Register"), {
   loading: () => <Loading height="50vh" tip="Loading..." />,
 });
 

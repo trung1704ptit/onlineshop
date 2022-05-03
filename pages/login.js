@@ -3,7 +3,7 @@ import dynamic from "next/dynamic";
 import Layout from "@components/Layout";
 import Loading from "@components/Loading";
 
-const Login = dynamic(() => import("../containers/Login"), {
+const Login = dynamic(() => import("@containers/Login"), {
   loading: () => <Loading height="50vh" tip="Loading..." />,
 });
 
