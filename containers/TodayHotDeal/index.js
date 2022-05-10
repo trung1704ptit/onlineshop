@@ -3,14 +3,16 @@ import Slider from "react-slick";
 import Link from "next/link";
 import { Col, Row } from "antd";
 import { MdOutlineKeyboardArrowRight } from "react-icons/md";
-import { Typography } from 'antd';
+import { Typography } from "antd";
 import Section from "@components/Section";
 import Product from "@components/Product";
 import ProductHeadCarousel from "@components/ProductHeadCarousel";
 import styles from "@styles/product.module.scss";
 import { NextArrow, PrevArrow } from "@utils/helper";
 import Countdown from "@components/CountDown";
-import { products } from "../../data/products";
+import { products } from "data/products";
+
+const items = products.slice(0, 10);
 
 const { Title } = Typography;
 
@@ -77,10 +79,8 @@ export default function TodayHotDeal() {
 
         <Col xs={24} sm={18}>
           <Slider {...settings}>
-            {products &&
-              products.map((item) => (
-                <Product data={item} key={item.id} />
-              ))}
+            {items &&
+              items.map((item) => <Product data={item} key={item.id} />)}
           </Slider>
         </Col>
       </Row>

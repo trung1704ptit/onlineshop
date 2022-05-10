@@ -52,7 +52,7 @@ export default function CartPreview({ products, totalPrice }) {
                   className={styles["product-img"]}
                 />
               }
-              title={<a href={`/product/${item.id}`}>{item.title}</a>}
+              title={<a href={`/product/${item.slug}`}>{item.title}</a>}
               description={`${item.cartQty} x $${item.currentPrice}`}
             />
           </List.Item>

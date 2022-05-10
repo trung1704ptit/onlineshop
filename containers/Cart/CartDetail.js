@@ -54,7 +54,7 @@ export default function CartDetail() {
                   </td>
                   <td>
                     <p className="mb-2 mb-sm-0">
-                      <Link href={`/product/${product.id}`}>
+                      <Link href={`/product/${product.slug}`}>
                         <a>{product.title}</a>
                       </Link>
                     </p>
