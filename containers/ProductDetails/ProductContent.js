@@ -96,9 +96,9 @@ export default function ProductContent({ product }) {
           <div className={styles["product-rating"]}>
             <Rate
               allowHalf
-              defaultValue={4}
               disabled={true}
               style={{ fontSize: 15 }}
+              value={product.rating || 0}
             />
             <Text type="secondary" className="ms-2">
               1 Review

@@ -136,7 +136,7 @@ export default function ProductFilter() {
         <Row gutter={8}>
           {list &&
             list.map((item) => (
-              <Col xs={12} md={8} xl={6} key={item.id}>
+              <Col xs={12} sm={8} md={6} key={item.id}>
                 <div className="pb-4 h-100">
                   <Product data={item} />
                 </div>
