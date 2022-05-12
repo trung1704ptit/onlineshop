@@ -57,7 +57,7 @@ export default function TodayHotDeal() {
           </Col>
 
           <Col xs={6} sm={2}>
-            <Link href="#">
+            <Link href="/shop">
               <a className="link-animated">
                 See More <MdOutlineKeyboardArrowRight />
               </a>

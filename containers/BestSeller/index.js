@@ -28,7 +28,7 @@ export default function BestSeller() {
       </Row>
 
       <div className="text-center mt-3 mb-2">
-        <Link href="#">
+        <Link href="/shop">
           <a className="link-animated text-center d-inline-flex align-items-center">
             See more <MdOutlineKeyboardArrowDown />
           </a>
