@@ -74,7 +74,10 @@ export default function TodayHotDeal() {
 
       <Row gutter={32}>
         <Col xs={24} sm={6}>
-          <ProductHeadCarousel imageUrl="/images/products/women.jpg" />
+          <ProductHeadCarousel
+            imageUrl="/images/banner-x360.png"
+            title="Xbox Wireless Sale Up To 50% Off"
+          />
         </Col>
 
         <Col xs={24} sm={18}>

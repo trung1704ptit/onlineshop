@@ -27,19 +27,19 @@ export default function HomeCarousel() {
       <Slider {...settings}>
         <div className={styles["carousel-item"]}>
           <img
-            src="/images/slider-1.jpg"
+            src="/images/slider-3.jpg"
             alt="First slide"
             className={styles["image"]}
-            width={'100%'}
+            width={"100%"}
             height={height}
           />
           <div className={styles["carousel-caption"]}>
-            <Title level={3}>Beauty and Personal Care</Title>
+            <Title level={3}>FlipBuds Pro</Title>
             <p className={styles["sub-title"]}>
-              Subscribe and get 20% off your first{" "}
+              A powerful phone to help you relax at work and play. Hurry up!
             </p>
             <CircleButton>
-              Samsung Galaxy S22 <ImArrowRight2 />
+              Learn more <ImArrowRight2 />
             </CircleButton>
           </div>
         </div>
@@ -49,35 +49,35 @@ export default function HomeCarousel() {
             src="/images/slider-2.jpg"
             alt="second slide"
             className={styles["image"]}
-            width={'100%'}
+            width={"100%"}
             height={height}
           />
           <div className={styles["carousel-caption"]}>
-            <Title level={3}>Beauty and Personal Care</Title>
+            <Title level={3}>Find X3 OPPO</Title>
             <p className={styles["sub-title"]}>
-              Subscribe and get 20% off your first{" "}
+              Pre-order starting at 5:00 a.m. PDT on 2.19.
             </p>
             <CircleButton>
-              Samsung Galaxy S22 <ImArrowRight2 />
+              Buy now <ImArrowRight2 />
             </CircleButton>
           </div>
         </div>
 
         <div className={styles["carousel-item"]}>
           <img
-            src="/images/slider-3.jpg"
+            src="/images/slider-1.jpg"
             alt="third slide"
             className={styles["image"]}
-            width={'100%'}
+            width={"100%"}
             height={height}
           />
           <div className={styles["carousel-caption"]}>
-            <Title level={3}>Beauty and Personal Care</Title>
+            <Title level={3}>Apple watch</Title>
             <p className={styles["sub-title"]}>
-              Subscribe and get 20% off your first{" "}
+              Durable Nato 42/44mm Apple Watch Straps Set. Free Shipping!
             </p>
             <CircleButton>
-              Samsung Galaxy S22 <ImArrowRight2 />
+              Learn more <ImArrowRight2 />
             </CircleButton>
           </div>
         </div>

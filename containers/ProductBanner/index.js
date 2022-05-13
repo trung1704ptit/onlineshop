@@ -11,7 +11,7 @@ export default function CategoryBanner() {
       <div className="container">
         <div
           className={styles["product-banner"]}
-          style={{ backgroundImage: "url(/images/banner-street-style.jpg)" }}
+          style={{ backgroundImage: "url(/images/banner-2.png)" }}
         >
           <div className="pos-rel h-100">
             <div className={styles["content"]}>

@@ -68,7 +68,7 @@ export default function TrendingProductCarousel() {
             <img src="/images/phone.jpg" alt="slide-image" />
             <div className={styles["overlay"]} />
             <div className={styles["caption"]}>
-              <Title level={4}>Galaxy S22 Series.</Title>
+              <Title level={4}>Hot deal today Galaxy S22 Series.</Title>
               <CircleButton size="medium">
                 See Products <MdOutlineKeyboardArrowRight />
               </CircleButton>
@@ -76,10 +76,10 @@ export default function TrendingProductCarousel() {
           </div>
 
           <div className={styles["slide-block"]}>
-            <img src="/images/queen.jpg" alt="slide-image" />
+            <img src="/images/banner-middle-headphone.png" alt="slide-image" />
             <div className={styles["overlay"]} />
             <div className={styles["caption"]}>
-              <Title level={4}>Chanel Gabriele Perfume.</Title>
+              <Title level={4}>On-sale best prices Headphone</Title>
               <CircleButton size="medium">
                 See Products <MdOutlineKeyboardArrowRight />
               </CircleButton>
@@ -87,10 +87,10 @@ export default function TrendingProductCarousel() {
           </div>
 
           <div className={styles["slide-block"]}>
-            <img src="/images/women.jpg" alt="slide-image" />
+            <img src="/images/banner-middle-laptop.png" alt="slide-image" />
             <div className={styles["overlay"]} />
             <div className={styles["caption"]}>
-              <Title level={4}>Women's Lookbook</Title>
+              <Title level={4}>Hot sale Super Laptops 2022</Title>
               <CircleButton size="medium">
                 See Products <MdOutlineKeyboardArrowRight />
               </CircleButton>

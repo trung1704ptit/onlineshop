@@ -28,7 +28,7 @@ export default function Shop() {
           <BlankSpace height={16} className="d-md-none" />
 
           <AdvertiseBanner />
-          <BlankSpace height={40} />
+          <BlankSpace height={20} />
 
           <ProductListWithFilter noCategory={true} />
           <BlankSpace height={60} />

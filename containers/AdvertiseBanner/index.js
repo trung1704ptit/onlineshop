@@ -1,10 +1,10 @@
-import Advertise from "../../components/Advertise";
-import Section from "../../components/Section";
+import { Advertise2 } from "@components/Advertise";
+import Section from "@components/Section";
 
 export default function AdvertiseBanner() {
   return (
     <Section>
-      <Advertise />
+      <Advertise2 />
     </Section>
   );
 }

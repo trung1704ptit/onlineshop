@@ -3,7 +3,7 @@ import styles from "@styles/product.module.scss";
 import CircleButton from "../Button/CircleButton";
 import Title from "antd/lib/typography/Title";
 
-export default function ProductHeadCarousel({ imageUrl }) {
+export default function ProductHeadCarousel({ imageUrl, title }) {
   return (
     <div
       style={{
@@ -12,9 +12,9 @@ export default function ProductHeadCarousel({ imageUrl }) {
       className={styles["product-preview"]}
     >
       <div className={styles["caption"]}>
-        <Title level={3}>New Arrivals in Fashion.</Title>
+        <Title level={3}>{title}</Title>
         <CircleButton size="medium">
-          Shop Women&apos;s <MdKeyboardArrowRight />
+          Shop Now <MdKeyboardArrowRight />
         </CircleButton>
       </div>
     </div>

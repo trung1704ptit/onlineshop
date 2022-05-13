@@ -1,4 +1,4 @@
-import styles from "../../styles/advertise.module.scss";
+import styles from "@styles/advertise.module.scss";
 import CircleButton from "../Button/CircleButton";
 
 export default function Advertise() {
@@ -26,3 +26,11 @@ export default function Advertise() {
     </div>
   );
 }
+
+
+function Advertise2() {
+  return <img src="/images/banner-5.jpg" className="w-100" alt="ads 2" />;
+}
+
+
+export { Advertise2 }
