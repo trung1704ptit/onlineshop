@@ -179,8 +179,7 @@ a:focus {
   font-weight: 600;
 
   &:hover {
-    background: #000;
-    color: $gray-color;
+    color: $second-color;
   }
 
   svg {
@@ -219,6 +218,7 @@ a:focus {
   &:hover {
     border-color: #000;
     background: #000;
+    color: #fff;
   }
 }
 
