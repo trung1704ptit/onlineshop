@@ -327,11 +327,11 @@ export const products = [
     colors: [
       {
         name: "pink",
-        image: "/images/products/samsung-galaxy-s22/samsung-galaxy-s22.png",
+        image: "/images/products/samsung-smartphone/samsung-galaxy-s22/samsung-galaxy-s22.png",
       },
       {
         name: "green",
-        image: "/images/products/samsung-galaxy-s22/samsung-galaxy-s22_1.png",
+        image: "/images/products/samsung-smartphone/samsung-galaxy-s22/samsung-galaxy-s22_1.png",
       },
     ],
     sku: "45sd343",
@@ -355,12 +355,12 @@ export const products = [
       {
         name: "white",
         image:
-          "/images/products/samsung-galaxy-s21/samsung-galaxy-s21-plus.png",
+          "/images/products/samsung-smartphone/samsung-galaxy-s21/samsung-galaxy-s21-plus.png",
       },
       {
         name: "black",
         image:
-          "/images/products/samsung-galaxy-s21/samsung-galaxy-s21-plus_1.png",
+          "/images/products/samsung-smartphone/samsung-galaxy-s21/samsung-galaxy-s21-plus_1.png",
       },
     ],
     sku: "4s2ssd3",

@@ -81,8 +81,9 @@
     padding: 8px;
     flex-wrap: wrap;
     visibility: none;
-    pointer-events: none;
-    opacity: 0;
+    // pointer-events: none;
+    // opacity: 1;
+    min-height: 100%;
     
     @media screen and (min-width: 768px) {
       width: 800px;

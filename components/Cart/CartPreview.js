@@ -10,7 +10,8 @@ import { useDispatch } from "react-redux";
 export default function CartPreview({ products, totalPrice }) {
   const dispatch = useDispatch();
 
-  const handleRemoveProduct = (product) => {
+  const handleRemoveProduct = (e, product) => {
+    e.stopPropagation();
     dispatch(removeFromCart(product));
     openMessage(product.title);
   };
@@ -40,7 +41,7 @@ export default function CartPreview({ products, totalPrice }) {
               <Tooltip title="Remove product">
                 <IoIosCloseCircleOutline
                   className={styles["remove-icon"]}
-                  onClick={() => handleRemoveProduct(item)}
+                  onClick={e => handleRemoveProduct(e, item)}
                 />
               </Tooltip>
             }
