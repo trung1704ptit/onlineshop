@@ -2,7 +2,7 @@ import { useMediaQuery } from "react-responsive";
 
 import Section from "@components/Section";
 import HomeCarousel from "@components/HomeCarousel";
-import DesktopCategoryList from "@components/Category/DesktopCategoryList";
+import CategoryList from "@components/Category/CategoryList";
 import { useEffect, useState } from "react";
 
 export default function CategoryListAndProductCarousel() {
@@ -21,7 +21,7 @@ export default function CategoryListAndProductCarousel() {
       return (
         <Section>
           <div className="d-flex align-item-stretch">
-            <DesktopCategoryList />
+            <CategoryList />
             <HomeCarousel />
           </div>
         </Section>

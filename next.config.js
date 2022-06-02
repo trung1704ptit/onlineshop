@@ -21,6 +21,12 @@ const nextConfig = {
   webpack(config) {
     return config;
   },
+  env: {
+    API_ENDPOINT: process.env.API_ENDPOINT,
+  },
+  images: {
+    domains: ['localhost'],
+  },
 };
 
 module.exports = withAntdLess(nextConfig);

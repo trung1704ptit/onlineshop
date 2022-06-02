@@ -1,9 +1,8 @@
-// import { AiOutlineClose } from "react-icons/ai";
 import { useState } from "react";
 import { BiGridAlt } from "react-icons/bi";
 import { Drawer } from "antd";
 import styles from "@styles/header.module.scss";
-import DesktopCategoryList from "./DesktopCategoryList";
+import CategoryList from "./CategoryList";
 
 export default function MobileMenu() {
   const [open, setOpen] = useState(false);
@@ -22,7 +21,7 @@ export default function MobileMenu() {
         visible={open}
         bodyStyle={{ padding: '8px' }}
       >
-        <DesktopCategoryList screen="mobile" />
+        <CategoryList screen="mobile" />
       </Drawer>
     </>
   );

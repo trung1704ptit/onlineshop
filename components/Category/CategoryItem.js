@@ -41,7 +41,7 @@ export default function CategoryItem({ screen, item }) {
     >
       <Link href={`${PRODUCT_CATEGORY_BASE}/${item.slug}`}>
         <a className={styles["category-link"]} data-cy="category-link">
-          <item.icon className={styles["icon"]} />
+          <img className={styles["icon"]} src={`${process.env.API_ENDPOINT}/${item.icon}`} width={20} height={20} />
           {item.name}
           {!isEmpty(item.sub) ? (
             <IoChevronForwardOutline
