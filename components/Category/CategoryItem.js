@@ -22,7 +22,7 @@ export default function CategoryItem({ screen, item }) {
 
   const handleMouseEnter = () => {
     if (screen !== "mobile") {
-      setOpenSub(item.id);
+      setOpenSub(item._id);
     }
   };
 
@@ -32,45 +32,49 @@ export default function CategoryItem({ screen, item }) {
     }
   };
 
-  return (
-    <li
-      key={item.id}
-      className={styles["category-item"]}
-      onMouseEnter={handleMouseEnter}
-      onMouseLeave={handleMouseLeave}
-    >
-      <Link href={`${PRODUCT_CATEGORY_BASE}/${item.slug}`}>
-        <a className={styles["category-link"]} data-cy="category-link">
-          <img className={styles["icon"]} src={`${process.env.API_ENDPOINT}/${item.icon}`} width={20} height={20} />
-          {item.name}
-          {!isEmpty(item.sub) ? (
-            <IoChevronForwardOutline
-              className={classNames(
-                styles["sub-menu-arrow"],
-                "d-none d-sm-block"
-              )}
-              onClick={(e) => handleOpenSubMenu(e, item.id)}
-            />
-          ) : null}
-          {!isEmpty(item.sub) ? (
-            <MdOutlineKeyboardArrowDown
-              className={classNames(
-                styles["sub-menu-arrow"],
-                "d-block d-sm-none fs-4"
-              )}
-              onClick={(e) => handleOpenSubMenu(e, item.id)}
-            />
-          ) : null}
-        </a>
-      </Link>
+  if (isEmpty(item.ancestors)) {
+    return (
+      <li
+        className={styles["category-item"]}
+        onMouseEnter={handleMouseEnter}
+        onMouseLeave={handleMouseLeave}
+      >
 
-      {!isEmpty(item.sub) && openSub === item.id ? (
-        <SubCategory
-          data={item.sub}
-          groupCategoryId={item.slug}
-          screen={screen}
-        />
-      ) : null}
-    </li>
-  );
+        <Link href={`${PRODUCT_CATEGORY_BASE}/${item.slug}`}>
+          <a className={styles["category-link"]} data-cy="category-link">
+            <img className={styles["icon"]} src={`${process.env.API_ENDPOINT}/${item.icon}`} width={20} height={20} />
+            {item.name}
+            {!isEmpty(item.children) ? (
+              <IoChevronForwardOutline
+                className={classNames(
+                  styles["sub-menu-arrow"],
+                  "d-none d-sm-block"
+                )}
+                onClick={(e) => handleOpenSubMenu(e, item._id)}
+              />
+            ) : null}
+            {!isEmpty(item.children) ? (
+              <MdOutlineKeyboardArrowDown
+                className={classNames(
+                  styles["sub-menu-arrow"],
+                  "d-block d-sm-none fs-4"
+                )}
+                onClick={(e) => handleOpenSubMenu(e, item._id)}
+              />
+            ) : null}
+          </a>
+        </Link>
+
+        {!isEmpty(item.children) && openSub === item._id ? (
+          <SubCategory
+            data={item.children}
+            groupCategoryId={item.slug}
+            screen={screen}
+          />
+        ) : null}
+      </li>
+    );
+  }
+
+  return null;
 }

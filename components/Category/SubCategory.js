@@ -12,7 +12,7 @@ export default function SubCategory({ data, groupCategoryId, screen }) {
           data.map((item) => {
             if (item.isShow) {
               return (
-                <Col xs={24} lg={12} key={item.id}>
+                <Col xs={24} lg={12} key={item._id}>
                   <div className={styles["sub-category-block"]}>
                     <div>
                       <h3 className={styles["sub-cat-title"]}>
@@ -23,9 +23,9 @@ export default function SubCategory({ data, groupCategoryId, screen }) {
                         </Link>
                       </h3>
                       <ul className="list-style-none">
-                        {item.sub &&
-                          item.sub.map((subItem) => (
-                            <li key={subItem.id}>
+                        {item.children &&
+                          item.children.map((subItem) => (
+                            <li key={subItem._id}>
                               <Link
                                 href={`${PRODUCT_CATEGORY_BASE}/${groupCategoryId}/${item.slug}/${subItem.slug}`}
                               >

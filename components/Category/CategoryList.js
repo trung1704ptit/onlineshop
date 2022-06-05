@@ -21,7 +21,7 @@ export default function CategoryList({ screen }) {
       <ul className="list-style-none">
         {categories?.map((item) => {
           if (item.isShow) {
-            return <CategoryItem screen={screen} item={item} key={item.id} />;
+            return <CategoryItem screen={screen} item={item} key={item._id} />;
           }
         })}
       </ul>
