@@ -44,7 +44,7 @@ export default function SubCategory({ data, groupCategoryId, screen }) {
                     </div>
                     {item.thumbnail ? (
                       <div className={styles["category-img"]}>
-                        <img src={`${process.env.API_ENDPOINT}/${item.thumbnail}`} alt="category-img" />
+                        <img src={item.thumbnail} alt="category-img" />
                       </div>
                     ) : null}
                   </div>
