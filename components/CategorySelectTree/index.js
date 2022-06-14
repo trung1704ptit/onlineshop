@@ -1,17 +1,20 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useLayoutEffect, useState } from "react";
 import { Tree } from "antd";
-import { categories } from "data/categories";
 import { useRouter } from "next/router";
-import { findCategory } from "@utils/helper";
+import { useDispatch, useSelector } from "react-redux";
+import { isEmpty } from "lodash";
+import { actionGetCategories } from "@redux/actions/category";
+import axios from "axios";
 
 const formatItem = (item) => {
   let children = [];
-  if (item.sub && item.sub.length > 0) {
-    children = formatData(item.sub) || [];
+  if (!isEmpty(item.children)) {
+    children = formatData(item.children) || [];
   }
   return {
+    id: item._id,
     title: item.name,
-    key: item.id,
+    key: item._id,
     children,
   };
 };
@@ -22,21 +25,20 @@ const formatData = (list) => {
   }
 
   return list.map((item) => {
-    const exist = findCategory(item.id, categories);
-    if (exist) {
-      return formatItem(exist);
-    }
+    return formatItem(item);
   });
 };
-
-const treeData = formatData(categories);
 
 const CategorySelectTree = () => {
   const [expandedKeys, setExpandedKeys] = useState([]);
   const [checkedKeys, setCheckedKeys] = useState([]);
   const [autoExpandParent, setAutoExpandParent] = useState(true);
   const [firstLoaded, setFirstLoaded] = useState(false);
+  const dispatch = useDispatch();
   const router = useRouter();
+  const categories = useSelector((state) => state.category.categories);
+
+  const treeData = formatData(categories);
 
   useEffect(() => {
     const { catids } = router.query;
@@ -52,6 +54,20 @@ const CategorySelectTree = () => {
     setExpandedKeys(expandedKeysValue);
     setAutoExpandParent(false);
   };
+
+  useLayoutEffect(() => {
+    if (isEmpty(categories)) {
+      try {
+        axios.get(`${process.env.API_ENDPOINT}/v1/categories`).then((res) => {
+          if (res.data) {
+            dispatch(actionGetCategories(res.data));
+          }
+        });
+      } catch (error) {
+        console.log(error);
+      }
+    }
+  }, [categories]);
 
   const onCheck = (checkedKeysValue) => {
     let catids = "*";

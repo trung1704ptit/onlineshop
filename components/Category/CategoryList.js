@@ -3,7 +3,7 @@ import styles from "@styles/category.module.scss";
 import { Skeleton, Space } from "antd";
 import axios from "axios";
 import { isEmpty } from "lodash";
-import { useEffect, useState } from "react";
+import { useLayoutEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import CategoryItem from "./CategoryItem";
 
@@ -12,7 +12,7 @@ export default function CategoryList({ screen }) {
   const [loading, setLoading] = useState(false);
   const dispatch = useDispatch();
 
-  useEffect(() => {
+  useLayoutEffect(() => {
     if (isEmpty(categories)) {
       try {
         setLoading(true);
